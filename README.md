@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Banner</title>
+    <title>Website Banner with Transparent Scroll Effect</title>
     <style>
         /* General page styling */
         body {
@@ -11,13 +11,19 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Banner / Navbar styling */
+        /* Navbar styling */
         .navbar {
             position: sticky;
             top: 0;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 1); /* Solid color at the start */
             overflow: hidden;
             z-index: 1000;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        /* Change navbar background to transparent on scroll */
+        body.scrolled .navbar {
+            background-color: rgba(51, 51, 51, 0.8); /* 80% transparency */
         }
 
         /* Navbar links styling */
@@ -28,11 +34,12 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Change color on hover */
+        /* White hover effect */
         .navbar a:hover {
-            background-color: #ddd;
+            background-color: white;
             color: black;
         }
 
@@ -43,6 +50,20 @@
             height: 2000px; /* Just to demonstrate scrolling */
         }
     </style>
+    <script>
+        // Add class to body when scrolling
+        window.onscroll = function() {
+            var body = document.body;
+            var html = document.documentElement;
+            var scrollTop = window.pageYOffset || body.scrollTop || html.scrollTop;
+
+            if (scrollTop > 50) {
+                body.classList.add('scrolled');
+            } else {
+                body.classList.remove('scrolled');
+            }
+        };
+    </script>
 </head>
 <body>
 
@@ -55,8 +76,8 @@
     </div>
 
     <div class="content">
-        <h2>Sticky Navbar Example</h2>
-        <p>Scroll down this page to see the navbar stay at the top of the page.</p>
+        <h2>Sticky Navbar with Transparency Effect</h2>
+        <p>Scroll down to see the navbar become transparent, and hover over links to see the white hover effect.</p>
         <p>Add your website's content here.</p>
     </div>
 
