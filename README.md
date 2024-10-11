@@ -1,10 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Banner with Transparent Scroll Effect</title>
+    <title>Newer Earth Program</title>
     <style>
-        /* General page styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -14,151 +14,127 @@
         .navbar {
             position: sticky;
             top: 0;
-            background-color: rgba(51, 51, 51, 1); /* Solid color at the start */
-            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            transition: background-color 0.3s ease; /* Smooth transition */
         }
 
-        /* Change navbar background to transparent on scroll */
-        body.scrolled .navbar {
-            background-color: rgba(51, 51, 51, 0.8); /* 80% transparency */
+        /* Logo styling */
+        .navbar img {
+            height: 50px;
         }
 
-        /* Navbar links styling */
+        /* Navigation links styling */
         .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
             text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* White hover effect */
-        .navbar a:hover {
-            background-color: white;
             color: black;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        /* Add content for demo purposes */
-        .content {
-            padding: 16px;
-            margin-top: 30px;
-            height: 2000px; /* Just to demonstrate scrolling */
+        .navbar a:hover {
+            color: #4CAF50; /* Green hover effect */
         }
-    </style>
-    <script>
-        // Add class to body when scrolling
-        window.onscroll = function() {
-            var body = document.body;
-            var html = document.documentElement;
-            var scrollTop = window.pageYOffset || body.scrollTop || html.scrollTop;
 
-            if (scrollTop > 50) {
-                body.classList.add('scrolled');
-            } else {
-                body.classList.remove('scrolled');
-            }
-        };
-    </script>
-</head>
-<body>
+        /* Event button styling */
+        .navbar .events-button {
+            background-color: #2F7D66;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
 
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#landscape">Landscape Aesthetics</a>
-        <a href="#learning">Learning Hub</a>
-        <a href="#events">Events</a>
-    </div>
+        .navbar .events-button:hover {
+            background-color: #0c5b43; /* Darker green on hover */
+        }
 
-    <div class="content">
-        <h2>Sticky Navbar with Transparency Effect</h2>
-        <p>Scroll down to see the navbar become transparent, and hover over links to see the white hover effect.</p>
-        <p>Add your website's content here.</p>
-    </div>
+        /* Search bar styling */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Banner with Transparent Scroll Effect</title>
-    <style>
-        /* General page styling */
-        body {
+        .search-container input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 20px;
+            background-color: #eee;
+        }
+
+        /* Hero section */
+        .hero {
+            background-image: url('background-image.jpg'); /* Replace with your actual image path */
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 60px;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-weight: bold;
         }
 
-        /* Navbar styling */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: rgba(51, 51, 51, 1); /* Solid color at the start */
-            overflow: hidden;
-            z-index: 1000;
-            transition: background-color 0.3s ease; /* Smooth transition */
+        .hero p {
+            font-size: 24px;
+            font-style: italic;
+            margin: 10px 0;
         }
 
-        /* Change navbar background to transparent on scroll */
-        body.scrolled .navbar {
-            background-color: rgba(51, 51, 51, 0.8); /* 80% transparency */
-        }
-
-        /* Navbar links styling */
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
+        /* Footer text */
+        .footer-text {
             text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* White hover effect */
-        .navbar a:hover {
-            background-color: white;
-            color: black;
-        }
-
-        /* Add content for demo purposes */
-        .content {
-            padding: 16px;
-            margin-top: 30px;
-            height: 2000px; /* Just to demonstrate scrolling */
+            padding: 20px;
+            font-size: 18px;
         }
     </style>
-    <script>
-        // Add class to body when scrolling
-        window.onscroll = function() {
-            var body = document.body;
-            var html = document.documentElement;
-            var scrollTop = window.pageYOffset || body.scrollTop || html.scrollTop;
-
-            if (scrollTop > 50) {
-                body.classList.add('scrolled');
-            } else {
-                body.classList.remove('scrolled');
-            }
-        };
-    </script>
 </head>
 <body>
 
+    <!-- Navbar -->
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#landscape">Landscape Aesthetics</a>
-        <a href="#learning">Learning Hub</a>
-        <a href="#events">Events</a>
+        <!-- Logo -->
+        <img src="logo.png" alt="Newer Earth Logo"> <!-- Replace with actual logo path -->
+
+        <!-- Navigation Links -->
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#landscape">Landscape Aesthetics</a>
+            <a href="#learning">Learning Hub</a>
+        </div>
+
+        <!-- Events Button and Search Bar -->
+        <div class="search-container">
+            <a href="#events" class="events-button">EVENTS!</a>
+            <input type="text" placeholder="Search...">
+        </div>
     </div>
 
-    <div class="content">
-        <h2>Sticky Navbar with Transparency Effect</h2>
-        <p>Scroll down to see the navbar become transparent, and hover over links to see the white hover effect.</p>
-        <p>Add your website's content here.</p>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>The Environment Matters</h1>
+        <p>Making sustainability fun</p>
     </div>
+
+    <!-- Footer Text -->
+    <div class="footer-text">
+        THE NEWER EARTH PROGRAMME
+    </div>
+
 </body>
 </html>
