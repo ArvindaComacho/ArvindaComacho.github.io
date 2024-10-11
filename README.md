@@ -81,7 +81,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            background-image: url('background-image.jpg'); /* Replace with actual image */
+            background-image: url('![Home page background](https://github.com/user-attachments/assets/c734c9ce-ffcb-49ee-9abb-468feff4fcf8)'); /* background image */
             background-size: cover;
             background-position: center;
             height: 90vh;
