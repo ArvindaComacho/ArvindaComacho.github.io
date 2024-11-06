@@ -137,17 +137,41 @@
     </header>
 
     <!-- Main Content (For Testing Scroll) -->
- <main>
-    <section style="padding: 40px; max-width: 800px; margin: 0 auto; text-align: center;">
-        <h1 style="font-size: 3.5em; color: #2c3e50; font-weight: 700; margin-bottom: 10px; line-height: 1.2;">
-            The Environment Matters
-        </h1>
-        <p style="font-size: 1.2em; color: #7f8c8d; font-family: 'Georgia', serif; letter-spacing: 1px;">
-            making sustainability fun
-        </p>
-        <p style="margin-top: 20px;">
-            Scroll down to explore more about our commitment to a greener planet and sustainable practices.
-        </p>
+<main>
+    <section style="
+        padding: 60px; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        text-align: center; 
+        background-image: url('your-image.jpg'); /* Replace with your image path */
+        background-size: cover; 
+        background-position: center; 
+        color: white;
+        position: relative;
+    ">
+        <!-- Overlay for better text contrast -->
+        <div style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        "></div>
+
+        <!-- Text content with white color -->
+        <div style="position: relative; z-index: 2;">
+            <h1 style="font-size: 3.5em; font-weight: 700; margin-bottom: 10px; line-height: 1.2;">
+                The Environment Matters
+            </h1>
+            <p style="font-size: 1.2em; font-family: 'Georgia', serif; letter-spacing: 1px;">
+                making sustainability fun
+            </p>
+            <p style="margin-top: 20px;">
+                Scroll down to explore more about our commitment to a greener planet and sustainable practices.
+            </p>
+        </div>
     </section>
     <!-- Add some dummy content for scrolling effect -->
     <section style="height: 2000px;"></section>
