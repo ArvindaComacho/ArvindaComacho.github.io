@@ -138,18 +138,20 @@
 
     <!-- Main Content (For Testing Scroll) -->
 <main>
+    <!-- Full-Screen Intro Section -->
     <section style="
-        padding: 60px; 
-        max-width: 800px; 
-        margin: 0 auto; 
+        height: 100vh; 
+        max-width: 100%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
         text-align: center; 
-        background-image: url('Home Page background.jpg'); /* Replace with your image path */
+        background-image: url('your-image.jpg'); /* Replace with your image path */
         background-size: cover; 
         background-position: center; 
         color: white;
         position: relative;
     ">
-        <!-- Overlay for better text contrast -->
         <div style="
             position: absolute; 
             top: 0; 
@@ -159,8 +161,6 @@
             background-color: rgba(0, 0, 0, 0.4);
             z-index: 1;
         "></div>
-
-        <!-- Text content with white color -->
         <div style="position: relative; z-index: 2;">
             <h1 style="font-size: 3.5em; font-weight: 700; margin-bottom: 10px; line-height: 1.2;">
                 The Environment Matters
@@ -168,13 +168,41 @@
             <p style="font-size: 1.2em; font-family: 'Georgia', serif; letter-spacing: 1px;">
                 making sustainability fun
             </p>
-            <p style="margin-top: 20px;">
-                Scroll down to explore more about our commitment to a greener planet and sustainable practices.
-            </p>
         </div>
     </section>
-    <!-- Add some dummy content for scrolling effect -->
-    <section style="height: 2000px;"></section>
+
+    <!-- Two-Column Content Section -->
+    <section style="
+        display: flex; 
+        align-items: flex-start; 
+        justify-content: center; 
+        padding: 40px; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        gap: 40px;
+    ">
+        <!-- Left Column: Logo and Text -->
+        <div style="flex: 1;">
+            <!-- Logo at the Top Left -->
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <img src="logo.png" alt="Your Logo" style="width: 100px; height: auto; margin-right: 10px;">
+            </div>
+            <!-- Text Content Below the Logo -->
+            <div>
+                <h2 style="font-size: 2em; color: #2c3e50; margin-bottom: 10px;">Our Commitment to Sustainability</h2>
+                <p style="font-size: 1em; color: #555; line-height: 1.6;">
+                    At our organization, we believe that sustainability is more than just a buzzword – it's a way of life.
+                    Our mission is to inspire and educate others on making eco-friendly choices that positively impact 
+                    our planet. Join us on a journey to make sustainability accessible, fun, and impactful.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div style="flex: 1;">
+            <img src="side-image.jpg" alt="Sustainability Image" style="width: 100%; border-radius: 10px;">
+        </div>
+    </section>
 </main>
 
     <!-- JavaScript for Transparent Scroll Effect -->
