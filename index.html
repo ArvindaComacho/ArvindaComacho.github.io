@@ -140,10 +140,6 @@
 <body style="
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('your-image.jpg'); /* Replace with your image path */
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed; 
     color: white;
 ">
 
@@ -155,7 +151,7 @@
         display: flex;
         align-items: center;
         padding: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent for readability */
         z-index: 10;
     ">
         <div class="logo" style="margin-right: 20px;">
@@ -180,6 +176,10 @@
             justify-content: center;
             text-align: center;
             position: relative;
+            background-image: url('your-image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
             overflow: hidden;
         ">
             <h1 style="font-size: 6em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">
@@ -189,25 +189,19 @@
                 making sustainability fun
             </p>
 
-            <!-- SVG for Curved Bottom Effect -->
-            <div style="
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 100px;
-                background: #f8f8f8;
-                clip-path: path('M0,100 Q50,150 100,100 T200,100 T300,150 T400,100 T500,150 T600,100 T700,150 T800,100 T900,150 T1000,100 T1100,150 T1200,100');
-            "></div>
+            <!-- SVG Wave for Curved Bottom Effect -->
+            <svg style="position: absolute; bottom: 0; left: 0; width: 100%; height: 150px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f8f8f8" fill-opacity="1" d="M0,224L60,213.3C120,203,240,181,360,154.7C480,128,600,96,720,112C840,128,960,192,1080,197.3C1200,203,1320,149,1380,122.7L1440,96V320H1380H1200H1080H960H840H720H600H480H360H240H120H60H0Z"></path>
+            </svg>
         </section>
 
-        <!-- Content Section -->
+        <!-- Content Section with Background Color -->
         <section style="padding: 40px; max-width: 1200px; margin: 0 auto; background-color: #f8f8f8;">
             <h2>Our Commitment to Sustainability</h2>
             <p>Explore more about our initiatives for creating a greener planet and sustainable practices.</p>
         </section>
     </main>
 </body>
-
     <!-- JavaScript for Transparent Scroll Effect -->
     <script>
         window.addEventListener('scroll', function () {
