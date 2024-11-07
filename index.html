@@ -112,31 +112,6 @@
         }
     </style>
 </head>
-<body>
-
-    <!-- Banner Section -->
-    <header class="banner">
-        <!-- Logo Section -->
-        <div class="logo">
-            <img src="Logo.png"> <!-- Replace with your logo image file -->
-        </div>
-
-        <!-- Navigation Links -->
-        <nav class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="landscape.html">Landscape Aesthetics</a>
-            <a href="learning.html">Learning Hub</a>
-            <a href="events.html">Events</a>
-        </nav>
-
-        <!-- Search Bar -->
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search...">
-        </div>
-    </header>
-
-    <!-- Main Content (For Testing Scroll) -->
 <body style="
     margin: 0;
     font-family: Arial, sans-serif;
@@ -166,10 +141,11 @@
         </nav>
     </header>
 
-    <!-- Full-Screen Intro Section with Curved Bottom -->
-    <main style="margin-top: 80px;">
+    <!-- Intro Section with Curved Bottom and Background Image -->
+    <main style="margin-top: 80px; display: flex; justify-content: center;">
         <section style="
-            height: 100vh; 
+            max-width: 1200px; /* Controls width for whitespace on sides */
+            height: 80vh; /* Slightly shorter than full height */
             display: flex; 
             flex-direction: column; 
             align-items: center; 
@@ -179,28 +155,31 @@
             background-image: url('your-image.jpg'); /* Replace with your image path */
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             color: white;
             overflow: hidden;
+            border-radius: 10px; /* Adds rounded corners */
+            padding: 20px;
         ">
-            <h1 style="font-size: 6em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">
+            <h1 style="font-size: 5em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">
                 The Environment Matters
             </h1>
-            <p style="font-size: 2em; font-family: 'Georgia', serif; letter-spacing: 1px;">
+            <p style="font-size: 1.8em; font-family: 'Georgia', serif; letter-spacing: 1px;">
                 making sustainability fun
             </p>
 
             <!-- SVG Wave for Curved Bottom Effect -->
-            <svg style="position: absolute; bottom: 0; left: 0; width: 100%; height: 150px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg style="position: absolute; bottom: 0; left: 0; width: 100%; height: 120px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#f8f8f8" fill-opacity="1" d="M0,224L60,213.3C120,203,240,181,360,154.7C480,128,600,96,720,112C840,128,960,192,1080,197.3C1200,203,1320,149,1380,122.7L1440,96V320H1380H1200H1080H960H840H720H600H480H360H240H120H60H0Z"></path>
             </svg>
         </section>
-
-        <!-- Content Section with Background Color -->
-        <section style="padding: 40px; max-width: 1200px; margin: 0 auto; background-color: #f8f8f8;">
-            <h2>Our Commitment to Sustainability</h2>
-            <p>Explore more about our initiatives for creating a greener planet and sustainable practices.</p>
-        </section>
     </main>
+
+    <!-- Content Section -->
+    <section style="padding: 40px; max-width: 1200px; margin: 40px auto; background-color: #f8f8f8; border-radius: 10px;">
+        <h2 style="text-align: center; color: #333;">Our Commitment to Sustainability</h2>
+        <p style="text-align: center; color: #555;">Explore more about our initiatives for creating a greener planet and sustainable practices.</p>
+    </section>
 </body>
     <!-- JavaScript for Transparent Scroll Effect -->
     <script>
