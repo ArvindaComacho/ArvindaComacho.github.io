@@ -138,7 +138,7 @@
 
     <!-- Main Content (For Testing Scroll) -->
 <main>
-    <!-- Full-Screen Intro Section (as before) -->
+    <!-- Full-Screen Intro Section with Background Image and Whitespace on the Sides -->
     <section style="
         height: 100vh; 
         max-width: 100%; 
@@ -150,7 +150,7 @@
         background-size: cover; 
         background-position: center; 
         background-attachment: fixed;
-        padding: 0 10%; /* Add horizontal padding for whitespace */
+        padding: 0 10%; /* Adds horizontal padding (whitespace) on the sides */
         color: white;
         position: relative;
     ">
@@ -176,8 +176,19 @@
         </div>
     </section>
 
+    <!-- Two-Column Section (Logo + Text on Left, Image on Right) -->
+    <section style="
+        display: flex; 
+        align-items: flex-start; 
+        justify-content: center; 
+        padding: 40px; 
+        background-color: #f8f8f8; 
+        max-width: 1200px; 
+        margin: 0 auto;
+        gap: 40px;
+    ">
         <!-- Left Column: Logo and Text -->
-        <div style="flex: 1; color: white;">
+        <div style="flex: 1; color: #333;">
             <!-- Logo at the Mid-Top Left -->
             <div style="display: flex; align-items: center; margin-bottom: 20px;">
                 <img src="Logo.png" alt="Logo" style="width: 150px; height: auto; margin-right: 10px;">
@@ -185,13 +196,13 @@
             <!-- Text Content Below the Logo -->
             <div>
                 <h2 style="font-size: 2.5em; margin-bottom: 20px;">We bring sustainability to unexpected places.</h2>
-                <p style="font-size: 1.2em; line-height: 1.8; color: #ddd;">
+                <p style="font-size: 1.2em; line-height: 1.8; color: #555;">
                     Whether it's planting native wildflower borders in your backyard,
                     teaching novice gardeners to grow their own food, or helping locals
                     with environmental conservation practices, we empower homeowners to help
                     the environment.
                 </p>
-                <p style="font-size: 1.2em; line-height: 1.8; color: #ddd;">
+                <p style="font-size: 1.2em; line-height: 1.8; color: #555;">
                     Each small step helps us to create a newer earth for future generations.
                 </p>
             </div>
