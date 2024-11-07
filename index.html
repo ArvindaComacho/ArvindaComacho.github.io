@@ -138,7 +138,7 @@
 
     <!-- Main Content (For Testing Scroll) -->
 <main>
-    <!-- Full-Screen Intro Section -->
+    <!-- Full-Screen Intro Section (as before) -->
     <section style="
         height: 100vh; 
         max-width: 100%; 
@@ -146,7 +146,7 @@
         align-items: center; 
         justify-content: center; 
         text-align: center; 
-        background-image: url('Home Page background.jpg'); /* Replace with your image path */
+        background-image: url('your-image.jpg'); /* Replace with your image path */
         background-size: cover; 
         background-position: center; 
         background-attachment: fixed;
@@ -176,32 +176,35 @@
         </div>
     </section>
 
-    <!-- Section After Scrolling with Logo, Text, and Image -->
+    <!-- Two-Column Section (Logo + Text on Left, Image on Right) -->
     <section style="
         display: flex; 
-        padding: 40px; 
-        justify-content: center; 
         align-items: flex-start; 
+        justify-content: center; 
+        padding: 40px; 
+        background-image: url('Home Page background.jpg'); /* Background for this section */
+        background-size: cover; 
+        background-position: center;
         max-width: 1200px; 
-        margin: 0 auto; 
+        margin: 0 auto;
         gap: 40px;
     ">
         <!-- Left Column: Logo and Text -->
-        <div style="flex: 1; position: relative;">
-            <!-- Fixed Logo on the Top Left -->
-            <img src="Logo.png" alt="Your Logo" style="width: 120px; height: auto; position: fixed; top: 20px; left: 20px; z-index: 10;">
-
-            <!-- Text Content Below Logo -->
-            <div style="margin-top: 100px; padding-left: 140px;">
-                <h2 style="font-size: 2em; color: #2c3e50; margin-bottom: 10px;">What We Stand For</h2>
-                <p style="font-size: 1.2em; color: #555; line-height: 1.6;">
-                    We bring sustainability to unexpected places.
-
+        <div style="flex: 1; color: white;">
+            <!-- Logo at the Mid-Top Left -->
+            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <img src="Logo.png" alt="Logo" style="width: 150px; height: auto; margin-right: 10px;">
+            </div>
+            <!-- Text Content Below the Logo -->
+            <div>
+                <h2 style="font-size: 2.5em; margin-bottom: 20px;">We bring sustainability to unexpected places.</h2>
+                <p style="font-size: 1.2em; line-height: 1.8; color: #ddd;">
                     Whether it's planting native wildflower borders in your backyard,
                     teaching novice gardeners to grow their own food, or helping locals
                     with environmental conservation practices, we empower homeowners to help
                     the environment.
-
+                </p>
+                <p style="font-size: 1.2em; line-height: 1.8; color: #ddd;">
                     Each small step helps us to create a newer earth for future generations.
                 </p>
             </div>
@@ -209,12 +212,10 @@
 
         <!-- Right Column: Image -->
         <div style="flex: 1;">
-            <img src="Sustainability Image.jpg" alt="Sustainability Image" style="width: 100%; height: auto; border-radius: 10px;">
+            <img src="Sustainability Image.jpg" alt="Sustainability Image" style="width: 100%; border-radius: 10px;">
         </div>
     </section>
-
 </main>
-
     <!-- JavaScript for Transparent Scroll Effect -->
     <script>
         window.addEventListener('scroll', function () {
