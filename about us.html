@@ -127,6 +127,73 @@
             <a href="about us.html">About Us</a>
             <a href="landscape.html">Landscape Aesthetics</a>
             <a href="learning.html">Learning Hub</a>
+         <!-- Dropdown Menu -->
+<nav style="background-color: #014D50; padding: 10px;">
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 15px;">
+        <!-- Learning Hub Link -->
+        <li style="position: relative;">
+            <a href="learning_hub.html" style="color: white; text-decoration: none; padding: 10px 20px; font-weight: bold;">
+                Learning Hub
+            </a>
+            <!-- Dropdown Menu Items -->
+            <ul class="dropdown">
+                <li><a href="whats_blooming.html">What's Blooming</a></li>
+                <li><a href="debunking.html">Debunking</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!-- CSS Styling -->
+<style>
+    /* Base Styles */
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Dropdown Menu Styling */
+    .dropdown {
+        display: none; /* Initially hidden */
+        position: absolute;
+        background-color: #ECECE9;
+        padding: 10px 0;
+        border-radius: 5px;
+        list-style: none;
+        top: 40px; /* Position it below the main link */
+        left: 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        width: 150px; /* Adjust width as needed */
+    }
+
+    .dropdown li {
+        padding: 8px 15px;
+    }
+
+    .dropdown li a {
+        color: #014D50;
+        text-decoration: none;
+        font-weight: normal;
+        display: block;
+    }
+
+    .dropdown li a:hover {
+        background-color: #d9e2e1;
+        color: #014D50;
+        border-radius: 3px;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover .dropdown {
+        display: block;
+    }
+
+    /* Add smooth transition for hover */
+    .dropdown, .dropdown li a {
+        transition: all 0.3s ease;
+    }
+</style>
+
             <a href="events.html">Events</a>
         </nav>
 
