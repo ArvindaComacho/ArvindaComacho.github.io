@@ -205,7 +205,15 @@
         &#9664;
     </div>
 
-    <!-- Face Images with Descriptions -->
+<!-- Faces Carousel -->
+<div id="carousel" style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 50px;">
+    
+    <!-- Left Arrow for Carousel Navigation -->
+    <div onclick="previousFace()" style="position: absolute; left: 20px; cursor: pointer; font-size: 2em; color: #014D50;">
+        &#9664;
+    </div>
+
+    <!-- Face Images -->
     <div style="display: flex; align-items: center; gap: 30px;">
 
         <!-- Face 1 -->
@@ -240,38 +248,36 @@
 <div style="text-align: center; margin-top: 20px; font-size: 1.2em; color: #014D50;">
     <p>Students of Queen's College</p>
 </div>
-</section>
-    
-<!-- JavaScript for Carousel Navigation -->
+
 <script>
-    let currentFaceIndex = 1;
+    // JavaScript for rotating faces
+    let currentIndex = 1;
+    const faces = document.querySelectorAll('.face');
+    const totalFaces = faces.length;
 
-    function updateFaces() {
-        const faces = document.querySelectorAll('.face');
-        faces.forEach((face, index) => {
-            face.classList.remove('main-face');
-            if (index === currentFaceIndex) {
-                face.classList.add('main-face');
-                face.style.width = '130px';
-                face.style.height = '130px';
-            } else {
-                face.style.width = '100px';
-                face.style.height = '100px';
-            }
-        });
+    // Function to update the carousel
+    function updateCarousel() {
+        // Reset all faces to the smaller scale
+        faces.forEach(face => face.classList.remove('main-face'));
+
+        // Set the current face to 'main-face' and adjust size
+        faces[currentIndex].classList.add('main-face');
     }
 
+    // Previous face functionality
     function previousFace() {
-        currentFaceIndex = (currentFaceIndex - 1 + 3) % 3;
-        updateFaces();
+        currentIndex = (currentIndex === 0) ? totalFaces - 1 : currentIndex - 1;
+        updateCarousel();
     }
 
+    // Next face functionality
     function nextFace() {
-        currentFaceIndex = (currentFaceIndex + 1) % 3;
-        updateFaces();
+        currentIndex = (currentIndex === totalFaces - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
     }
 
-    document.addEventListener("DOMContentLoaded", updateFaces);
+    // Initialize carousel with the first face as the active one
+    updateCarousel();
 </script>
 
 <!-- CSS for Face Scaling -->
