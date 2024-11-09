@@ -197,88 +197,80 @@
         We foster community through conservation, making sustainability enjoyable, practical, and inclusive for everyone.
     </p>
 
-<!-- Faces Carousel -->
-<div id="carousel" style="position: relative; display: flex; align-items: center; justify-content: center; margin-top: 50px;">
-    
+<!-- Carousel Container -->
+<div id="profileCarousel" style="display: flex; align-items: center; justify-content: center; position: relative; width: 100%; padding: 20px; box-sizing: border-box;">
+
     <!-- Left Arrow for Carousel Navigation -->
-    <div onclick="previousFace()" style="position: absolute; left: 20px; cursor: pointer; font-size: 2em; color: #014D50;">
+    <div onclick="previousProfile()" style="position: absolute; left: 20px; cursor: pointer; font-size: 2em; color: #014D50;">
         &#9664;
     </div>
 
-    <!-- Face Images -->
-    <div style="display: flex; align-items: center; gap: 50px;">
+    <!-- Profile Cards -->
+    <div id="carouselSlides" style="display: flex; gap: 20px; transition: transform 0.5s ease; width: 70%; overflow: hidden;">
 
-        <!-- Face 1 -->
-        <div class="face" id="face1" style="display: flex; flex-direction: column; align-items: center; text-align: center; height: 280px;">
-            <div style="width: 200px; height: 200px; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                <img src="Arvinda.png" alt="Arianna Seepersaud" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Profile 1 -->
+        <div class="profileCard" style="width: 100%; max-width: 300px; padding: 20px; background-color: #C3DB7D; text-align: center; border-radius: 20px;">
+            <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="your-image1.jpg" alt="Profile 1" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
+            <h2 style="color: #014D50; font-weight: bold; margin-top: 15px;">ARVINDA COMACHO</h2>
+            <p style="color: #014D50;">Arvinda Comacho is an 18-year-old passionate about digital media technologies and environmentally sustainable living.</p>
         </div>
 
-        <!-- Main Face 2 (highlighted) -->
-        <div class="face main-face" id="face2" style="display: flex; flex-direction: column; align-items: center; text-align: center; height: 280px;">
-            <div style="width: 250px; height: 250px; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                <img src="Arvinda.png" alt="Arvinda Comacho" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Profile 2 -->
+        <div class="profileCard" style="width: 100%; max-width: 300px; padding: 20px; background-color: #C3DB7D; text-align: center; border-radius: 20px;">
+            <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="your-image2.jpg" alt="Profile 2" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
+            <h2 style="color: #014D50; font-weight: bold; margin-top: 15px;">PERSON 2</h2>
+            <p style="color: #014D50;">Person 2's description goes here, reflecting their interests and achievements.</p>
         </div>
 
-        <!-- Face 3 -->
-        <div class="face" id="face3" style="display: flex; flex-direction: column; align-items: center; text-align: center; height: 280px;">
-            <div style="width: 200px; height: 200px; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                <img src="Arvinda.png" alt="Darindra Charan" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Profile 3 -->
+        <div class="profileCard" style="width: 100%; max-width: 300px; padding: 20px; background-color: #C3DB7D; text-align: center; border-radius: 20px;">
+            <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="your-image3.jpg" alt="Profile 3" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
+            <h2 style="color: #014D50; font-weight: bold; margin-top: 15px;">PERSON 3</h2>
+            <p style="color: #014D50;">Person 3's description goes here, reflecting their interests and achievements.</p>
         </div>
-
+        
     </div>
 
     <!-- Right Arrow for Carousel Navigation -->
-    <div onclick="nextFace()" style="position: absolute; right: 20px; cursor: pointer; font-size: 2em; color: #014D50;">
+    <div onclick="nextProfile()" style="position: absolute; right: 20px; cursor: pointer; font-size: 2em; color: #014D50;">
         &#9654;
     </div>
 </div>
 
-<!-- Team Label -->
-<div style="text-align: center; margin-top: 20px; font-size: 1.2em; color: #014D50;">
-    <p>Students of Queen's College</p>
-</div>
-
 <!-- JavaScript for Carousel Navigation -->
 <script>
-    let currentFaceIndex = 1;
+    let currentProfileIndex = 0;
 
-    function updateFaces() {
-        const faces = document.querySelectorAll('.face');
-        faces.forEach((face, index) => {
-            face.classList.remove('main-face');
-            if (index === currentFaceIndex) {
-                face.classList.add('main-face');
-                face.style.width = '300px';  /* Enlarged size for selected face */
-                face.style.height = '300px';
-            } else {
-                face.style.width = '250px';  /* Smaller size for non-selected faces */
-                face.style.height = '250px';
-            }
-        });
+    function updateCarousel() {
+        const carouselSlides = document.getElementById('carouselSlides');
+        carouselSlides.style.transform = `translateX(-${currentProfileIndex * 320}px)`;
     }
 
-    function previousFace() {
-        currentFaceIndex = (currentFaceIndex - 1 + 3) % 3;
-        updateFaces();
+    function previousProfile() {
+        currentProfileIndex = (currentProfileIndex - 1 + 3) % 3;
+        updateCarousel();
     }
 
-    function nextFace() {
-        currentFaceIndex = (currentFaceIndex + 1) % 3;
-        updateFaces();
+    function nextProfile() {
+        currentProfileIndex = (currentProfileIndex + 1) % 3;
+        updateCarousel();
     }
-
-    document.addEventListener("DOMContentLoaded", updateFaces);
 </script>
 
-<!-- CSS for Face Scaling -->
+<!-- CSS Styling -->
 <style>
-    .main-face {
-        transition: width 0.3s, height 0.3s;
+    .profileCard {
+        transition: transform 0.3s;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .profileCard:hover {
+        transform: scale(1.05);
     }
 </style>
     
