@@ -138,43 +138,48 @@
 
     <!-- Main Content (For Scrolling) -->
 <main>
-    <!-- Full-Screen Intro Section with Background Image and Whitespace on the Sides -->
+    <!-- Full-Screen about us section with coloured background and whitespace on the sides -->
     <section style="
         height: 100vh; 
         max-width: 100%; 
         display: flex; 
         align-items: center; 
-        justify-content: center; 
-        text-align: center; 
-        background-image: url('Home Page background.jpg');
-        background-size: cover; 
-        background-position: center; 
-        background-attachment: fixed;
-        padding: 0 10%; /* Adds horizontal padding (whitespace) on the sides */
+        justify-content: space-between; 
+        text-align: left; 
+        background-color: #99B81D; 
+        padding: 0 10%; /* Adds horizontal padding */
         color: white;
         position: relative;
     ">
-        <!-- Overlay for better text contrast -->
-        <div style="
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        "></div>
 
-        <!-- Centered Text Content -->
-        <div style="position: relative; z-index: 2;">
-            <h1 style="font-size: 6em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">
-                The Environment Matters
-            </h1>
-            <p style="font-size: 2em; font-family: 'Georgia', serif; letter-spacing: 1px;">
-                making sustainability fun
-            </p>
-        </div>
-    </section>
+    <!-- Left Side: About Us Text -->
+    <div style="width: 50%; z-index: 2;">
+        <h1 style="font-size: 4em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">
+            About Us
+        </h1>
+        <p style="font-size: 1.5em; font-family: 'Georgia', serif; letter-spacing: 1px; line-height: 1.5;">
+            We are committed to fostering a sustainable world by creating engaging and educational experiences that inspire change. Join us on our journey to make sustainability fun and accessible for everyone!
+        </p>
+    </div>
+
+    <!-- Right Side: Image Design -->
+    <div style="
+        width: 45%; 
+        height: 100%; 
+        position: absolute; 
+        right: 0; 
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-image: url('your-plant-design.png'); /* Replace with your image file */
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+    ">
+    </div>
+
+</section>
 
 <!-- Footer Section -->
 <footer style="
