@@ -213,9 +213,9 @@
     <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center;">
         <img src="face1.jpg" alt="Arianna Seepersaud" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-    <!-- Name will appear only when selected -->
-    <div class="name" style="margin-top: 10px; color: #014D50; display: none;">
-        <p style="font-weight: bold; font-size: 1.2em;">Arianna Seepersaud</p>
+    <!-- New container for image with name -->
+    <div class="name-container" style="margin-top: 10px; color: #014D50;">
+        <img src="name-image1.png" alt="Arianna Seepersaud Name Image" style="width: 100%; height: auto;">
     </div>
 </div>
 
@@ -224,9 +224,9 @@
     <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center;">
         <img src="Arvinda.png" alt="Arvinda Comacho" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-    <!-- Name will appear only when selected -->
-    <div class="name" style="margin-top: 10px; color: #014D50; display: none;">
-        <p style="font-weight: bold; font-size: 1.4em;">Arvinda Comacho</p>
+    <!-- New container for image with name -->
+    <div class="name-container" style="margin-top: 10px; color: #014D50;">
+        <img src="name-image2.png" alt="Arvinda Comacho Name Image" style="width: 100%; height: auto;">
     </div>
 </div>
 
@@ -235,9 +235,9 @@
     <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center;">
         <img src="face3.jpg" alt="Darindra Charan" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-    <!-- Name will appear only when selected -->
-    <div class="name" style="margin-top: 10px; color: #014D50; display: none;">
-        <p style="font-weight: bold; font-size: 1.2em;">Darindra Charan</p>
+    <!-- New container for image with name -->
+    <div class="name-container" style="margin-top: 10px; color: #014D50;">
+        <img src="name-image3.png" alt="Darindra Charan Name Image" style="width: 100%; height: auto;">
     </div>
 </div>
 
@@ -248,12 +248,12 @@
     function updateFaces() {
         const faces = document.querySelectorAll('.face');
         faces.forEach((face, index) => {
-            const nameDiv = face.querySelector('.name');
+            const nameDiv = face.querySelector('.name-container');
             face.classList.remove('main-face');
-            nameDiv.style.display = 'none'; // Hide name by default
+            nameDiv.style.display = 'none'; // Hide name container by default
             if (index === currentFaceIndex) {
                 face.classList.add('main-face');
-                nameDiv.style.display = 'block'; // Show name when selected
+                nameDiv.style.display = 'block'; // Show name container when selected
                 face.style.width = '130px';
                 face.style.height = '130px';
             } else {
@@ -282,7 +282,51 @@
         transition: width 0.3s, height 0.3s;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
+    /* Arrows positioned closer */
+    #carousel {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    /* Arrow Styles */
+    .arrow {
+        position: absolute;
+        font-size: 2em;
+        color: #014D50;
+        cursor: pointer;
+    }
+
+    .arrow-left {
+        left: 20px;
+    }
+
+    .arrow-right {
+        right: 20px;
+    }
 </style>
+
+<!-- Carousel Structure -->
+<div id="carousel">
+    <!-- Left Arrow for Carousel Navigation -->
+    <div onclick="previousFace()" class="arrow arrow-left">
+        &#9664;
+    </div>
+
+    <!-- Face Images with Descriptions (Updated to new structure) -->
+    <div style="display: flex; align-items: center; gap: 30px;">
+        <!-- Faces here (already covered in code above) -->
+    </div>
+
+    <!-- Right Arrow for Carousel Navigation -->
+    <div onclick="nextFace()" class="arrow arrow-right">
+        &#9654;
+    </div>
+</div>
+
         </section>
 <!-- Footer Section -->
 <footer style="
