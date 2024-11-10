@@ -357,43 +357,50 @@
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
             <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
-            <p>Phone: <span>+123 456 7890</span></p>
+            <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
 
-        <!-- Middle Section: Social Media Links -->
-        <div style="flex: 1; min-width: 200px; text-align: center;">
-            <h3>Follow Us</h3>
-            <div style="display: flex; gap: 10px; justify-content: center;">
-                <a href="https://facebook.com" target="_blank" style="color: #ECECE9; text-decoration: none;">Facebook</a>
-                <a href="https://instagram.com" target="_blank" style="color: #ECECE9; text-decoration: none;">Instagram</a>
-                <a href="https://twitter.com" target="_blank" style="color: #ECECE9; text-decoration: none;">Twitter</a>
-            </div>
+        <!-- Center Section: Social Media Links -->
+        <div style="flex: 1; min-width: 200px; text-align: center; padding: 10px;">
+            <h3 style="color: #ECECE9;">Follow Us</h3>
+            <a href="https://www.facebook.com/people/The-Newer-Earth-Programme/61565747641949/?rdid=0QMA8aLVpjtyjk6I&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FjsrvtRrCVDyLw7H2%252F" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
+                <img src="facebook footer.png" alt="Facebook" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://www.instagram.com/newerearthprogramme/" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
+                <img src="instagram footer.png" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
         </div>
 
-        <!-- Right Section: Sitemap Links -->
-        <div style="flex: 1; min-width: 200px; text-align: right;">
-            <h3 style="color: #ECECE9;">Sitemap</h3>
-            <ul style="list-style-type: none;">
-                <li><a href="home.html" style="color: #ECECE9; text-decoration: none;">Home</a></li>
-                <li><a href="aboutus.html" style="color: #ECECE9; text-decoration: none;">About Us</a></li>
-                <li><a href="learninghub.html" style="color: #ECECE9; text-decoration: none;">Learning Hub</a></li>
-                <li><a href="events.html" style="color: #ECECE9; text-decoration: none;">Events</a></li>
-            </ul>
+        <!-- Right Section: Quick Links -->
+        <div style="flex: 1; min-width: 200px; text-align: right; padding: 10px;">
+            <h3 style="color: #ECECE9;">Quick Links</h3>
+            <a href="index.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Home</a>
+            <a href="about us.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">About Us</a>
+            <a href="landscape aesthetics.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Landscape Aesthetics</a>
+            <a href="learning hub.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Learning Hub</a>
+                <a href="what's blooming.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">What's Blooming</a>
+                <a href="debunking.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Debunking</a>
+            <a href="events.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Events</a>
         </div>
     </div>
-</footer>
 
-<script>
-    // Toggle transparent banner when scrolling
-    window.addEventListener('scroll', function() {
-        const banner = document.querySelector('.banner');
-        if (window.scrollY > 50) {
-            banner.classList.add('transparent');
-        } else {
-            banner.classList.remove('transparent');
-        }
-    });
-</script>
+    <!-- Copyright Section -->
+    <div style="margin-top: 20px; text-align: center;">
+        <p>&copy; 2024 Newer Earth. All rights reserved.</p>
+    </div>
+</footer>
+        
+    <!-- JavaScript for Transparent Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const banner = document.querySelector('.banner');
+            if (window.scrollY > 50) {
+                banner.classList.add('transparent');
+            } else {
+                banner.classList.remove('transparent');
+            }
+        });
+    </script>
 
 </body>
 </html>
