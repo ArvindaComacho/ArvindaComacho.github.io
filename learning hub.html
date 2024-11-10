@@ -159,6 +159,29 @@
             }
         });
     </script>
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById("dropdownContent");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Close the dropdown if clicked outside
+    window.onclick = function(event) {
+        if (!event.target.matches('button')) {
+            const dropdown = document.getElementById("dropdownContent");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        }
+    }
+</script>
+            <!-- CSS for hover styling-->
+        <style>
+    #dropdownContent a:hover {
+        background-color: rgba(153, 184, 29, 0.2);
+        border-radius: 5px;
+    }
+</style>
 
 </body>
 </html>
