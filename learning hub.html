@@ -1,5 +1,151 @@
-<html>
-<body>
-THIS IS THE LEARNING HUB PAGE!!!!!!!!!!!!!!!!!!
-</body> 
-<html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newer Earth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding-top: 80px; /* To avoid content hiding behind banner */
+        }
+
+        /* Banner Style */
+        .banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #ccc;
+            transition: background 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        /* Banner changes to semi-transparent on scroll */
+        .banner.transparent {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Logo placeholder */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        /* Navigation style */
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: bold;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #014D50;
+        }
+
+        /* Underline effect on hover */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #014D50;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Search Bar style */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            width: 200px;
+            transition: width 0.4s ease;
+            font-size: 1rem;
+        }
+
+        .search-bar:focus {
+            width: 300px;
+            border-color: #014D50;
+            outline: none;
+        }
+    </style>
+</head>
+    <body>
+
+    <!-- Banner Section -->
+    <header class="banner">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="Logo.png"> <!-- Replace with your logo image file -->
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about us.html">About Us</a>
+            <a href="landscape aesthetics.html">Landscape Aesthetics</a>
+            <a href="learning hub.html">Learning Hub</a>
+            <a href="events.html">Events</a>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+    </header>
+        
+    <!-- JavaScript for Transparent Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const banner = document.querySelector('.banner');
+            if (window.scrollY > 50) {
+                banner.classList.add('transparent');
+            } else {
+                banner.classList.remove('transparent');
+            }
+        });
+    </script>
+
+</body>
+</html>
