@@ -57,7 +57,6 @@
         .nav-links {
             display: flex;
             gap: 20px;
-            position: relative;
         }
 
         .nav-links a {
@@ -111,40 +110,6 @@
             border-color: #014D50;
             outline: none;
         }
-
-        /* Dropdown Styling */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 4px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            backdrop-filter: blur(10px);
-            border: 1px solid #ccc;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 20px;
-            text-decoration: none;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f0f0;
-        }
     </style>
 </head>
     <body>
@@ -161,16 +126,7 @@
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
-
-            <!-- Learning Hub Dropdown -->
-            <div class="dropdown">
-                <a href="learning hub.html">Learning Hub</a>
-                <div class="dropdown-content">
-                    <a href="what's blooming.html">What's Blooming</a>
-                    <a href="debunking.html">Debunking</a>
-                </div>
-            </div>
-
+            <a href="learning hub.html">Learning Hub</a>
             <a href="events.html">Events</a>
         </nav>
 
@@ -183,66 +139,212 @@
     <!-- Main Content (For Testing Scroll) -->
 <main>
     <!-- Full-Screen Intro Section with Background Image and Whitespace on the Sides -->
-    <section style="height: 100vh; max-width: 100%; display: flex; align-items: center; justify-content: center; text-align: center; background-image: url('Home Page background.jpg'); background-size: cover; background-position: center; background-attachment: fixed; padding: 0 10%; color: white; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
+    <section style="
+        height: 100vh; 
+        max-width: 100%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        background-image: url('Home Page background.jpg'); /* Replace with your image path */
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: fixed;
+        padding: 0 10%; /* Adds horizontal padding (whitespace) on the sides */
+        color: white;
+        position: relative;
+    ">
+        <!-- Overlay for better text contrast -->
+        <div style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        "></div>
+
+        <!-- Centered Text Content -->
         <div style="position: relative; z-index: 2;">
-            <h1 style="font-size: 6em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">The Environment Matters</h1>
-            <p style="font-size: 2em; font-family: 'Georgia', serif; letter-spacing: 1px;">making sustainability fun</p>
+            <h1 style="font-size: 6em; font-weight: 700; margin-bottom: 20px; line-height: 1.1;">
+                The Environment Matters
+            </h1>
+            <p style="font-size: 2em; font-family: 'Georgia', serif; letter-spacing: 1px;">
+                making sustainability fun
+            </p>
         </div>
     </section>
 
     <!-- Two-Column Section (Logo + Text on Left, Image on Right) -->
-    <section style="display: flex; align-items: flex-start; justify-content: center; padding: 40px; background-color: #f8f8f8; max-width: 1200px; margin: 0 auto; gap: 40px;">
+    <section style="
+        display: flex; 
+        align-items: flex-start; 
+        justify-content: center; 
+        padding: 40px; 
+        background-color: #f8f8f8; 
+        max-width: 1200px; 
+        margin: 0 auto;
+        gap: 40px;
+    ">
+        <!-- Left Column: Logo and Text -->
         <div style="flex: 1; color: #333;">
+            <!-- Logo at the Mid-Top Left -->
             <div style="display: flex; align-items: center; margin-bottom: 20px;">
                 <img src="Logo.png" alt="Logo" style="width: 150px; height: auto; margin-right: 10px;">
             </div>
+            <!-- Text Content Below the Logo -->
             <div>
                 <h2 style="font-size: 2.5em; margin-bottom: 20px;">We bring sustainability to unexpected places.</h2>
-                <p style="font-size: 1.2em; line-height: 1.8; color: #555;">Whether it's planting a native wildflower border in your backyard, teaching novice gardeners to grow their own food, or helping locals with environmental conservation practices, we empower homeowners to help the environment.</p>
-                <p style="font-size: 1.2em; line-height: 1.8; color: #555;">Each small step helps us to create a newer earth for future generations.</p>
+                <p style="font-size: 1.2em; line-height: 1.8; color: #555;">
+                    Whether it's planting a native wildflower border in your backyard,
+                    teaching novice gardeners to grow their own food, or helping locals
+                    with environmental conservation practices, we empower homeowners to help
+                    the environment.
+                </p>
+                <p style="font-size: 1.2em; line-height: 1.8; color: #555;">
+                    Each small step helps us to create a newer earth for future generations.
+                </p>
             </div>
         </div>
+
+        <!-- Right Column: Image -->
         <div style="flex: 1;">
             <img src="sustainability image.png" alt="sustainability image" style="width: 100%; border-radius: 10px;">
         </div>
     </section>
-
-    <!-- Third Section: Statistics Start -->
-    <section style="padding: 60px 0; text-align: center; background-color: #f9f9f9;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
-                <!-- Years -->
-                <div>
-                    <span style="font-size: 3em; font-weight: bold; color: #2f4f4f; font-family: 'Pacifico', cursive;">1</span>
-                    <div style="margin: 10px 0;">
-                        <img src="star.png" alt="Star" style="height: 24px;">
-                    </div>
-                    <span style="font-size: 1.5em; color: #6b8e23; font-family: 'Pacifico', cursive;">Years</span>
+<!-- Third Section: Statistics Start -->
+<section style="
+    padding: 60px 0; 
+    text-align: center; 
+    background-color: #f9f9f9;
+">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+            <!-- Years -->
+            <div>
+                <span style="font-size: 3em; font-weight: bold; color: #2f4f4f; font-family: 'Pacifico', cursive;">1</span>
+                <div style="margin: 10px 0;">
+                    <img src="star.png" alt="Star" style="height: 24px;">
                 </div>
-                
-                <!-- Programmes -->
-                <div>
-                    <span style="font-size: 3em; font-weight: bold; color: #2f4f4f; font-family: 'Pacifico', cursive;">0</span>
-                    <div style="margin: 10px 0;">
-                        <img src="star.png" alt="Star" style="height: 24px;">
-                    </div>
-                    <span style="font-size: 1.5em; color: #6b8e23; font-family: 'Pacifico', cursive;">Programmes</span>
+                <span style="font-size: 1.5em; color: #6b8e23; font-family: 'Pacifico', cursive;">Years</span>
+            </div>
+            
+            <!-- Programmes -->
+            <div>
+                <span style="font-size: 3em; font-weight: bold; color: #2f4f4f; font-family: 'Pacifico', cursive;">0</span>
+                <div style="margin: 10px 0;">
+                    <img src="star.png" alt="Star" style="height: 24px;">
                 </div>
+                <span style="font-size: 1.5em; color: #6b8e23; font-family: 'Pacifico', cursive;">Programmes</span>
+            </div>
+            
+            <!-- Participants -->
+            <div>
+                <span style="font-size: 3em; font-weight: bold; color: #2f4f4f; font-family: 'Pacifico', cursive;">3</span>
+                <div style="margin: 10px 0;">
+                    <img src="star.png" alt="Star" style="height: 24px;">
+                </div>
+                <span style="font-size: 1.5em; color: #6b8e23; font-family: 'Pacifico', cursive;">Participants</span>
+            </div>
+            
+            <!-- Volunteers -->
+            <div>
+                <span style="font-size: 3em; font-weight: bold; color: #2f4f4f; font-family: 'Pacifico', cursive;">3</span>
+                <div style="margin: 10px 0;">
+                    <img src="star.png" alt="Star" style="height: 24px;">
+                </div>
+                <span style="font-size: 1.5em; color: #6b8e23; font-family: 'Pacifico', cursive;">Volunteers</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- Third Section: Statistics End -->
 
-    <!-- Footer Section -->
-    <footer style="background-color: #014D50; color: white; padding: 40px 0; text-align: center; font-size: 0.9em;">
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <a href="about us.html" style="color: white; text-decoration: none;">About Us</a>
-            <a href="events.html" style="color: white; text-decoration: none;">Events</a>
-            <a href="contact us.html" style="color: white; text-decoration: none;">Contact Us</a>
+<!-- Fourth Section: People Powered Start -->
+<section style="
+    display: flex; 
+    flex-direction: row-reverse; 
+    align-items: flex-start; 
+    justify-content: center; 
+    padding: 40px; 
+    background-color: #014D50;  
+    max-width: 1200px; 
+    margin: 0 auto;
+    gap: 40px;
+">
+    <!-- Right Column: Text -->
+    <div style="flex: 1;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #FFFFFF;">People Powered.</h2>
+        <p style="font-size: 1.2em; line-height: 1.8; color: #FFFFFF;">
+            Newer Earth thrives on community support. We're not backed by large funds or national
+            organizations. Through determination and effort, we aim to rejuvenate our community's
+            natural environment, making it a welcoming space for all its inhabitants.
+        </p>
+
+        <p style="font-size: 1.2em; line-height: 1.8; color: #FFFFFF;">
+            With your assistance, we aspire to build partnerships with national
+            agencies, non-profits, and local farms.
+        </p>
+
+        <p style="font-size: 1.2em; line-height: 1.8; color: #FFFFFF;">
+            If you believe that the environment matters, get involved! 
+        </p>
+    </div>
+
+    <!-- Left Column: Image -->
+    <div style="flex: 1;">
+        <img src="people powered image.png" alt="People Powered Image" style="width: 100%; border-radius: 10px;">
+    </div>
+</section>
+<!-- Fourth Section: People Powered End -->
+</main>
+<!-- Footer Section -->
+<footer style="
+    background-color: #014D50; 
+    color: white; 
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9em;
+">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+        <!-- Left Section: Motto and Contact Information -->
+        <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
+            <h3 style="color: #ECECE9;">The Environment Matters</h3>
+            <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
+            <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
-        <p style="margin-top: 20px;">© 2024 Newer Earth. All rights reserved.</p>
-    </footer>
 
+        <!-- Center Section: Social Media Links -->
+        <div style="flex: 1; min-width: 200px; text-align: center; padding: 10px;">
+            <h3 style="color: #ECECE9;">Follow Us</h3>
+            <a href="https://www.facebook.com/people/The-Newer-Earth-Programme/61565747641949/?rdid=0QMA8aLVpjtyjk6I&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FjsrvtRrCVDyLw7H2%252F" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
+                <img src="facebook footer.png" alt="Facebook" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://www.instagram.com/newerearthprogramme/" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
+                <img src="instagram footer.png" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+
+        <!-- Right Section: Quick Links -->
+        <div style="flex: 1; min-width: 200px; text-align: right; padding: 10px;">
+            <h3 style="color: #ECECE9;">Quick Links</h3>
+            <a href="index.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Home</a>
+            <a href="about us.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">About Us</a>
+            <a href="landscape aesthetics.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Landscape Aesthetics</a>
+            <a href="learning hub.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Learning Hub</a>
+                <a href="what's blooming.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">What's Blooming</a>
+                <a href="debunking.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Debunking</a>
+            <a href="events.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Events</a>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div style="margin-top: 20px; text-align: center;">
+        <p>&copy; 2024 Newer Earth. All rights reserved.</p>
+    </div>
+</footer>
+        
     <!-- JavaScript for Transparent Scroll Effect -->
     <script>
         window.addEventListener('scroll', function () {
