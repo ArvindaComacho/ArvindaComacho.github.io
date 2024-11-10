@@ -91,6 +91,38 @@
             transform: scaleX(1);
         }
 
+        /* Learning Hub Link Styling */
+        .nav-links .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: bold;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links .nav-link:hover {
+            color: #014D50;
+        }
+
+        /* Underline effect on hover for Learning Hub link */
+        .nav-links .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #014D50;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
         /* Dropdown Menu Styling */
         .dropdown {
             position: relative;
@@ -145,7 +177,42 @@
         }
     </style>
 </head>
-    <body>
+<body>
+    
+<!-- Banner Section -->
+<header class="banner">
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="Logo.png"> <!-- Replace with your logo image file -->
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="landscape aesthetics.html">Landscape Aesthetics</a>
+        
+        <!-- Learning Hub Dropdown -->
+        <div class="dropdown">
+            <a href="#" class="nav-link">Learning Hub</a>
+            <div class="dropdown-menu">
+                <a href="whats blooming.html">What's Blooming</a>
+                <a href="debunking.html">Debunking</a>
+            </div>
+        </div>
+        
+        <a href="events.html">Events</a>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+</header>
+
+</body>
+</html>
+
 
     <!-- Banner Section -->
     <header class="banner">
@@ -161,9 +228,9 @@
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
             
             <!-- Learning Hub Dropdown -->
-            <div class="dropdown" style="position: relative;">
-                <span class="dropdown-btn">Learning Hub</span>
-                <div id="dropdownContent">
+            <div class="dropdown">
+                <a href="#" class="nav-link">Learning Hub</a>
+                <div class="dropdown-menu">
                     <a href="whats blooming.html">What's Blooming</a>
                     <a href="debunking.html">Debunking</a>
                 </div>
