@@ -110,29 +110,55 @@
             outline: none;
         }
 
-        /* Section Styles */
+       /* Section styling */
         .section {
-            padding: 40px 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            background-color: #ECECE9;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
         }
 
         .section img {
-            width: 100%;
-            max-width: 600px;
+            width: 45%;
             height: auto;
-            margin-bottom: 20px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
-        .section h2 {
-            font-size: 2rem;
-            color: #014D50;
-            margin-bottom: 20px;
+        .text-image-container {
+            width: 45%;
+            text-align: center;
+            padding: 20px;
         }
 
-        .section p {
+        .text-image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text-image-container button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #014D50;
+            color: white;
             font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-image-container button:hover {
+            background-color: #012f33;
         }
     </style>
 </head>
@@ -160,25 +186,48 @@
         </div>
     </header>
 
-    <!-- Section 1 -->
+  <!-- Section 1: Image Left, Text Right -->
     <section class="section">
-        <img src="image1.jpg" alt="Image 1"> <!-- Replace with your image -->
-        <h2>Welcome to Newer Earth</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nisi eget urna placerat fringilla.</p>
+        <div class="section-content">
+            <img src="image1.jpg" alt="Landscape 1">
+            <div class="text-image-container">
+                <img src="text1.png" alt="Text 1">
+                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Section 2 -->
-    <section class="section" style="background-color: #e6f7f8;">
-        <img src="image2.jpg" alt="Image 2"> <!-- Replace with your image -->
-        <h2>Our Mission</h2>
-        <p>Ut vulputate, ligula in aliquet auctor, ex orci feugiat nulla, in accumsan lacus elit non sapien.</p>
+    <!-- Section 2: Text Left, Image Right -->
+    <section class="section">
+        <div class="section-content">
+            <div class="text-image-container">
+                <img src="text2.png" alt="Text 2">
+                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
+            </div>
+            <img src="image2.jpg" alt="Landscape 2">
+        </div>
     </section>
 
-    <!-- Section 3 -->
+    <!-- Section 3: Image Left, Text Right -->
     <section class="section">
-        <img src="image3.jpg" alt="Image 3"> <!-- Replace with your image -->
-        <h2>Join Us</h2>
-        <p>Morbi a felis libero. Suspendisse potenti. Vivamus congue dui ac tortor gravida, eget venenatis eros hendrerit.</p>
+        <div class="section-content">
+            <img src="image3.jpg" alt="Landscape 3">
+            <div class="text-image-container">
+                <img src="text3.png" alt="Text 3">
+                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Text Left, Image Right -->
+    <section class="section">
+        <div class="section-content">
+            <div class="text-image-container">
+                <img src="text4.png" alt="Text 4">
+                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
+            </div>
+            <img src="image4.jpg" alt="Landscape 4">
+        </div>
     </section>
         
       <!-- Footer Section -->
