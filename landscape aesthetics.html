@@ -160,6 +160,9 @@
         .text-image-container button:hover {
             background-color: #012f33;
         }
+        .dropdown.active . dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
     <body>
@@ -176,7 +179,22 @@
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
-            <a href="learning hub.html">Learning Hub</a>
+            
+             <!-- Learning Hub Dropdown -->
+        <div class="dropdown">
+            <a href="#" class="nav-link">Learning Hub</a>
+            <div class="dropdown-menu">
+                <a href="whats blooming.html">What's Blooming</a>
+                <a href="debunking.html">Debunking</a>
+            </div>
+        </div>
+
+        <a href="events.html">Events</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
             <a href="events.html">Events</a>
         </nav>
 
