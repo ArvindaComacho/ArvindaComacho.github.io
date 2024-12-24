@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="favicon.jpg">
-    <title>Landscape Aesthetics</title>
+    <title>Newer Earth</title>
     <style>
         * {
             margin: 0;
@@ -16,6 +16,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            padding-top: 80px; /* To avoid content hiding behind banner */
         }
 
         /* Banner Style */
@@ -34,10 +35,27 @@
             z-index: 1000;
         }
 
+        /* Banner changes to semi-transparent on scroll */
+        .banner.transparent {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Logo placeholder */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
         .logo img {
             width: 50px;
             height: auto;
             margin-right: 15px;
+        }
+
+        /* Navigation style */
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
 
         .nav-links a {
@@ -45,72 +63,89 @@
             color: #333;
             font-size: 1rem;
             font-weight: bold;
-            margin-right: 15px;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
             color: #014D50;
         }
 
-        /* Section styling */
-        .section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 20px;
-            background-color: #ECECE9;
+        /* Underline effect on hover */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #014D50;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
-        .section-content {
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Search Bar style */
+        .search-container {
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 80%;
+        }
+
+        .search-bar {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            width: 200px;
+            transition: width 0.4s ease;
+            font-size: 1rem;
+        }
+
+        .search-bar:focus {
+            width: 300px;
+            border-color: #014D50;
+            outline: none;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
         }
 
         .section img {
-            width: 45%;
+            width: 100%;
+            max-width: 600px;
             height: auto;
-            object-fit: cover;
-            border-radius: 10px;
+            margin-bottom: 20px;
         }
 
-        .text-image-container {
-            width: 45%;
-            text-align: center;
-            padding: 20px;
+        .section h2 {
+            font-size: 2rem;
+            color: #014D50;
+            margin-bottom: 20px;
         }
 
-        .text-image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .text-image-container button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #014D50;
-            color: white;
+        .section p {
             font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .text-image-container button:hover {
-            background-color: #012f33;
+            color: #555;
+            line-height: 1.6;
         }
     </style>
 </head>
-<body>
+    <body>
 
     <!-- Banner Section -->
     <header class="banner">
+        <!-- Logo Section -->
         <div class="logo">
-            <img src="Logo.png" alt="Logo">
+            <img src="Logo.png"> <!-- Replace with your logo image file -->
         </div>
+
+        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
@@ -118,52 +153,45 @@
             <a href="learning hub.html">Learning Hub</a>
             <a href="events.html">Events</a>
         </nav>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
     </header>
 
-    <!-- Section 1: Image Left, Text Right -->
+    <!-- Section 1 -->
     <section class="section">
-        <div class="section-content">
-            <img src="image1.jpg" alt="Landscape 1">
-            <div class="text-image-container">
-                <img src="text1.png" alt="Text 1">
-                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
-            </div>
-        </div>
+        <img src="image1.jpg" alt="Image 1"> <!-- Replace with your image -->
+        <h2>Welcome to Newer Earth</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non nisi eget urna placerat fringilla.</p>
     </section>
 
-    <!-- Section 2: Text Left, Image Right -->
-    <section class="section">
-        <div class="section-content">
-            <div class="text-image-container">
-                <img src="text2.png" alt="Text 2">
-                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
-            </div>
-            <img src="image2.jpg" alt="Landscape 2">
-        </div>
+    <!-- Section 2 -->
+    <section class="section" style="background-color: #e6f7f8;">
+        <img src="image2.jpg" alt="Image 2"> <!-- Replace with your image -->
+        <h2>Our Mission</h2>
+        <p>Ut vulputate, ligula in aliquet auctor, ex orci feugiat nulla, in accumsan lacus elit non sapien.</p>
     </section>
 
-    <!-- Section 3: Image Left, Text Right -->
+    <!-- Section 3 -->
     <section class="section">
-        <div class="section-content">
-            <img src="image3.jpg" alt="Landscape 3">
-            <div class="text-image-container">
-                <img src="text3.png" alt="Text 3">
-                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
-            </div>
-        </div>
+        <img src="image3.jpg" alt="Image 3"> <!-- Replace with your image -->
+        <h2>Join Us</h2>
+        <p>Morbi a felis libero. Suspendisse potenti. Vivamus congue dui ac tortor gravida, eget venenatis eros hendrerit.</p>
     </section>
-
-    <!-- Section 4: Text Left, Image Right -->
-    <section class="section">
-        <div class="section-content">
-            <div class="text-image-container">
-                <img src="text4.png" alt="Text 4">
-                <button onclick="window.open('https://example.com', '_blank')">Explore</button>
-            </div>
-            <img src="image4.jpg" alt="Landscape 4">
-        </div>
-    </section>
+        
+    <!-- JavaScript for Transparent Scroll Effect -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const banner = document.querySelector('.banner');
+            if (window.scrollY > 50) {
+                banner.classList.add('transparent');
+            } else {
+                banner.classList.remove('transparent');
+            }
+        });
+    </script>
 
 </body>
 </html>
-
