@@ -187,14 +187,31 @@
     </header>
 
     <!-- Section 1: Image Left, Text Right -->
-    <section class="section">
-        <div class="section-content">
-            <img src="landscape aesthetics image text.png" alt="Landscape Title">
-            <div class="text-image-container">
-                <img src="text0.png" alt="Overview text">
-            </div>
+<section style="height: 100vh; display: flex; align-items: center; justify-content: center; background-image: url('your-background-image.jpg'); background-size: cover; background-position: center; position: relative;">
+    <div style="width: 80%; display: flex; justify-content: space-between; align-items: center; color: white;">
+        <!-- Left side: Landscape Aesthetics Image Text -->
+        <div style="width: 40%; text-align: center;">
+            <img src="landscape-aesthetics-text.png" alt="Landscape Aesthetics" style="max-width: 100%; height: auto;">
         </div>
-    </section>
+
+        <!-- Right side: Overview Text -->
+        <div style="width: 50%; text-align: left; padding-left: 20px;">
+            <h2 style="font-size: 2rem;">Overview</h2>
+            <p style="font-size: 1.2rem;">Discover the beauty and sustainability of landscape aesthetics, designed to enhance both functionality and visual appeal in outdoor spaces. Explore various landscaping techniques, plants, and materials for a greener environment.</p>
+        </div>
+    </div>
+
+    <!-- Transparent Explore Button with Down Arrow -->
+    <a href="#next-section" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 15px 30px; background-color: rgba(0, 0, 0, 0.4); color: white; text-decoration: none; font-size: 1.5rem; border-radius: 5px; display: inline-block; text-align: center; transition: background-color 0.3s;">
+        Explore
+        <span style="display: block; font-size: 1.5rem; margin-top: 5px;">↓</span>
+    </a>
+</section>
+
+<!-- The next section (example) -->
+<section id="next-section" style="height: 100vh; background-color: #ECECE9;">
+    <!-- Content of the next section goes here -->
+</section>
         
   <!-- Section 2: Image Left, Text Right -->
  <section style="height: 100vh; background-color: #ECECE9; display: flex; align-items: center; justify-content: center; text-align: left;">
