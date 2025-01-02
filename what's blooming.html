@@ -205,7 +205,70 @@
             border-color: #014D50;
             outline: none;
         }
-    </style>
+
+        /* Fullscreen Background Section */
+        .fullscreen-section {
+            height: 100vh; /* Full viewport height */
+            background: url('background-image.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding: 0 50px; /* Adjust left padding for centering text image */
+        }
+        
+        /* Content Container */
+        .content-container {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Text Image */
+        .text-image {
+            max-width: 300px; /* Adjust the size of your text image */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        /* Explore Button Styling */
+        .explore-button img {
+            width: 50px; /* Adjust size for Explore button/image */
+            height: auto;
+            cursor: pointer;
+            animation: bounce 2s infinite; /* Optional animation */
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Next Section */
+        .next-section {
+            height: 100vh; /* Full viewport height for the next section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5; /* Adjust as needed */
+            padding: 50px;
+        }
+        
+        .next-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .next-section p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+            </style>
 </head>
 <body>
     
@@ -276,6 +339,22 @@
     </header>
 
 <main>
+    <!-- Fullscreen Background Section -->
+    <section class="fullscreen-section">
+        <div class="content-container">
+            <img src="text-image.png" alt="What's Blooming Text" class="text-image">
+            <a href="#next-section" class="explore-button">
+                <img src="explore-image.png" alt="Explore">
+            </a>
+        </div>
+    </section>
+
+    <!-- Next Section -->
+    <section id="next-section" class="next-section">
+        <h2>Welcome to the next section</h2>
+        <p>Here is the content for the next section of the webpage.</p>
+    </section>
+</main>
 
 
 <!-- Footer Section -->
