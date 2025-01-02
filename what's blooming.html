@@ -252,27 +252,48 @@
         .next-section {
             height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Ensures elements stack vertically */
+            align-items: center; /* Centers the heading image and the boxes */
             justify-content: center;
             background-color: #f5f5f5;
             padding: 50px;
         }
         
-        .next-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .heading-image {
+            text-align: center; /* Centers the heading image */
+            margin-bottom: 30px; /* Space between heading image and boxes */
         }
         
-        .next-section p {
-            font-size: 1.2rem;
-            color: #333;
+        .centered-image {
+            max-width: 100%;
+            height: auto;
         }
+        
+        .link-boxes {
+            display: flex;
+            gap: 25px; /* Adds gap between the boxes */
+            justify-content: center; /* Ensures the boxes are centered horizontally */
+            width: 100%;
+        }
+        
+        .link-box img {
+            width: 200px; /* Adjust the size of each image */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .link-box img:hover {
+            transform: scale(1.05);
+        }       
         
         html {
             scroll-behavior: smooth;
         }
         
         </style>
+    
 </head>
 <body>
     
@@ -323,21 +344,20 @@
 
  <!-- Target Section -->
 <section id="next-section" class="next-section">
-    <!-- Heading Image (Text Image) at the top center -->
-    <div class="heading-image" style="text-align: center; margin-bottom: 30px;">
-        <img src="hey homeowners.png" alt="Heading Image" style="max-width: 70%; height: auto;">
+    <div class="heading-image">
+        <img src="hey homeowners.png" alt="Heading Image" class="centered-image">
     </div>
 
-    <!-- Boxes for Links with 25px gap between them -->
-    <div class="link-boxes" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
+    <!-- Boxes for Links -->
+    <div class="link-boxes">
         <a href="renewable energy.html" class="link-box">
-            <img src="renewable energy.png" alt="Renewable Energy" style="width: 100%; max-width: 200px; height: auto;">
+            <img src="renewable energy.png" alt="Renewable Energy">
         </a>
         <a href="why it matters.html" class="link-box">
-            <img src="why it matters.png" alt="Why It Matters" style="width: 100%; max-width: 200px; height: auto;">
+            <img src="why it matters.png" alt="Why It Matters">
         </a>
         <a href="3rs.html" class="link-box">
-            <img src="three rs.png" alt="3 Rs of Waste Management" style="width: 100%; max-width: 200px; height: auto;">
+            <img src="three rs.png" alt="3 Rs of Waste Management">
         </a>
     </div>
 </section>
