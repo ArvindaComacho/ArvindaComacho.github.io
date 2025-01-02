@@ -271,22 +271,27 @@
         
         .link-boxes {
             display: flex;
-            gap: 25px; /* Adds gap between the boxes */
+            gap: 30px; /* Adds gap between the boxes */
             justify-content: center; /* Ensures the boxes are centered horizontally */
             width: 100%;
         }
         
-        .link-box img {
-            width: 200px; /* Adjust the size of each image */
-            height: 200;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .link-box {
+            width: 250px;  /* Adjust the width of the box */
+            height: 250px; /* Adjust the height of the box */
+            display: flex;
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: box shadow for the box itself */
         }
         
-        .link-box img:hover {
-            transform: scale(1.05);
-        }       
-        
+        .link-box img {
+            width: 100%;  /* Make the image fill the box */
+            height: 100%; /* Adjust the height of the image */
+            object-fit: cover; /* Ensures the image covers the box without distortion */
+            transition: transform 0.3s ease; /* Animation for hover effect */
+        }    
+                
         html {
             scroll-behavior: smooth;
         }
