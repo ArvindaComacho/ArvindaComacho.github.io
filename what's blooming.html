@@ -271,38 +271,31 @@
         
         .link-boxes {
             display: flex;
-            gap: 35px; /* Adds gap between the boxes */
-            justify-content: center; /* Ensures the boxes are centered horizontally */
+            gap: 35px; /* Adds gap between the images */
+            justify-content: center; /* Ensures the images are centered horizontally */
             width: 100%;
         }
         
-        .link-box {
-            width: 250px;  /* Adjust the width of the box */
-            height: 250px; /* Adjust the height of the box */
-            display: flex;
-            justify-content: center; /* Centers the content horizontally */
-            align-items: center; /* Centers the content vertically */
-            overflow: hidden; /* Ensures no content overflows the box */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1; /* Optional: box shadow for the box itself */
-        }
-        
-        .link-box img {
-            width: auto;  /* Make the image fill the box */
-            height: auto; /* Adjust the height of the image */
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 12px; /* Rounds the corners of the image */
+        .link-boxes a {
+            display: inline-block; /* Makes the image clickable */
             transition: transform 0.3s ease; /* Animation for hover effect */
         }
         
-        .link-box img:hover {
+        .link-boxes img {
+            width: 100%; /* Makes the image fill its container */
+            height: auto; /* Maintains the aspect ratio of the image */
+            border-radius: 12px; /* Rounds the corners of the image */
+            object-fit: cover; /* Ensures the image covers the container */
+        }
+        
+        .link-boxes a:hover img {
             transform: scale(1.05); /* Makes the image grow slightly on hover */
         }
-                
+        
         html {
             scroll-behavior: smooth;
         }
-        
+
         </style>
     
 </head>
