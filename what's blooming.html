@@ -273,34 +273,61 @@
         }
 
         .heading-image img {
-            max-width: 70%;
+            max-width: 100%;
             height: auto;
             max-height: 150px
+            margin-bottom: 20px;
         }
 
-        .link-boxes {
+       .link-boxes {
             display: flex;
-            justify-content: space-between;
-            gap: 20px;
+            justify-content: center; /* Center align boxes */
+            gap: 25px;
             width: 100%;
             margin-top: 20px;
         }
 
         .link-box {
-            width: 30%; /* Decreased size */
-            height: 150px; /* Reduced height */
+            width: 30%; /* Set a fixed width for the boxes */
+            height: 150px;
             cursor: pointer;
+            display: flex; /* Ensure that the box behaves as a block container */
+            justify-content: center; /* Center content inside the box */
+            align-items: center;
         }
-
+        
         .link-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease-in-out;
         }
-
+        
         .link-box img:hover {
             transform: scale(1.1);
+        }
+        
+        /* Adjust container padding and centering */
+        .fullscreen-section {
+            height: 100vh;
+            background: url('Sunflower.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content */
+            position: relative;
+            padding: 0 50px;
+        }
+        
+        /* Ensure proper layout on the main section */
+        .next-section {
+            height: auto;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 50px;
+            text-align: center;
         }
         
         html {
