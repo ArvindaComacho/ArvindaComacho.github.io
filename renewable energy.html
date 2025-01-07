@@ -221,6 +221,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
         
         .top-half-image {
@@ -240,12 +241,14 @@
         /* Bottom Half Styling */
         .bottom-half {
             background: #F6F6F4;
-            margin: -40px auto 50px; /* Overlap the top image slightly and center */
+            margin-top: -50px; /* Overlap the top image slightly and center */
             padding: 30px;
-            max-width: 1000px;
+            max-width: 1100px;
             border-radius: 12px; /* Rounded corners for a clean look */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
             text-align: center;
+            position: relative; 
+            z-index: 1;
         }
         
         /* Content Blocks Styling */
