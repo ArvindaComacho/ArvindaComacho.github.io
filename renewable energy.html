@@ -264,8 +264,34 @@
         /* Content Blocks Styling */
         .content-block {
             margin-bottom: 30px; /* Spacing between content blocks */
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        /* Image Row Styling */
+        .image-row {
+            display: flex;  /* Flexbox for horizontal alignment */
+            justify-content: space-between;  /* Distribute the images evenly */
+            margin-bottom: 20px;  /* Add some space below the rows */
         }
         
+        /* Image Styling */
+        .image-row a {
+            display: block;
+            width: 30%;  /* Adjust size of each image (change as needed) */
+            text-align: center;
+        }
+        
+        .image-row img {
+            width: 100%;  /* Image takes the full width of the container */
+            height: auto;  /* Maintain aspect ratio */
+        }
+        
+        /* Add a little gap between the images if needed */
+        .image-row a + a {
+            margin-left: 10px;
+        }
+        ---
         /* Section Heading Images Styling */
         .section-heading-image {
             width: 100%; /* Adjust size of your text image */
@@ -387,35 +413,28 @@
             <img src="content heading 2.png" alt="How Does Renewable Energy Work?" class="section-heading-image">
             <p>
                 Renewable energy sources, such as biomass, the heat in the earth’s crust, sunlight, water, and wind,
-                are natural resources that can be converted into several types of clean, usable energy:
+                are natural resources that can be converted into several types of clean, usable energy. Explore the following ways of renewable energy below:
             </p>
-                    <ul>
-                        <li>
-                            <a href="https://www.energy.gov/eere/solar/solar-energy-united-states" target="_blank">
-                                <img src="solar.png" alt="Solar Energy" style="width: 50px; height: auto;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.energy.gov/eere/wind/advantages-and-challenges-wind-energy" target="_blank">
-                                <img src="wind.png" alt="Wind Energy" style="width: 50px; height: auto;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.energy.gov/eere/water/advantages-and-challenges-hydropower" target="_blank">
-                                <img src="hydropower.png" alt="Hydropower" style="width: 50px; height: auto;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.energy.gov/eere/geothermal/advantages-and-challenges-geothermal-energy" target="_blank">
-                                <img src="geothermal.png" alt="Geothermal Energy" style="width: 50px; height: auto;">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.energy.gov/eere/bioenergy/advantages-and-challenges-biomass-energy" target="_blank">
-                                <img src="biomass.png" alt="Biomass Energy" style="width: 50px; height: auto;">
-                            </a>
-                        </li>
-                    </ul>
+                <div class="image-row">
+                    <a href="https://www.energy.gov/eere/solar/solar-energy-united-states" target="_blank">
+                        <img src="solar.png" alt="Solar Energy">
+                    </a>
+                    <a href="https://www.energy.gov/eere/wind/advantages-and-challenges-wind-energy" target="_blank">
+                        <img src="wind.png" alt="Wind Energy">
+                    </a>
+                    <a href="https://www.energy.gov/eere/water/advantages-and-challenges-hydropower" target="_blank">
+                        <img src="hydropower.png" alt="Hydropower">
+                    </a>
+                </div>
+            
+                <div class="image-row">
+                    <a href="https://www.energy.gov/eere/geothermal/advantages-and-challenges-geothermal-energy" target="_blank">
+                        <img src="geothermal.png" alt="Geothermal Energy">
+                    </a>
+                    <a href="https://www.energy.gov/eere/bioenergy/advantages-and-challenges-biomass-energy" target="_blank">
+                        <img src="biomass.png" alt="Biomass Energy">
+                    </a>
+                </div>
         </div>
 
             <!-- Content Block 3 -->
