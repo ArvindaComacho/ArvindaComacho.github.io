@@ -216,13 +216,12 @@
         /* Top Half Styling */
         .top-half {
             position: relative;
-            height: 50vh; /* 50% of the viewport height */
+            height: 60vh; /* 50% of the viewport height */
             overflow: hidden; /* Ensures no content overflows */
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            margin-top: 50px;
             margin: 0;
             padding: 0;
         }
@@ -236,10 +235,11 @@
         
         .heading-overlay {
             position: absolute;
-            top: 50%; /* Vertically centers the heading */
-            left: 50%; /* Horizontally centers the heading */
-            transform: translate(-50%, -50%);
-            text-align: center;
+            top: 60%; /* Vertically centers the heading */
+            left: 0; /* Horizontally centers the heading */
+            transform: translate(0%, -50%);
+            text-align: left;
+            padding-left: 20px;
         }
         
         /* Bottom Half Styling */
