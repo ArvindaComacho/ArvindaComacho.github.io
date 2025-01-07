@@ -280,7 +280,7 @@
         /* Image Styling */
         .image-row a {
             display: block;
-            width: 20%;  /* Adjust size of each image (change as needed) */
+            width: 30%;  /* Adjust size of each image (change as needed) */
             text-align: center;
         }
         
@@ -288,19 +288,23 @@
             width: 100%; 
             height: auto;
             max-width: 100%;
-            transition: transform 0.3 ease, box-shadow 0.3 ease;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-row img:hover {
+            transform: scale(1.05);
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         /* Add a little gap between the images if needed */
         .image-row a + a {
-            margin-left: 10px;
+            margin-left: 5px;
         }
         
-        /* Hover effect */
-        .image-row img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
+      
     
         /* Section Heading Images Styling */
         .section-heading-image {
