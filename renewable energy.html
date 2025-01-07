@@ -205,6 +205,80 @@
             border-color: #014D50;
             outline: none;
         }
+        /* Overall Section Styling */
+        .renewable-energy-section {
+            background-color: #ECECE9; /* Light beige background */
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif; /* Adjust the font */
+        }
+        
+        /* Top Half Styling */
+        .top-half {
+            position: relative;
+            height: 50vh; /* 50% of the viewport height */
+            overflow: hidden; /* Ensures no content overflows */
+        }
+        
+        .top-half-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+        }
+        
+        .heading-overlay {
+            position: absolute;
+            top: 50%; /* Vertically centers the heading */
+            left: 50%; /* Horizontally centers the heading */
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .renewable-heading-text {
+            width: 70%; /* Adjust the size of the text */
+            height: auto;
+        }
+        
+        /* Bottom Half Styling */
+        .bottom-half {
+            background: white; /* White content background */
+            margin: -40px auto 50px; /* Overlap the top image slightly and center */
+            padding: 30px;
+            max-width: 800px;
+            border-radius: 12px; /* Rounded corners for a clean look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            text-align: center;
+        }
+        
+        /* Content Blocks Styling */
+        .content-block {
+            margin-bottom: 30px; /* Spacing between content blocks */
+        }
+        
+        /* Section Heading Images Styling */
+        .section-heading-image {
+            width: 70%; /* Adjust size of your text image */
+            height: auto;
+            margin: 0 auto; /* Center the heading image */
+            display: block;
+        }
+        
+        /* Underline Styling */
+        .underline {
+            width: 60px; /* Adjust the width of the underline */
+            height: auto;
+            margin: 10px auto 20px; /* Center the underline and add spacing */
+            display: block;
+        }
+        
+        /* Paragraph Styling */
+        .content-block p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333; /* Darker gray for better readability */
+            margin-bottom: 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -276,6 +350,48 @@
     </header>
 
 <main>
+<section class="renewable-energy-section">
+    <!-- Top Half with Image -->
+    <div class="top-half">
+        <img src="path-to-your-half-image.jpg" alt="Renewable Energy Field" class="top-half-image">
+        <div class="heading-overlay">
+            <img src="path-to-your-renewable-energy-text.png" alt="Renewable Energy Text" class="renewable-heading-text">
+        </div>
+    </div>
+
+    <!-- Bottom Half with Content -->
+    <div class="bottom-half">
+        <!-- Content Block 1 -->
+        <div class="content-block">
+            <img src="path-to-your-what-is-renewable-energy.png" alt="What is Renewable Energy?" class="section-heading-image">
+            <img src="path-to-your-underline.png" alt="Underline Design" class="underline">
+            <p>
+                Renewable energy comes from unlimited, naturally replenished resources, such as the sun, water, and wind.
+                It is important as it can be used for generating large amounts of electricity. This electricity can provide space
+                and water heating, cooling, and transportation to name a few.
+            </p>
+            <p>
+                In contrast, non-renewable energy comes from limited sources such as coal, natural gas, and oil which are generally
+                referred to as fossil fuels.
+            </p>
+        </div>
+
+        <!-- Content Block 2 -->
+        <div class="content-block">
+            <img src="path-to-your-how-does-renewable-energy-work.png" alt="How Does Renewable Energy Work?" class="section-heading-image">
+            <img src="path-to-your-underline.png" alt="Underline Design" class="underline">
+            <p>
+                Renewable energy systems work by converting natural resources like sunlight, wind, or water into usable forms
+                of energy, such as electricity or heat. Solar panels, for instance, capture sunlight and transform it into
+                electricity using photovoltaic cells.
+            </p>
+            <p>
+                Wind turbines convert wind movement into mechanical energy, which is then turned into electricity. These
+                systems are designed to be sustainable and environmentally friendly.
+            </p>
+        </div>
+    </div>
+</section>
 
 
 <!-- Footer Section -->
