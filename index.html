@@ -274,11 +274,24 @@
             z-index: 1;
         }
         
-        /* Content Blocks Styling */
         .content-block {
-            margin-bottom: 30px;
-            margin-left: 50px;
-            margin-right: 50px;
+            display: flex; /* Create a flex container */
+            align-items: center; /* Center the image vertically with the text */
+            justify-content: space-between; /* Spread the text and image across the width */
+            margin-bottom: 20px; /* Adjust space between content blocks */
+        }
+        /* Text Paragraph */
+        
+        .text-left {
+            flex: 1; /* Allow the text to take up available space */
+            text-align: left; /* Align the text to the left */
+        }
+        
+        /* Image on the Right */
+        .image-right {
+            width: 100px; /* Adjust the size of the image */
+            height: auto;
+            margin-left: 20px; /* Add some space between text and image */
         }
 
         /* Image Row Styling */
@@ -458,6 +471,7 @@
             <p>
                 Each small step helps us to create a newer earth for future generations.
             </p>
+            <img src="sustainability image.png" alt="Sustainability Image" class="image-right">
         </div>
 
         <!-- Content Block 2 -->
