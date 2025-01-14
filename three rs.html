@@ -388,6 +388,41 @@
             background-image: url('icon7.png');
         }
 
+        /* Styling for the bottom section */
+        .bottom-section {
+            text-align: center; /* Center content */
+            padding: 20px; /* Add padding to the section */
+            background-color: #f9f9f9; /* Optional: background color */
+        }
+        
+        /* Styling for the text images */
+        .text-images {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Add space between the images */
+            margin-bottom: 20px; /* Space below the images */
+        }
+        
+        .text-image {
+            max-width: 100%; /* Ensure responsiveness */
+            height: auto;
+        }
+        
+        /* Styling for the explore button */
+        .explore-button-container {
+            margin-top: 10px; /* Space above the button */
+        }
+        
+        .explore-button {
+            max-width: 200px; /* Adjust to fit your desired button size */
+            height: auto;
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        
+        .explore-button:hover {
+            opacity: 0.8; /* Add hover effect */
+        }
+
     </style>
     
 </head>
@@ -543,6 +578,22 @@
         </div>
             
     </div>
+
+        <div class="bottom-section">
+        <!-- Text Images -->
+        <div class="text-images">
+            <img src="bottom image1.png" alt="Text Image 1" class="text-image">
+            <img src="bottom image2.png" alt="Text Image 2" class="text-image">
+        </div>
+        
+        <!-- Explore Button -->
+        <div class="explore-button-container">
+            <a href="your-other-webpage.html">
+                <img src="explore button1.png" alt="Explore Button" class="explore-button">
+            </a>
+        </div>
+            
+</div>
 </section>
     
 <!-- Footer Section -->
