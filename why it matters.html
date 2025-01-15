@@ -349,6 +349,48 @@
             margin-bottom: 20px;
         }
 
+         /* Styling for the bottom section */
+        .bottom-section {
+            text-align: center; /* Center content */
+            padding: 20px; /* Add padding to the section */
+            background-color: #F6F6F4; /* Optional: background color */
+            border: 2px solid #EAEAE6; /* Light gray border */
+            border-radius: 20px; /* Rounded edges */
+            
+        }
+        
+        /* Styling for the text images */
+        .text-images {
+            display: flex;
+            justify-content: column; /* Center the images horizontally */
+            align-items: center;
+            gap: 0px; /* Add space between the images */
+            margin-bottom: 20px; /* Space below the images */
+        }
+        
+        .text-image {
+            max-width: 60%; /* Ensure responsiveness */
+            height: auto;
+        }
+        
+        /* Styling for the explore button */
+        .explore-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Space above the button */
+            width: 100%
+        }
+        
+        .explore-button {
+            width: 25%; /* Adjust to fit your desired button size */
+            height: auto;
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+        
+        .explore-button:hover {
+            opacity: 0.8; /* Add hover effect */
+        }
+        
     </style>
     
 </head>
@@ -489,6 +531,29 @@
                     </a>
                 </div>
         </div>
+
+                <!-- Content Block 4 -->
+        <div class="bottom-section">
+            <div class="text-images">
+                <div class="text-image-container">
+                    <img src="bottom image1.png" alt="Text Image 1" class="text-image">
+                    <a href="renewable energy.html">
+                    </a>
+                        <div class="explore-button-container">
+                            <img src="explore button1.png" alt="Explore Button" class="explore-button">
+                        </div>
+                </div>
+                <div class="text-image-container">
+                    <img src="bottom image2.png" alt="Text Image 2" class="text-image">
+                    <a href="why it matters.html">
+                    </a>
+                        <div class="explore-button-container">
+                            <img src="explore button1.png" alt="Explore Button" class="explore-button">
+                        </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </section>
     
