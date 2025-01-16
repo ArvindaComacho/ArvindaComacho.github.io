@@ -274,10 +274,34 @@
             z-index: 1;
         }
 
+        /* Content Block 1 Adjustments */
         .content-block {
-            margin-bottom: 30px; /* Adjust space between content blocks */
-            margin-left: 50px;
-            margin-right: 50px
+            display: flex;
+            justify-content: space-between; /* Space between text and image */
+            align-items: center; /* Vertically center content */
+            margin-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        
+        .text-and-image {
+            display: flex;
+            align-items: flex-start; /* Align text at the top */
+            width: 70%; /* Adjust width for text */
+        }
+        
+        .text-content {
+            width: 60%; /* Controls the width of the text */
+            padding-right: 20px;
+        }
+        
+        .image-content {
+            width: 30%; /* Space for the sustainability image */
+        }
+        
+        .image-right {
+            width: 100%; /* Ensure the image is responsive */
+            height: auto;
         }
        
         .content-block-2 {
@@ -287,13 +311,6 @@
             box-sizing: border-box;
             margin-left: 0;
             margin-right: 0;
-        }
-        
-        /* Image on the Right */
-        .image-right {
-            width: 150px; /* Adjust the size of the image */
-            height: auto;
-            margin-left: 20px; /* Add some space between text and image */
         }
 
         /* Image Row Styling */
@@ -472,26 +489,22 @@
       <!-- Bottom Half with Content -->
     <div class="bottom-half">
         <!-- Content Block 1 -->
-        <div class="content block">
-            <img src="Logo.png" alt="Logo" class="logo-above-heading">
-            <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
-            <p>
-                Whether it's planting a native wildflower border in your backyard, teaching novice gardeners to grow their own food, or helping locals with environmental conservation practices, we empower homeowners to help the environment.
-            </p>
-            <p>
-                Each small step helps us to create a newer earth for future generations.
-            </p>
-        </div>
-            <div class="content block">
+        <div class="content-block">
+            <div class="text-and-image">
+                <div class="text-content">
+                    <img src="Logo.png" alt="Logo" class="logo-above-heading">
+                    <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
+                    <p>
+                        Whether it's planting a native wildflower border in your backyard, teaching novice gardeners to grow their own food, or helping locals with environmental conservation practices, we empower homeowners to help the environment.
+                    </p>
+                    <p>
+                        Each small step helps us to create a newer earth for future generations.
+                    </p>
+                </div>
+                <div class="image-content">
                     <img src="sustainability image.png" alt="Sustainability Image" class="image-right">
+                </div>
             </div>
-
-        <!-- Content Block 2 -->
-        <div class="content-block content-block-2">
-            <img src="content heading 1b.png" alt="What is Environmental Sustainability?" class="section-heading-image">
-            <p>
-            Whether it's planting a native wildflower border in your backyard, teaching novice gardeners to grow their own food, or helping locals with environmental conservation practices, we empower homeowners to help the environment.
-            </p>
         </div>
 
             <!-- Content Block 3 -->
