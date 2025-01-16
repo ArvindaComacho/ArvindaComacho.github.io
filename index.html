@@ -273,6 +273,20 @@
             position: relative; 
             z-index: 1;
         }
+
+        .content-left {
+            flex: 1;
+            max-width: 60%;
+            margin-left: 50px;
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 20px;
+        }
+
+         .content-right {
+            flex-shrink: 0;
+            max-width: 30%;
+        }
         
         .content-block {
             margin-bottom: 30px; /* Adjust space between content blocks */
@@ -453,7 +467,7 @@
       <!-- Bottom Half with Content -->
     <div class="bottom-half">
         <!-- Content Block 1 -->
-        <div class="content-block">
+        <div class="content-left">
             <img src="Logo.png" alt="Logo" class="logo-above-heading">
             <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
             <p>
@@ -463,8 +477,9 @@
                 Each small step helps us to create a newer earth for future generations.
             </p>
         </div>
-        
-            <img src="sustainability image.png" alt="Sustainability Image" class="image-right">
+            <div class="content-right">
+                    <img src="sustainability image.png" alt="Sustainability Image" class="image-right">
+            </div>
 
         <!-- Content Block 2 -->
         <div class="content-block content-block-2">
