@@ -203,6 +203,25 @@
     .event-image:hover {
         transform: scale(1.1); /* Increases size by 10% */
     }
+    
+            /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+          width: 12px; /* Adjust the width of the scrollbar */
+        }
+        
+        ::-webkit-scrollbar-track {
+          background-color: #E3E3E1; /* Track background color */
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background-color: #888888; /* Thumb (the draggable part) color */
+          border-radius: 10px; /* Optional: round the thumb */
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: #A1A1A1; /* Thumb color on hover */
+        }
+
 </style>
 
 <!--Upcoming Events Section-->
