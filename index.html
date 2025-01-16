@@ -276,34 +276,31 @@
 
         /* Content Block 1 Adjustments */
         .content-block {
-            display: flex;
-            justify-content: space-between; /* Space between text and image */
-            align-items: center; /* Vertically center content */
             margin-bottom: 30px;
             padding-left: 50px;
             padding-right: 50px;
         }
         
-        .text-and-image {
-            display: flex;
-            align-items: flex-start; /* Align text at the top */
-            width: 70%; /* Adjust width for text */
+       .content-block-1 {
+          display: flex;
+          justify-content: space-between; /* Align items with space between */
+          align-items: center; /* Vertically center items */
+          width: 100%; /* Ensure the container uses the full width of the screen */
+          height: 100vh; /* Ensure the container takes full height of the screen */
         }
         
-        .text-content {
-            width: 60%; /* Controls the width of the text */
-            padding-right: 20px;
+        .content-block-1 .text {
+          flex: 1; /* Allow text to take available space */
+          padding: 20px; /* Optional padding */
         }
         
-        .image-content {
-            width: 30%; /* Space for the sustainability image */
+        .content-block-1 .image {
+          width: 50%; /* Adjust width of image */
+          display: block; /* Make the image behave like a block element */
+          margin-left: auto; /* Align image to the right */
+          margin-right: auto; /* Center it horizontally */
         }
-        
-        .image-right {
-            width: 100%; /* Ensure the image is responsive */
-            height: auto;
-        }
-       
+
         .content-block-2 {
             background-color: #014D50;
             height: 500px;
@@ -489,8 +486,8 @@
       <!-- Bottom Half with Content -->
     <div class="bottom-half">
         <!-- Content Block 1 -->
-        <div class="content-block">
-            <div class="text-and-image">
+        <div class="content-block-1">
+            <div class="text">
                 <div class="text-content">
                     <img src="Logo.png" alt="Logo" class="logo-above-heading">
                     <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
