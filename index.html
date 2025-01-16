@@ -276,29 +276,35 @@
 
         /* Content Block 1 Adjustments */
         .content-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin-bottom: 30px;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding: 50px;
         }
-        
-       .content-block-1 {
-          display: flex;
-          justify-content: space-between; /* Align items with space between */
-          align-items: center; /* Vertically center items */
-          width: 100%; /* Ensure the container uses the full width of the screen */
-          height: 100vh; /* Ensure the container takes full height of the screen */
+
+        .text-content {
+            width: 50%
+            max-width: 500px;
         }
-        
-        .content-block-1 .text {
-          flex: 1; /* Allow text to take available space */
-          padding: 20px; /* Optional padding */
+
+        .heading-image {
+            width: 100%; /* Ensures it fits properly */
+            max-width: 400px; /* Adjust based on your actual image */
+            margin-bottom: 20px;
         }
-        
-        .content-block-1 .image {
-          width: 50%; /* Adjust width of image */
-          display: block; /* Make the image behave like a block element */
-          margin-left: auto; /* Align image to the right */
-          margin-right: auto; /* Center it horizontally */
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .image-content img {
+            width: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            clip-path: ellipse(60% 50% at 50% 50%);
         }
 
         .content-block-2 {
@@ -486,8 +492,7 @@
       <!-- Bottom Half with Content -->
     <div class="bottom-half">
         <!-- Content Block 1 -->
-        <div class="content-block-1">
-            <div class="text">
+        <div class="content-block">
                 <div class="text-content">
                     <img src="Logo.png" alt="Logo" class="logo-above-heading">
                     <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
