@@ -244,8 +244,8 @@
             font-size: 16px;
             border-radius: 7px;
         }
-        .yes { background-color: #014D50; color: white; }
-        .no { background-color: #084F6A; color: white; }
+        .true { background-color: #014D50; color: white; }
+        .false { background-color: #084F6A; color: white; }
         .result {
             margin-top: 10px;
             font-size: 18px;
@@ -304,8 +304,8 @@
             mythBox.innerHTML = `
                 <p><strong>${item.myth}</strong></p>
                 <div class="buttons">
-                    <button class="yes" onclick="checkAnswer(${index}, true, this)">Yes</button>
-                    <button class="no" onclick="checkAnswer(${index}, false, this)">No</button>
+                    <button class="true" onclick="checkAnswer(${index}, true, this)">Yes</button>
+                    <button class="false" onclick="checkAnswer(${index}, false, this)">No</button>
                 </div>
                 <p class="result" id="result-${index}"></p>
             `;
