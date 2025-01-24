@@ -315,10 +315,10 @@
         function checkAnswer(index, answer, button) {
             const resultBox = document.getElementById(`result-${index}`);
             if (answer === myths[index].correct) {
-                resultBox.style.color = "green";
+                resultBox.style.color = "014D50";
                 resultBox.textContent = "✔ The myth is true: " + myths[index].explanation;
             } else {
-                resultBox.style.color = "blue";
+                resultBox.style.color = "084F6A";
                 resultBox.textContent = "✘ This myth is false: " + myths[index].explanation;
             }
             button.parentElement.querySelectorAll("button").forEach(btn => btn.disabled = true);
