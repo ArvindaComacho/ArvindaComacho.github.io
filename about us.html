@@ -95,6 +95,63 @@
             transform: scaleX(1);
         }
 
+                /* Learning Hub Dropdown Menu */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Dropdown Item Styling */
+        .dropdown-menu a {
+            color: #014D50; /* Text color */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dropdown-menu a:hover {
+            background-color: rgba(153, 184, 29, 0.2); /* Hover effect */
+            border-radius: 5px;
+        }
+        
+        /* Underline effect for main navigation and dropdown links */
+        .nav-links a::after,
+        .dropdown-menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #014D50;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-links a:hover::after,
+        .dropdown-menu a:hover::after {
+            transform: scaleX(1);
+        }
+        
         /* Search Bar Styling */
         .search-container {
             display: flex;
@@ -150,7 +207,16 @@
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
-            <a href="learning hub.html">Learning Hub</a>
+
+            <!-- Learning Hub Dropdown -->
+            <div class="dropdown">
+                <a href="#" class="nav-link">Learning Hub</a>
+                <div class="dropdown-menu">
+                    <a href="what's blooming.html">What's Blooming</a>
+                    <a href="debunking.html">Debunking</a>
+                </div>
+            </div>
+            
             <a href="events.html">Events</a>
         </nav>
 
