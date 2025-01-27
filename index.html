@@ -325,30 +325,59 @@
             box-sizing: border-box;
         }
 
-        .content-block-2 img {
-            width: 300px;
+
+        /* Content Block 2 Styling */
+        .content-block-2 {
+            display: flex;
+            align-items: center; /* Vertically center the content */
+            background-color: #014D50; /* Background color */
+            padding: 40px; /* Add padding for spacing */
+            height: 500px; /* Adjust height as needed */
+            box-sizing: border-box;
+        }
+        
+        /* Left Side: People Powered Image */
+        .people-powered-image-container {
+            flex: 1; /* Take up 50% of the space */
+            display: flex;
+            align-items: center; /* Center the image vertically */
+            justify-content: center; /* Center the image horizontally */
+        }
+        
+        .people-powered-image {
+            width: 300px; /* Adjust image size */
             height: 300px;
-            object-fit: cover;
+            object-fit: cover; /* Ensure the image fits properly */
         }
         
+        /* Right Side: Heading and Text */
         .content-text {
-            flex: 1;
-            text-align: right;
-            padding-left: 20px;
-            max-width: 400px;
+            flex: 1; /* Take up 50% of the space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            padding-left: 40px; /* Add spacing between image and text */
         }
         
-        .content-text img {
-            width: 200px
-            margin-bottom: 10px;
-            display: block;
+        /* Heading Container */
+        .heading-container {
+            display: flex;
+            justify-content: flex-end; /* Align heading to the right */
+            margin-bottom: 20px; /* Space between heading and text */
         }
         
+        .heading-image {
+            width: 100%; /* Adjust heading image size */
+            max-width: 400px; /* Limit maximum width */
+            height: auto;
+        }
+        
+        /* Text Styling */
         .content-text p {
-            font-size: 1rem; 
+            font-size: 1rem;
             line-height: 1.6;
-            color: white;
-            margin: 0 0 10px 0;
+            color: white; /* Text color */
+            margin: 0 0 10px 0; /* Spacing between paragraphs */
         }
 
         /* Image Row Styling */
@@ -550,14 +579,24 @@
                 </div>
         </div>
 
-      <!-- Content Block 2 -->
+        <!-- Content Block 2 -->
         <div class="content-block content-block-2">
-            <img sec="people powered.png" alt="People Powered" class="content-block-2 img style="align-self: center;">
-                <div class="content-text">
-                    <img src="content heading 1b.png" alt= "People Powered Heading">
-                     <p> Newer Earth relies on community support. We're dedicated through determination and effort to rejuvenate our community's natural environment, making it a welcoming space for all. </p>
-                     <p> With your assistance, we aspire to build partnerships with national agencies in the future, non-profits, and local farms. If you believe that the environment matters, get involved! </p>
+            <!-- Left Side: People Powered Image -->
+            <div class="people-powered-image-container">
+                <img src="people powered.png" alt="People Powered" class="people-powered-image">
+            </div>
+        
+            <!-- Right Side: Heading and Text -->
+            <div class="content-text">
+                <!-- Heading (Centered Vertically on Top Right) -->
+                <div class="heading-container">
+                    <img src="content heading 1b.png" alt="People Powered Heading" class="heading-image">
                 </div>
+        
+                <!-- Text Content -->
+                <p>Newer Earth relies on community support. We're dedicated through determination and effort to rejuvenate our community's natural environment, making it a welcoming space for all.</p>
+                <p>With your assistance, we aspire to build partnerships with national agencies in the future, non-profits, and local farms. If you believe that the environment matters, get involved!</p>
+            </div>
         </div>
     
             <!-- Content Block 3 -->
