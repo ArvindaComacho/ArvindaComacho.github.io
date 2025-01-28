@@ -208,55 +208,98 @@
 
 /*<------------- Yes or no myth section ------------->*/ 
         
+        /* Middle Section Styling */
         .section {
-            padding: 30px;
-        }
-        
-        .myth-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            width: 80%;
-            margin: auto;
-            margin-top: 40px;
-        }
-        
-        .myth-box {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            min-height: 180px;
-            display: flex; 
-            flex-direction: column;
-            justify-content: center; 
-            align-items: center;
+            padding: 60px 20px;
+            background-color: #f9f9f9;
             text-align: center;
         }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            color: #014D50;
+            margin-bottom: 40px;
+        }
+        
+        /* Myth Container Grid Layout */
+        .myth-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Myth Box Card Design */
+        .myth-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+        
+        .myth-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .myth-box p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        /* Buttons Styling */
         .buttons {
             display: flex;
-            justify-content: center;
             gap: 10px;
             margin-top: 20px;
         }
-        button {
-            padding: 10px 20px;
+        
+        .buttons button {
+            flex: 1;
+            padding: 12px 20px;
             border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 7px;
-        }
-        .true { background-color: #014D50; color: white; }
-        .false { background-color: #084F6A; color: white; }
-        .result {
-            margin-top: 10px;
-            font-size: 18px;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        .resources img {
-            width: 200px;
-            margin: 10px;
-            border-radius: 5px;
+        
+        .buttons button.true {
+            background-color: #014D50;
+            color: white;
+        }
+        
+        .buttons button.false {
+            background-color: #084F6A;
+            color: white;
+        }
+        
+        .buttons button:hover {
+            transform: scale(1.05);
+        }
+        
+        .buttons button:active {
+            transform: scale(0.95);
+        }
+        
+        /* Result Feedback Styling */
+        .result {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #014D50;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .result.show {
+            opacity: 1;
         }
 
         /* Section 1 Styling */
@@ -444,64 +487,58 @@
         </div>
 </div>
 
-    <!-- Middle Section: Myths -->
-    <div class="section">
-        <h2>Test Your Knowledge</h2>
-        <div class="myth-container" id="myth-container"></div>
-    </div>
+<!-- Middle Section: Myths -->
+<div class="section">
+    <h2>Test Your Knowledge</h2>
+    <div class="myth-container" id="myth-container"></div>
+</div>
 
-    <!-- Third Section: Additional Resources -->
-    <div class="section">
-        <h2>Additional Resources</h2>
-        <div class="resources">
-            <img src="your-image-link-1.jpg" alt="Resource 1">
-            <img src="your-image-link-2.jpg" alt="Resource 2">
-            <img src="your-image-link-3.jpg" alt="Resource 3">
-        </div>
-    </div>
+<script>
+    const myths = [
+        { myth: "Recycling is a waste of time and doesn’t actually help.", correct: false, explanation: "Recycling helps conserve natural resources and reduces landfill waste." },
+        { myth: "Electric cars are worse for the environment than gasoline cars.", correct: false, explanation: "While battery production has an impact, electric cars produce fewer emissions over their lifetime." },
+        { myth: "Turning off lights when leaving a room makes a difference.", correct: true, explanation: "It saves energy and reduces electricity bills, especially with incandescent bulbs." },
+        { myth: "Climate change is a natural process and humans have no effect.", correct: false, explanation: "Scientific evidence shows that human activities, like burning fossil fuels, accelerate climate change." },
+        { myth: "Plastic bags are more eco-friendly than paper bags.", correct: false, explanation: "Plastic bags take hundreds of years to decompose and harm wildlife." },
+        { myth: "Solar panels don’t work in cloudy weather.", correct: false, explanation: "Solar panels can still generate energy in cloudy conditions, though less efficiently." },
+        { myth: "Composting reduces landfill waste.", correct: true, explanation: "Composting turns organic waste into nutrient-rich soil, reducing landfill waste." },
+        { myth: "Fast fashion has little impact on the environment.", correct: false, explanation: "Fast fashion contributes to pollution, water waste, and exploitative labor practices." },
+        { myth: "LED bulbs use less energy than incandescent bulbs.", correct: true, explanation: "LEDs are much more energy-efficient and last longer than incandescent bulbs." },
+        { myth: "Meat production has no significant impact on climate change.", correct: false, explanation: "Meat production contributes significantly to greenhouse gas emissions and deforestation." }
+    ];
 
-    <script>
-        const myths = [
-            { myth: "Recycling is a waste of time and doesn’t actually help.", correct: false, explanation: "Recycling helps conserve natural resources and reduces landfill waste." },
-            { myth: "Electric cars are worse for the environment than gasoline cars.", correct: false, explanation: "While battery production has an impact, electric cars produce fewer emissions over their lifetime." },
-            { myth: "Turning off lights when leaving a room makes a difference.", correct: true, explanation: "It saves energy and reduces electricity bills, especially with incandescent bulbs." },
-            { myth: "Climate change is a natural process and humans have no effect.", correct: false, explanation: "Scientific evidence shows that human activities, like burning fossil fuels, accelerate climate change." },
-            { myth: "Plastic bags are more eco-friendly than paper bags.", correct: false, explanation: "Plastic bags take hundreds of years to decompose and harm wildlife." },
-            { myth: "Solar panels don’t work in cloudy weather.", correct: false, explanation: "Solar panels can still generate energy in cloudy conditions, though less efficiently." },
-            { myth: "Composting reduces landfill waste.", correct: true, explanation: "Composting turns organic waste into nutrient-rich soil, reducing landfill waste." },
-            { myth: "Fast fashion has little impact on the environment.", correct: false, explanation: "Fast fashion contributes to pollution, water waste, and exploitative labor practices." },
-            { myth: "LED bulbs use less energy than incandescent bulbs.", correct: true, explanation: "LEDs are much more energy-efficient and last longer than incandescent bulbs." },
-            { myth: "Meat production has no significant impact on climate change.", correct: false, explanation: "Meat production contributes significantly to greenhouse gas emissions and deforestation." }
-        ];
+    const container = document.getElementById("myth-container");
 
-        const container = document.getElementById("myth-container");
+    myths.forEach((item, index) => {
+        let mythBox = document.createElement("div");
+        mythBox.classList.add("myth-box");
+        mythBox.innerHTML = `
+            <p><strong>${item.myth}</strong></p>
+            <div class="buttons">
+                <button class="true" onclick="checkAnswer(${index}, true, this)">Yes</button>
+                <button class="false" onclick="checkAnswer(${index}, false, this)">No</button>
+            </div>
+            <p class="result" id="result-${index}"></p>
+        `;
+        container.appendChild(mythBox);
+    });
 
-        myths.forEach((item, index) => {
-            let mythBox = document.createElement("div");
-            mythBox.classList.add("myth-box");
-            mythBox.innerHTML = `
-                <p><strong>${item.myth}</strong></p>
-                <div class="buttons">
-                    <button class="true" onclick="checkAnswer(${index}, true, this)">Yes</button>
-                    <button class="false" onclick="checkAnswer(${index}, false, this)">No</button>
-                </div>
-                <p class="result" id="result-${index}"></p>
-            `;
-            container.appendChild(mythBox);
-        });
-
-        function checkAnswer(index, answer, button) {
-            const resultBox = document.getElementById(`result-${index}`);
-            if (answer === myths[index].correct) {
-                resultBox.style.color = "014D50";
-                resultBox.textContent = "✔ The myth is true: " + myths[index].explanation;
-            } else {
-                resultBox.style.color = "084F6A";
-                resultBox.textContent = "✘ This myth is false: " + myths[index].explanation;
-            }
-            button.parentElement.querySelectorAll("button").forEach(btn => btn.disabled = true);
+    function checkAnswer(index, answer, button) {
+        const resultBox = document.getElementById(`result-${index}`);
+        if (answer === myths[index].correct) {
+            resultBox.style.color = "#014D50";
+            resultBox.textContent = "✔ Correct: " + myths[index].explanation;
+        } else {
+            resultBox.style.color = "#084F6A";
+            resultBox.textContent = "✘ Incorrect: " + myths[index].explanation;
         }
-    </script>
+        resultBox.classList.add("show"); // Show the result with animation
+        button.parentElement.querySelectorAll("button").forEach(btn => {
+            btn.disabled = true;
+            btn.style.opacity = 0.6; // Dim the buttons after answering
+        });
+    }
+</script>
     
 <!-- Banner Section -->
 <header class="banner">
