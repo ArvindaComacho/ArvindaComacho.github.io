@@ -259,38 +259,123 @@
             border-radius: 5px;
         }
 
-        /* Full-Viewport Section */
+        /* Section 1 Styling */
         .section-1 {
-            height: 100vh; /* Takes up the entire viewport height */
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #014D50; /* Example background color */
-            color: white; /* Example text color */
+            background-color: #014D50;
+            color: white;
             padding: 20px;
         }
-
-        .section 1-h1 {
+        
+        .section-1 h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-
+        
         .section-1 p {
             font-size: 1.2rem;
             max-width: 800px;
+            margin-bottom: 40px;
         }
         
+        /* Myth Boxes Container */
+        .myth-boxes {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            width: 80%;
+        }
+        
+        /* Individual Myth Box */
+        .myth-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 45%;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .myth-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .myth-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .myth-box .brief-description {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Expanded Content (Hidden by Default) */
+        .myth-box .expanded-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        
+        .myth-box .expanded-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        /* Expanded State */
+        .myth-box.expanded {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .myth-box.expanded .expanded-content {
+            display: block;
+        }
+                
     </style>
 </head>
 <body>
 
-    <!-- Section 1 -->
-    <div class="section-1">
-        <h1>debunking</h1>
-        <p>Myths about the environment can lead to misinformation and hinder sustainability efforts. By separating fact from fiction, we can encourage individuals to make informed decisions that will positively impact the planet.</p>
+<!-- Section 1 -->
+<div class="section-1">
+    <h1>Debunking</h1>
+    <p>Myths about the environment can lead to misinformation and hinder sustainability efforts. By separating fact from fiction, we can encourage individuals to make informed decisions that will positively impact the planet.</p>
+    
+    <!-- Two Boxes for True and False Myths -->
+    <div class="myth-boxes">
+        <!-- True Myths Box -->
+        <div class="myth-box" onclick="toggleExpand(this)">
+            <h2>True Myths</h2>
+            <p class="brief-description">These are myths that are actually true. Click to learn more.</p>
+            <div class="expanded-content">
+                <ul>
+                    <li>Turning off lights when leaving a room saves energy.</li>
+                    <li>Composting reduces landfill waste.</li>
+                    <li>LED bulbs use less energy than incandescent bulbs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- False Myths Box -->
+        <div class="myth-box" onclick="toggleExpand(this)">
+            <h2>False Myths</h2>
+            <p class="brief-description">These are myths that are false. Click to learn more.</p>
+            <div class="expanded-content">
+                <ul>
+                    <li>Recycling is a waste of time and doesn’t help.</li>
+                    <li>Electric cars are worse for the environment than gasoline cars.</li>
+                    <li>Plastic bags are more eco-friendly than paper bags.</li>
+                </ul>
+            </div>
+        </div>
     </div>
+</div>
 
     <!-- Middle Section: Myths -->
     <div class="section">
