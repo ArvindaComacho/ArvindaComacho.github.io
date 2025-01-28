@@ -270,6 +270,7 @@
             background-color: #014D50;
             color: white;
             padding: 20px;
+            position: relative;
         }
         
         .section-1 h1 {
@@ -371,6 +372,22 @@
             color: #084F6A;
         }
 
+        /* Debunking Image Container */
+        .debunking-image-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0; /* Add some padding to avoid the image touching the very bottom */
+        }
+        
+        /* Debunking Image */
+        .debunking-image {
+            max-width: 100%; /* Ensure the image doesn't exceed the container width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
         /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
           width: 12px; /* Adjust the width of the scrollbar */
@@ -393,48 +410,39 @@
 </head>
 <body>
 
-    <!-- Section 1 -->
-    <div class="section-1">
-        <h1>Debunking</h1>
-        <p>Myths about the environment can lead to misinformation and hinder sustainability efforts. By separating fact from fiction, we can encourage individuals to make informed decisions that will positively impact the planet.</p>
-        
-        <!-- Two Boxes for True and False Myths -->
-        <div class="myth-boxes">
-            <!-- True Myths Box -->
-            <div class="myth-box">
-                <input type="checkbox" id="true-myths-toggle" class="toggle-checkbox">
-                <label for="true-myths-toggle" class="myth-box-label">
-                    <h2>True Myths</h2>
-                    <p class="brief-description">These are myths that are actually true. Click to learn more.</p>
-                </label>
-                <div class="expanded-content">
-                    <label for="true-myths-toggle" class="close-button">X</label>
-                    <ul>
-                        <li>Turning off lights when leaving a room saves energy.</li>
-                        <li>Composting reduces landfill waste.</li>
-                        <li>LED bulbs use less energy than incandescent bulbs.</li>
-                    </ul>
-                </div>
-            </div>
+ <!-- Section 1 -->
+<div class="section-1">
+    <h1>Debunking</h1>
+    <p>Myths about the environment can lead to misinformation and hinder sustainability efforts. By separating fact from fiction, we can encourage individuals to make informed decisions that will positively impact the planet.</p>
     
-            <!-- False Myths Box -->
-            <div class="myth-box">
-                <input type="checkbox" id="false-myths-toggle" class="toggle-checkbox">
-                <label for="false-myths-toggle" class="myth-box-label">
-                    <h2>False Myths</h2>
-                    <p class="brief-description">These are myths that are false. Click to learn more.</p>
-                </label>
-                <div class="expanded-content">
-                    <label for="false-myths-toggle" class="close-button">X</label>
-                    <ul>
-                        <li>Recycling is a waste of time and doesn’t help.</li>
-                        <li>Electric cars are worse for the environment than gasoline cars.</li>
-                        <li>Plastic bags are more eco-friendly than paper bags.</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Two Boxes for True and False Myths -->
+    <div class="myth-boxes">
+        <!-- True Myths Box -->
+        <div class="myth-box" onclick="openSectionModal('True Myths', [
+            'Turning off lights when leaving a room saves energy.',
+            'Composting reduces landfill waste.',
+            'LED bulbs use less energy than incandescent bulbs.'
+        ])">
+            <h2>True Myths</h2>
+            <p class="brief-description">These are myths that are actually true. Click to learn more.</p>
+        </div>
+
+        <!-- False Myths Box -->
+        <div class="myth-box" onclick="openSectionModal('False Myths', [
+            'Recycling is a waste of time and doesn’t help.',
+            'Electric cars are worse for the environment than gasoline cars.',
+            'Plastic bags are more eco-friendly than paper bags.'
+        ])">
+            <h2>False Myths</h2>
+            <p class="brief-description">These are myths that are false. Click to learn more.</p>
         </div>
     </div>
+
+        <!-- Debunking Image -->
+        <div class="debunking-image-container">
+            <img src="debunking image.png" alt="Debunking Image" class="debunking-image">
+        </div>
+</div>
 
     <!-- Middle Section: Myths -->
     <div class="section">
