@@ -369,60 +369,6 @@
             text-align: center;
             z-index: 3;
         }
-        
-        /* Hide the Checkbox */
-        .toggle-checkbox {
-            display: none;
-        }
-        
-        /* Expanded Content (Hidden by Default) */
-        .expanded-content {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #014D50;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            text-align: left;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        
-        .expanded-content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        
-        /* Show Expanded Content When Checkbox is Checked */
-        .toggle-checkbox:checked ~ .expanded-content {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        /* Close Button */
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #014D50;
-            background: transparent;
-            border: none;
-            padding: 5px;
-        }
-        
-        .close-button:hover {
-            color: #084F6A;
-        }
 
         /* Debunking Image Container */
         .debunking-image-container {
@@ -472,24 +418,12 @@
     
     <!-- Two Boxes for True and False Myths -->
     <div class="myth-boxes">
-        <!-- True Myths Box -->
-        <div class="myth-box" onclick="openSectionModal('True Myths', [
-            'Turning off lights when leaving a room saves energy.',
-            'Composting reduces landfill waste.',
-            'LED bulbs use less energy than incandescent bulbs.'
-        ])">
             <h2>True Myths</h2>
-            <p class="brief-description">These are myths that are actually true. Click to learn more.</p>
+            <p class="brief-description">Explore and learn through testing which myths are actually true. Scroll for the fun!</p>
         </div>
 
-        <!-- False Myths Box -->
-        <div class="myth-box" onclick="openSectionModal('False Myths', [
-            'Recycling is a waste of time and doesn’t help.',
-            'Electric cars are worse for the environment than gasoline cars.',
-            'Plastic bags are more eco-friendly than paper bags.'
-        ])">
             <h2>False Myths</h2>
-            <p class="brief-description">These are myths that are false. Click to learn more.</p>
+            <p class="brief-description">Explore and learn through testing which myths are actually false. Scroll for the fun!</p>
         </div>
     </div>
 
