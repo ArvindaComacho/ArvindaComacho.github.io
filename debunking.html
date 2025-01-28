@@ -296,9 +296,9 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 12px;
-            cursor: pointer;
             width: 45%;
             transition: background 0.3s ease, transform 0.3s ease;
+            position: relative;
         }
         
         .myth-box:hover {
@@ -316,29 +316,36 @@
             margin-bottom: 10px;
         }
         
+        /* Hide the Checkbox */
+        .toggle-checkbox {
+            display: none;
+        }
+        
         /* Expanded Content (Hidden by Default) */
-        .myth-box .expanded-content {
+        .expanded-content {
             display: none;
             margin-top: 10px;
             font-size: 0.9rem;
             text-align: left;
         }
         
-        .myth-box .expanded-content ul {
+        .expanded-content ul {
             list-style-type: disc;
             padding-left: 20px;
         }
         
-        /* Expanded State */
-        .myth-box.expanded {
-            background: rgba(255, 255, 255, 0.3);
+        /* Show Expanded Content When Checkbox is Checked */
+        .toggle-checkbox:checked ~ .expanded-content {
+            display: block;
         }
         
-        .myth-box.expanded .expanded-content {
+        /* Style the Label to Make It Clickable */
+        .myth-box-label {
+            cursor: pointer;
             display: block;
         }
 
-                        /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+        /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
           width: 12px; /* Adjust the width of the scrollbar */
         }
@@ -368,9 +375,12 @@
     <!-- Two Boxes for True and False Myths -->
     <div class="myth-boxes">
         <!-- True Myths Box -->
-        <div class="myth-box" onclick="toggleExpand(this)">
-            <h2>True Myths</h2>
-            <p class="brief-description">These are myths that are actually true. Click to learn more.</p>
+        <div class="myth-box">
+            <input type="checkbox" id="true-myths-toggle" class="toggle-checkbox">
+            <label for="true-myths-toggle" class="myth-box-label">
+                <h2>True Myths</h2>
+                <p class="brief-description">These are myths that are actually true. Click to learn more.</p>
+            </label>
             <div class="expanded-content">
                 <ul>
                     <li>Turning off lights when leaving a room saves energy.</li>
@@ -381,9 +391,12 @@
         </div>
 
         <!-- False Myths Box -->
-        <div class="myth-box" onclick="toggleExpand(this)">
-            <h2>False Myths</h2>
-            <p class="brief-description">These are myths that are false. Click to learn more.</p>
+        <div class="myth-box">
+            <input type="checkbox" id="false-myths-toggle" class="toggle-checkbox">
+            <label for="false-myths-toggle" class="myth-box-label">
+                <h2>False Myths</h2>
+                <p class="brief-description">These are myths that are false. Click to learn more.</p>
+            </label>
             <div class="expanded-content">
                 <ul>
                     <li>Recycling is a waste of time and doesn’t help.</li>
