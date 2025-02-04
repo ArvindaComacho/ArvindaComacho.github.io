@@ -223,14 +223,14 @@
         
         /* Myth Container Grid Layout */
         .myth-container {
-            display: grid;
+            display: flex; /* Use flexbox instead of grid */
+            flex-wrap: wrap; /* Allow wrapping into multiple rows */
+            justify-content: center; /* Center the boxes horizontally */
+            gap: 30px; /* Spacing between boxes */
+            max-width: 1200px; /* Limit the container width */
+            margin: 0 auto; /* Center the container */
+            padding: 0 20px; /* Add minimal horizontal padding */
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            justify-content: center;
-            align-items: stretch;
         }
         
         /* Myth Box Card Design */
@@ -245,7 +245,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 100%
+            width: calc(50% - 15px)
         }
         
         .myth-box:hover {
