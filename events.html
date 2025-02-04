@@ -262,18 +262,31 @@
     </div>
 
     <!-- Right Section: Image -->
-    <div style="
-        width: 45%; 
-        height: 70%; 
-        background-image: url('caribbean.png');
-        background-repeat: no-repeat; 
-        background-position: center; 
-        background-size: contain;
-        border-radius: 12px; /* Rounded corners */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        margin-top: 53px;
-    ">
-    </div>
+<div style="
+    width: 45%; 
+    height: 70%; 
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: linear-gradient(135deg, #014D50, #99B81D, #084F6A);
+    background-size: 200% 200%;
+    animation: gradient 5s infinite ease-in-out;
+">
+</div>
+
+<style>
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
+    
 </section>
 
 <style>
