@@ -262,6 +262,7 @@
     </div>
 
     <!-- Right Section: Image -->
+<!-- Right Section: Calendar with Page Flip -->
 <div style="
     width: 45%; 
     height: 70%; 
@@ -269,9 +270,107 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     background: linear-gradient(135deg, #014D50, #99B81D, #084F6A);
     background-size: 200% 200%;
-    margin-top: 55px;
     animation: gradient 5s infinite ease-in-out;
+    position: relative; /* Required for positioning the calendar page */
+    overflow: hidden; /* Ensures the flip effect stays within the container */
 ">
+    <!-- Calendar Page -->
+    <div class="calendar-page">
+        <div class="page-front">
+            <div class="calendar-header">
+                <h3>February 2025</h3>
+                <p>Sun - Mon - Tue - Wed - Thu - Fri - Sat</p>
+            </div>
+            <div class="calendar-grid">
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+            </div>
+        </div>
+        <div class="page-back">
+            <div class="calendar-header">
+                <h3>March 2025</h3>
+                <p>Sun - Mon - Tue - Wed - Thu - Fri - Sat</p>
+            </div>
+            <div class="calendar-grid">
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day">9</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -286,8 +385,91 @@
             background-position: 0% 50%;
         }
     }
+
+    /* Calendar Page Styles */
+    .calendar-page {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        perspective: 1000px; /* Adds depth for the flip effect */
+    }
+
+    .page-front,
+    .page-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; /* Hides the back of the page during flip */
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .page-front {
+        transform: rotateY(0deg);
+    }
+
+    .page-back {
+        transform: rotateY(180deg);
+    }
+
+    /* Flip effect on hover */
+    .calendar-page:hover .page-front {
+        transform: rotateY(-180deg);
+    }
+
+    .calendar-page:hover .page-back {
+        transform: rotateY(0deg);
+    }
+
+    /* Calendar Header */
+    .calendar-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .calendar-header h3 {
+        margin: 0;
+        font-size: 24px;
+        color: #014D50;
+    }
+
+    .calendar-header p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* Calendar Grid */
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+    }
+
+    .day {
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        color: #333;
+        background: #f9f9f9;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .day:nth-child(7n + 1) {
+        color: #ff6b6b; /* Highlight Sundays */
+    }
+
+    .day:nth-child(7n) {
+        color: #4dabf7; /* Highlight Saturdays */
+    }
 </style>
-    
 </section>
 
 <style>
