@@ -6,20 +6,19 @@
     <link rel="icon" type="image/jpg" href="favicon.jpg">
     <title>Newer Earth</title>
     <style>
-        /* Reset margin and padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Style */
+        /* Body style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            padding-top: 0;   
+            padding-top: 0px;
         }
-        section: first-of-type {
+        section:first-of-type {
         padding-top: 70px;
         }
 
@@ -34,7 +33,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #ccc;
             transition: background 0.3s ease-in-out;
@@ -43,10 +42,10 @@
 
         /* Banner changes to semi-transparent on scroll */
         .banner.transparent {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.5);
         }
 
-        /* Logo Placeholder */
+        /* Logo placeholder */
         .logo {
             display: flex;
             align-items: center;
@@ -58,7 +57,7 @@
             margin-right: 15px;
         }
 
-        /* Navigation Links Styling */
+        /* Navigation style */
         .nav-links {
             display: flex;
             gap: 20px;
@@ -97,38 +96,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Link Styling */
-        .nav-links .nav-link {
-            text-decoration: none;
-            color: #333;
-            font-size: 1rem;
-            font-weight: bold;
-            position: relative;
-            padding: 5px 0;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links .nav-link:hover {
-            color: #014D50;
-        }
-
-        /* Underline effect on hover for Learning Hub link */
-        .nav-links .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #014D50;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .nav-links .nav-link:hover::after {
-            transform: scaleX(1);
-        }
-
         /* Learning Hub Dropdown Menu */
         .dropdown {
             display: inline-block;
@@ -151,6 +118,7 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
+        
         /* Dropdown Item Styling */
         .dropdown-menu a {
             color: #014D50; /* Text color */
@@ -185,7 +153,7 @@
             transform: scaleX(1);
         }
 
-        /* Search Bar Styling */
+        /* Search Bar style */
         .search-container {
             display: flex;
             align-items: center;
@@ -206,316 +174,9 @@
             outline: none;
         }
         
-    /* Overall Section Styling */
-        .home-page-section {
-        background-color: #ECECE9;
-        padding: 0;
-        margin: 0;
-        font-family: Arial, sans-serif; /* Adjust the font */
-        min-height: 100vh;
-        overflow: hidden;
-        }
-        
-        .home-page-section::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background-color: #ECECE9;
-    }
-        
-        /* Top Half Styling */
-        .top-half {
-            position: relative;
-            height: 70vh; /* Full viewport height */
-            overflow: hidden; /* Ensures no content overflows */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .top-half-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image covers the container */
-            margin-left: 0;
-        }
-        
-        .heading-overlay {
-            position: absolute;
-            top: 60%; /* Vertically centers the heading */
-            left: 0; /* Horizontally centers the heading */
-            transform: translate(0%, -50%);
-            text-align: left;
-            padding-left: 20px;
-        }
-        
-        /* Bottom Half Styling */
-        .bottom-half {
-            background: #F6F6F4;
-            margin: -80px auto 50px;
-            padding: 30px;
-            max-width: 1200px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            box-sizing: border-box;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative; 
-            z-index: 1;
-        }
-
-        /* Content Block 1 Adjustments */
-        .content-block {
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            padding: 50px;
-        }
-        
-        /* Content Block 1 Adjustments */
-        .content-block-1 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            padding: 50px;
-        }
-        
-        .text-content {
-            width: 50%;
-            max-width: 500px;
-        }
-
-        .heading-image {
-            width: 100%; /* Ensures it fits properly */
-            max-width: 400px; /* Adjust based on your actual image */
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333;
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-bottom: 20px;
-        }
-        
-        .image-content img {
-            width: 350px;
-            object-fit: cover;
-            margin-top: 190;
-            margin-right: 40px;
-        }
-
-        .content-block-2 {
-            background-color: #014D50;
-            height: 500px
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Content Block 2 Styling */
-        .content-block-2 {
-            display: flex;
-            align-items: center; /* Vertically center the content */
-            background-color: #014D50; /* Background color */
-            padding: 40px; /* Add padding for spacing */
-            height: 500px; /* Adjust height as needed */
-            box-sizing: border-box;
-        }
-        
-        /* Left Side: People Powered Image */
-        .people-powered-image-container {
-            flex: 1; /* Take up 50% of the space */
-            display: flex;
-            align-items: center; /* Center the image vertically */
-            justify-content: center; /* Center the image horizontally */
-            padding-left: 40px;
-        }
-        
-        .people-powered-image {
-            width: 330px; /* Adjust image size */
-            height: 330px;
-            object-fit: cover; /* Ensure the image fits properly */
-        }
-        
-        /* Right Side: Heading and Text */
-        .content-text {
-            flex: 1; /* Take up 50% of the space */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center content vertically */
-            padding-left: 20px; /* Add spacing between image and text */
-            margin-right: 50px;
-        }
-        
-        /* Heading Container */
-        .heading-container {
-            display: flex;
-            justify-content: flex-end; /* Align heading to the right */
-            margin-bottom: 20px; /*Space between heading and text*/
-            margin-left: -20px;
-        }
-        
-        .heading-image {
-            width: 100%; /* Adjust heading image size */
-            max-width: 380px; /* Limit maximum width */
-            height: auto;
-        }
-        
-        /* Text Styling */
-        .content-text p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #ECECE9 !important; /* Text color */
-            margin: 0 0 10px 0; /* Spacing between paragraphs */
-        }
-
-        /* Image Row Styling */
-        .image-row {
-            display: flex; 
-            justify-content: space-between; 
-            margin-bottom: 20px; 
-            padding-left: 150px;
-            padding-right: 150px;
-        }
-
-         .content-text p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: white;
-            margin: 0 0 10px 0;
-        }
-        
-        /* Image Styling */
-        .image-row a {
-            display: block;
-            width: 30%;  /* Adjust size of each image (change as needed) */
-            text-align: center;
-        }
-        
-        .image-row img {
-            width: 100%; 
-            height: auto;
-            max-width: 100%;
-            transition: transform 0.3s ease;
-        }
-        
-        .image-row img:hover {
-            transform: scale(1.05);
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Add a little gap between the images if needed */
-        .image-row a + a {
-            margin-left: 5px;
-        }
-
-        /* Container for Logo and Section Heading */
-        .heading-with-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* Logo above the Section Heading Image */
-        .logo-above-heading {
-            width: 170px; /* Adjust size of the logo */
-            height: auto;
-            margin-top: 10px;
-            margin-left: 220px;
-        }
-
-        /* Section Heading Images Styling */
-        .section-heading-image {
-            width: 100%; /* Adjust size of your text image */
-            max-width: 650px;
-            height: auto;
-            margin-left: 85px; /* Center the heading image */
-            margin-top: 25px;
-            margin-bottom: 25px;
-            display: block;
-        }
-        
-        /* Paragraph Styling */
-        .content-block p, .content-block ul {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333; /* Darker gray for better readability */
-            margin-left: 100px;
-            margin-right: 100px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
-        ::-webkit-scrollbar {
-          width: 12px; /* Adjust the width of the scrollbar */
-        }
-        
-        ::-webkit-scrollbar-track {
-          background-color: #E3E3E1; /* Track background color */
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background-color: #888888; /* Thumb (the draggable part) color */
-          border-radius: 10px; /* Optional: round the thumb */
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background-color: #A1A1A1; /* Thumb color on hover */
-        }
     </style>
-    
 </head>
-<body>
-    
-<!-- Banner Section -->
-<header class="banner">
-    <!-- Logo Section -->
-    <div class="logo">
-        <img src="Logo.png"> <!-- Replace with your logo image file -->
-    </div>
-
-    <!-- Navigation Links -->
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about us.html">About Us</a>
-        <a href="landscape aesthetics.html">Landscape Aesthetics</a>
-        
-        <!-- Learning Hub Dropdown -->
-        <div class="dropdown">
-            <a href="#" class="nav-link">Learning Hub</a>
-            <div class="dropdown-menu">
-                <a href="whats blooming.html">What's Blooming</a>
-                <a href="debunking.html">Debunking</a>
-            </div>
-        </div>
-        
-        <a href="events.html">Events</a>
-    </nav>
-
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Search...">
-    </div>
-</header>
-
-</body>
-</html>
-
+    <body>
 
     <!-- Banner Section -->
     <header class="banner">
@@ -548,76 +209,234 @@
         </div>
     </header>
 
-<main>
-<section class="home-page-section">
-    <!-- Top Half with Image -->
-    <div class="top-half">
-        <img src="home page background half image2.png" alt="Home Page Background Feild" class="top-half-image">
-        <div class="heading-overlay">
-        </div>
+<!-- Header Section with Events Text and Description -->
+<section style="
+    height: 100vh; 
+    max-width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 10%; 
+    background: linear-gradient(135deg, #ECECE9); /* Subtle gradient */
+    color: black;
+    position: relative; /* For overlay effects */
+">
+    <!-- Left Section: Events Text and Description -->
+    <div style="
+        width: 50%; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: flex-start;
+    ">
+        <h1 style="
+            font-size: 4rem; 
+            font-weight: 700; /* Bold font weight */
+            margin-bottom: 1.5rem;
+            color: #014D50; /* Dark green for contrast */
+            line-height: 1.2;
+        ">
+            Newer Earth
+        </h1>
+        <p style="
+            font-size: 1.4rem; 
+            line-height: 1.8; 
+            color: #555;
+            margin-bottom: 2rem; /* Add space below the paragraph */
+        ">
+            Welcome to Newer Earth, where passion meets environmental sustainability. 
+        </p>
+        <!-- Call-to-Action Button -->
+        <a href="#upcoming-events" style="
+            background-color: #014D50; /* Dark green */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        ">
+            Adventures Await!
+        </a>
     </div>
 
-      <!-- Bottom Half with Content -->
-    <div class="bottom-half">
-        <!-- Content Block 1 -->
-        <div class="content-block-1">
-                <div class="text-content">
-                    <img src="Logo.png" alt="Logo" class="logo-above-heading">
-                    <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
-                    <p>
-                        Whether it's planting a native wildflower border in your backyard, teaching novice gardeners to grow their own food, or helping locals with environmental conservation practices, we empower homeowners to help the environment.
-                    </p>
-                    <p>
-                        Each small step helps us to create a newer earth for future generations.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img src="sustainability image.png" alt="Sustainability Image" class="image-right">
-                </div>
-        </div>
-
-        <!-- Content Block 2 -->
-        <div class="content-block content-block-2">
-            <!-- Left Side: People Powered Image -->
-            <div class="people-powered-image-container">
-                <img src="people powered image.png" alt="People Powered" class="people-powered-image">
+    <!-- Right Section: Image -->
+<!-- Right Section: Calendar with Page Flip -->
+<div style="
+    width: 45%; 
+    height: 70%; 
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: linear-gradient(135deg, #014D50, #99B81D, #084F6A);
+    background-size: 200% 200%;
+    animation: gradient 5s infinite ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 55px;
+">
+    <!-- Scrolling Pages Container -->
+    <div style="
+        width: 80%;
+        height: 80%;
+        position: relative;
+        overflow: hidden;
+    ">
+        <!-- Scrolling Pages -->
+        <div style="
+            width: 100%;
+            height: 300%; /* 3 pages stacked vertically */
+            position: absolute;
+            top: 0;
+            animation: scroll 10s infinite ease-in-out;
+        ">
+            <!-- Page 1 -->
+            <div style="
+                width: 100%;
+                height: 33.33%; /* One-third of the container height */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 20px;
+            ">
+                Welcome to Newer Earth! 🌍
             </div>
-        
-            <!-- Right Side: Heading and Text -->
-            <div class="content-text">
-                <!-- Heading (Centered Vertically on Top Right) -->
-                <div class="heading-container">
-                    <img src="content heading 1b.png" alt="People Powered Heading" class="heading-image">
-                </div>
-        
-                <!-- Text Content -->
-                <p>Newer Earth relies on community support. We're dedicated through determination and effort to rejuvenate our community's natural environment, making it a welcoming space for all.</p>
-                <p>With your assistance, we aspire to build partnerships with national agencies in the future, non-profits, and local farms. If you believe that the environment matters, get involved!</p>
+            <!-- Page 2 -->
+            <div style="
+                width: 100%;
+                height: 33.33%; /* One-third of the container height */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 20px;
+            ">
+                Explore our sustainability initiatives. 🌱
             </div>
-        </div>
-    
-            <!-- Content Block 3 -->
-        <div class="content-block">
-            <img src="content heading 1c.png" alt="Our Top Picks" class="section-heading-image">
-                <div class="image-row">
-                    <a href="renewable energy.html">
-                        <img src="top pick1.png" alt="Renewable Energy">
-                    </a>
-                    <a href="landscape aesthetics.html">
-                        <img src="top pick 2.png" alt="Landscape Aesthetics">
-                    </a>
-                    <a href="three rs.html">
-                        <img src="top pick3.png" alt="Waste Management">
-                    </a>
-                </div>
+            <!-- Page 3 -->
+            <div style="
+                width: 100%;
+                height: 33.33%; /* One-third of the container height */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 20px;
+            ">
+                Join us in making a difference. 💚
+            </div>
         </div>
     </div>
-    
+</div>
+
+<style>
+    /* Gradient Animation */
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Scrolling Animation */
+    @keyframes scroll {
+        0% {
+            top: 0;
+        }
+        33.33% {
+            top: -100%; /* Scroll to the second page */
+        }
+        66.66% {
+            top: -200%; /* Scroll to the third page */
+        }
+        100% {
+            top: 0; /* Reset to the first page */
+        }
+    }
+</style>
 </section>
+
+<style>
+    /* Styling for the image container */
+    .event-image {
+        width: 65%; /* Initial size */
+        height: 65%; 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: transform 0.3s ease; /* Smooth scaling effect */
+    }
+
+    /* Hover effect to enlarge the image */
+    .event-image:hover {
+        transform: scale(1.1); /* Increases size by 10% */
+    }
     
-<!-- Footer Section -->
+            /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+          width: 12px; /* Adjust the width of the scrollbar */
+        }
+        
+        ::-webkit-scrollbar-track {
+          background-color: #E3E3E1; /* Track background color */
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background-color: #888888; /* Thumb (the draggable part) color */
+          border-radius: 10px; /* Optional: round the thumb */
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: #A1A1A1; /* Thumb color on hover */
+        }
+
+</style>
+
+<!--Upcoming Events Section-->
+<section style="
+    height: 100vh; 
+    max-width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #99B81D; 
+">
+    <div class="event-image" style="background-image: url('Upcoming events.png');"></div>
+</section>
+
+<!--Past Events Section-->
+<section style="
+    height: 100vh; 
+    max-width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #ECECE9; 
+">
+    <div class="event-image" style="background-image: url('Past events.png');"></div>
+</section>
+        
+        <!-- Footer Section -->
 <footer style="
-    background-color: #014D50 !important; 
+    background-color: #014D50; 
     color: white; 
     padding: 40px 0;
     text-align: center;
@@ -626,7 +445,7 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
         <!-- Left Section: Motto and Contact Information -->
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
-            <h3 style="color: #ECECE9 !important;">The Environment Matters</h3>
+            <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
             <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
@@ -661,7 +480,7 @@
     </div>
 </footer>
         
-    <!-- JavaScript for Transparent Scroll Effect -->
+           <!-- JavaScript for Transparent Scroll Effect -->
     <script>
         window.addEventListener('scroll', function () {
             const banner = document.querySelector('.banner');
@@ -671,7 +490,6 @@
                 banner.classList.remove('transparent');
             }
         });
-    </script>
-
+    </script> 
 </body>
 </html>
