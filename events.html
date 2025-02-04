@@ -209,7 +209,7 @@
         </div>
     </header>
 
-<!--Header Section with Events Text and Description-->
+<!-- Header Section with Events Text and Description -->
 <section style="
     height: 100vh; 
     max-width: 100%; 
@@ -217,22 +217,24 @@
     align-items: center; 
     justify-content: space-between; 
     padding: 0 10%; 
-    background-color: #ECECE9; 
+    background: linear-gradient(135deg, #ECECE9, #D3D3C1); /* Subtle gradient */
     color: black;
+    position: relative; /* For overlay effects */
 ">
     <!-- Left Section: Events Text and Description -->
     <div style="
-        width: 45%; 
+        width: 50%; 
         display: flex; 
         flex-direction: column; 
-        justify-content: flex-start; 
+        justify-content: center; 
         align-items: flex-start;
-        margin-top: -2%
     ">
         <h1 style="
             font-size: 4rem; 
-            font-weight: bold; 
-            margin-bottom: 1rem;
+            font-weight: 700; /* Bold font weight */
+            margin-bottom: 1.5rem;
+            color: #014D50; /* Dark green for contrast */
+            line-height: 1.2;
         ">
             Events
         </h1>
@@ -240,9 +242,23 @@
             font-size: 1.5rem; 
             line-height: 1.8; 
             color: #555;
+            margin-bottom: 2rem; /* Add space below the paragraph */
         ">
             Explore our upcoming and past events. Stay updated with what's happening and relive the moments that brought us together.
         </p>
+        <!-- Call-to-Action Button -->
+        <a href="#upcoming-events" style="
+            background-color: #014D50; /* Dark green */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        ">
+            View Events
+        </a>
     </div>
 
     <!-- Right Section: Image -->
@@ -253,6 +269,8 @@
         background-repeat: no-repeat; 
         background-position: center; 
         background-size: contain;
+        border-radius: 12px; /* Rounded corners */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     ">
     </div>
 </section>
