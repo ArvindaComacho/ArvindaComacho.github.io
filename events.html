@@ -12,7 +12,6 @@
             box-sizing: border-box;
         }
 
-        /* Body style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -22,7 +21,6 @@
         padding-top: 70px;
         }
 
-        /* Banner Style */
         .banner {
             position: fixed;
             top: 0;
@@ -40,12 +38,10 @@
             z-index: 1000;
         }
 
-        /* Banner changes to semi-transparent on scroll */
         .banner.transparent {
             background: rgba(255, 255, 255, 0.5);
         }
 
-        /* Logo placeholder */
         .logo {
             display: flex;
             align-items: center;
@@ -57,7 +53,6 @@
             margin-right: 15px;
         }
 
-        /* Navigation style */
         .nav-links {
             display: flex;
             gap: 20px;
@@ -79,7 +74,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -96,7 +90,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Dropdown Menu */
         .dropdown {
             display: inline-block;
             position: relative;
@@ -119,9 +112,8 @@
             display: block;
         }
         
-        /* Dropdown Item Styling */
         .dropdown-menu a {
-            color: #014D50; /* Text color */
+            color: #014D50; 
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -130,11 +122,10 @@
         }
         
         .dropdown-menu a:hover {
-            background-color: rgba(153, 184, 29, 0.2); /* Hover effect */
+            background-color: rgba(153, 184, 29, 0.2); 
             border-radius: 5px;
         }
         
-        /* Underline effect for main navigation and dropdown links */
         .nav-links a::after,
         .dropdown-menu a::after {
             content: '';
@@ -153,7 +144,6 @@
             transform: scaleX(1);
         }
 
-        /* Search Bar style */
         .search-container {
             display: flex;
             align-items: center;
@@ -180,18 +170,15 @@
 
     <!-- Banner Section -->
     <header class="banner">
-        <!-- Logo Section -->
         <div class="logo">
-            <img src="Logo.png"> <!-- Replace with your logo image file -->
+            <img src="Logo.png">
         </div>
 
-        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
             
-            <!-- Learning Hub Dropdown -->
             <div class="dropdown">
                 <a href="#" class="nav-link">Learning Hub</a>
                 <div class="dropdown-menu">
@@ -203,13 +190,11 @@
             <a href="events.html">Events</a>
         </nav>
 
-        <!-- Search Bar -->
         <div class="search-container">
             <input type="text" class="search-bar" placeholder="Search...">
         </div>
     </header>
 
-<!-- Header Section with Events Text and Description -->
 <section style="
     height: 100vh; 
     max-width: 100%; 
@@ -217,11 +202,10 @@
     align-items: center; 
     justify-content: space-between; 
     padding: 0 10%; 
-    background: linear-gradient(135deg, #ECECE9); /* Subtle gradient */
+    background: linear-gradient(135deg, #ECECE9);
     color: black;
-    position: relative; /* For overlay effects */
+    position: relative;
 ">
-    <!-- Left Section: Events Text and Description -->
     <div style="
         width: 50%; 
         display: flex; 
@@ -231,9 +215,9 @@
     ">
         <h1 style="
             font-size: 4rem; 
-            font-weight: 700; /* Bold font weight */
+            font-weight: 700;
             margin-bottom: 1.5rem;
-            color: #014D50; /* Dark green for contrast */
+            color: #014D50;
             line-height: 1.2;
         ">
             Events
@@ -242,13 +226,13 @@
             font-size: 1.4rem; 
             line-height: 1.8; 
             color: #555;
-            margin-bottom: 2rem; /* Add space below the paragraph */
+            margin-bottom: 2rem;
         ">
             Explore our upcoming and past events. Stay updated with what's happening and relive the moments that brought us together.
         </p>
-        <!-- Call-to-Action Button -->
+
         <a href="#upcoming-events" style="
-            background-color: #014D50; /* Dark green */
+            background-color: #014D50;
             color: white;
             padding: 15px 30px;
             font-size: 1.2rem;
@@ -261,18 +245,16 @@
         </a>
     </div>
 
-    <!-- Right Section: Image -->
-<!-- Right Section: Calendar with Page Flip -->
 <div style="
     width: 45%; 
     height: 70%; 
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     background: linear-gradient(135deg, #014D50, #99B81D, #084F6A);
     background-size: 200% 200%;
     animation: gradient 5s infinite ease-in-out;
-    position: relative; /* Required for positioning the calendar page */
-    overflow: hidden; /* Ensures the flip effect stays within the container */
+    position: relative;
+    overflow: hidden; 
     margin-top: 55px;
 ">
     <!-- Calendar Page -->
@@ -387,14 +369,13 @@
         }
     }
 
-    /* Calendar Page Styles */
     .calendar-page {
         position: absolute;
         top: 10%;
         left: 10%;
         width: 80%;
         height: 80%;
-        perspective: 1000px; /* Adds depth for the flip effect */
+        perspective: 1000px;
     }
 
     .page-front,
@@ -402,7 +383,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        backface-visibility: hidden; /* Hides the back of the page during flip */
+        backface-visibility: hidden;
         border-radius: 8px;
         background: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -419,7 +400,6 @@
         transform: rotateY(180deg);
     }
 
-    /* Flip effect on hover */
     .calendar-page:hover .page-front {
         transform: rotateY(-180deg);
     }
@@ -428,7 +408,6 @@
         transform: rotateY(0deg);
     }
 
-    /* Calendar Header */
     .calendar-header {
         text-align: center;
         margin-bottom: 20px;
@@ -446,7 +425,6 @@
         color: #666;
     }
 
-    /* Calendar Grid */
     .calendar-grid {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
@@ -464,47 +442,44 @@
     }
 
     .day:nth-child(7n + 1) {
-        color: #ff6b6b; /* Highlight Sundays */
+        color: #ff6b6b;
     }
 
     .day:nth-child(7n) {
-        color: #4dabf7; /* Highlight Saturdays */
+        color: #4dabf7; 
     }
 </style>
 </section>
 
 <style>
-    /* Styling for the image container */
     .event-image {
-        width: 65%; /* Initial size */
+        width: 65%;
         height: 65%; 
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        transition: transform 0.3s ease; /* Smooth scaling effect */
+        transition: transform 0.3s ease;
     }
 
-    /* Hover effect to enlarge the image */
     .event-image:hover {
-        transform: scale(1.1); /* Increases size by 10% */
+        transform: scale(1.1);
     }
     
-            /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
-          width: 12px; /* Adjust the width of the scrollbar */
+          width: 12px;
         }
         
         ::-webkit-scrollbar-track {
-          background-color: #E3E3E1; /* Track background color */
+          background-color: #E3E3E1;
         }
         
         ::-webkit-scrollbar-thumb {
-          background-color: #888888; /* Thumb (the draggable part) color */
-          border-radius: 10px; /* Optional: round the thumb */
+          background-color: #888888;
+          border-radius: 10px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-          background-color: #A1A1A1; /* Thumb color on hover */
+          background-color: #A1A1A1;
         }
 
 </style>
@@ -542,14 +517,12 @@
     font-size: 0.9em;
 ">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
-        <!-- Left Section: Motto and Contact Information -->
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
             <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
             <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
 
-        <!-- Center Section: Social Media Links -->
         <div style="flex: 1; min-width: 200px; text-align: center; padding: 10px;">
             <h3 style="color: #ECECE9;">Follow Us</h3>
             <a href="https://www.facebook.com/people/The-Newer-Earth-Programme/61565747641949/?rdid=0QMA8aLVpjtyjk6I&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FjsrvtRrCVDyLw7H2%252F" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
@@ -560,7 +533,6 @@
             </a>
         </div>
 
-        <!-- Right Section: Quick Links -->
         <div style="flex: 1; min-width: 200px; text-align: right; padding: 10px;">
             <h3 style="color: #ECECE9;">Quick Links</h3>
             <a href="index.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Home</a>
@@ -573,22 +545,10 @@
         </div>
     </div>
 
-    <!-- Copyright Section -->
     <div style="margin-top: 20px; text-align: center;">
         <p>&copy; 2024 Newer Earth. All rights reserved.</p>
     </div>
 </footer>
         
-           <!-- JavaScript for Transparent Scroll Effect -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const banner = document.querySelector('.banner');
-            if (window.scrollY > 50) {
-                banner.classList.add('transparent');
-            } else {
-                banner.classList.remove('transparent');
-            }
-        });
-    </script> 
 </body>
 </html>
