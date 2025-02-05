@@ -6,14 +6,12 @@
     <link rel="icon" type="image/jpg" href="favicon.jpg">
     <title>Newer Earth</title>
     <style>
-        /* Reset margin and padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -23,7 +21,6 @@
         padding-top: 70px;
         }
 
-        /* Banner Style */
         .banner {
             position: fixed;
             top: 0;
@@ -41,12 +38,10 @@
             z-index: 1000;
         }
 
-        /* Banner changes to semi-transparent on scroll */
         .banner.transparent {
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Logo Placeholder */
         .logo {
             display: flex;
             align-items: center;
@@ -58,7 +53,6 @@
             margin-right: 15px;
         }
 
-        /* Navigation Links Styling */
         .nav-links {
             display: flex;
             gap: 20px;
@@ -80,7 +74,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -97,7 +90,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Link Styling */
         .nav-links .nav-link {
             text-decoration: none;
             color: #333;
@@ -112,7 +104,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover for Learning Hub link */
         .nav-links .nav-link::after {
             content: '';
             position: absolute;
@@ -129,7 +120,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Dropdown Menu */
         .dropdown {
             display: inline-block;
             position: relative;
@@ -151,9 +141,9 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-        /* Dropdown Item Styling */
+
         .dropdown-menu a {
-            color: #014D50; /* Text color */
+            color: #014D50;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -162,11 +152,10 @@
         }
         
         .dropdown-menu a:hover {
-            background-color: rgba(153, 184, 29, 0.2); /* Hover effect */
+            background-color: rgba(153, 184, 29, 0.2);
             border-radius: 5px;
         }
         
-        /* Underline effect for main navigation and dropdown links */
         .nav-links a::after,
         .dropdown-menu a::after {
             content: '';
@@ -185,7 +174,6 @@
             transform: scaleX(1);
         }
 
-        /* Search Bar Styling */
         .search-container {
             display: flex;
             align-items: center;
@@ -208,7 +196,6 @@
 
 /*<------------- Yes or no myth section ------------->*/ 
         
-        /* Middle Section Styling */
         .section {
             padding: 60px 0;
             background-color: #FFFFFF;
@@ -221,19 +208,17 @@
             margin-bottom: 40px;
         }
         
-        /* Myth Container Grid Layout */
         .myth-container {
-            display: flex; /* Use flexbox instead of grid */
-            flex-wrap: wrap; /* Allow wrapping into multiple rows */
-            justify-content: center; /* Center the boxes horizontally */
-            gap: 35px; /* Spacing between boxes */
-            max-width: 1200px; /* Limit the container width */
-            margin: 0 auto; /* Center the container */
-            padding: 0 20px; /* Add minimal horizontal padding */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             grid-template-columns: repeat(2, 1fr);
         }
         
-        /* Myth Box Card Design */
         .myth-box {
             background: white;
             padding: 25px;
@@ -259,7 +244,6 @@
             margin-bottom: 20px;
         }
         
-        /* Buttons Styling */
         .buttons {
             display: flex;
             justify-content: center;
@@ -297,7 +281,6 @@
             transform: scale(0.95);
         }
         
-        /* Result Feedback Styling */
         .result {
             margin-top: 20px;
             font-size: 1.1rem;
@@ -310,8 +293,6 @@
         .result.show {
             opacity: 1;
         }
-
-        /* Section 1 Styling */
         
         .section-1 {
             height: 100vh;
@@ -340,7 +321,6 @@
             z-index: 3;
         }
         
-        /* Myth Boxes Container */
         .myth-boxes {
             display: flex;
             gap: 30px;
@@ -350,7 +330,6 @@
             z-index: 3;
         }
         
-        /* Individual Myth Box */
         .myth-box {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
@@ -381,7 +360,6 @@
             z-index: 3;
         }
 
-        /* Debunking Image Container */
         .debunking-image-container {
             position: absolute;
             bottom: 0;
@@ -396,20 +374,17 @@
             overflow: hidden;
         }
         
-        /* Debunking Image */
         .debunking-image {
-            max-width: 100%; /* Ensure the image doesn't exceed the container width */
-            height: 100%; /* Maintain aspect ratio */
+            max-width: 100%; 
+            height: 100%; 
             display: block;
             object-fit: cover;
         }
 
-        /* Hide the Checkbox */
         .toggle-checkbox {
             display: none;
         }
         
-        /* Expanded Content (Hidden by Default) */
         .expanded-content {
             display: none;
             position: fixed;
@@ -435,13 +410,11 @@
             padding-left: 20px;
         }
         
-        /* Show Expanded Content When Checkbox is Checked */
         .toggle-checkbox:checked ~ .expanded-content {
             opacity: 1;
             visibility: visible;
         }
         
-        /* Close Button */
         .close-button {
             position: absolute;
             top: 10px;
@@ -458,22 +431,21 @@
             color: #084F6A;
         }
 
-        /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
-          width: 12px; /* Adjust the width of the scrollbar */
+          width: 12px; 
         }
         
         ::-webkit-scrollbar-track {
-          background-color: #E3E3E1; /* Track background color */
+          background-color: #E3E3E1;
         }
         
         ::-webkit-scrollbar-thumb {
-          background-color: #888888; /* Thumb (the draggable part) color */
-          border-radius: 10px; /* Optional: round the thumb */
+          background-color: #888888; 
+          border-radius: 10px; 
         }
         
         ::-webkit-scrollbar-thumb:hover {
-          background-color: #A1A1A1; /* Thumb color on hover */
+          background-color: #A1A1A1;
         }
         
     </style>
@@ -485,7 +457,6 @@
         <h1>Debunking</h1>
         <p>Myths about the environment can lead to misinformation and hinder sustainability efforts. By separating fact from fiction, we can encourage individuals to make informed decisions that will positively impact the planet.</p>
         
-        <!-- Two Boxes for True and False Myths -->
         <div class="myth-boxes">
             <!-- True Myths Box -->
             <div class="myth-box">
@@ -521,13 +492,12 @@
                 </div>
             </div>
         </div>
-                    <!-- Debunking Image -->
+        
             <div class="debunking-image-container">
                 <img src="debunking image.png" alt="Debunking Image" class="debunking-image">
             </div>
     </div>
 
-<!-- Middle Section: Myths -->
 <div class="section">
     <h2>Test Your Knowledge</h2>
     <div class="myth-container" id="myth-container"></div>
@@ -572,28 +542,25 @@
             resultBox.style.color = "#084F6A";
             resultBox.textContent = "✘ Incorrect: " + myths[index].explanation;
         }
-        resultBox.classList.add("show"); // Show the result with animation
+        resultBox.classList.add("show");
         button.parentElement.querySelectorAll("button").forEach(btn => {
             btn.disabled = true;
-            btn.style.opacity = 0.6; // Dim the buttons after answering
+            btn.style.opacity = 0.6;
         });
     }
 </script>
     
 <!-- Banner Section -->
 <header class="banner">
-    <!-- Logo Section -->
     <div class="logo">
-        <img src="Logo.png"> <!-- Replace with your logo image file -->
+        <img src="Logo.png">
     </div>
 
-    <!-- Navigation Links -->
     <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about us.html">About Us</a>
         <a href="landscape aesthetics.html">Landscape Aesthetics</a>
         
-        <!-- Learning Hub Dropdown -->
         <div class="dropdown">
             <a href="#" class="nav-link">Learning Hub</a>
             <div class="dropdown-menu">
@@ -605,7 +572,6 @@
         <a href="events.html">Events</a>
     </nav>
 
-    <!-- Search Bar -->
     <div class="search-container">
         <input type="text" class="search-bar" placeholder="Search...">
     </div>
@@ -617,18 +583,15 @@
 
     <!-- Banner Section -->
     <header class="banner">
-        <!-- Logo Section -->
         <div class="logo">
-            <img src="Logo.png"> <!-- Replace with your logo image file -->
+            <img src="Logo.png">
         </div>
 
-        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
             
-            <!-- Learning Hub Dropdown -->
             <div class="dropdown">
                 <a href="#" class="nav-link">Learning Hub</a>
                 <div class="dropdown-menu">
@@ -640,7 +603,6 @@
             <a href="events.html">Events</a>
         </nav>
 
-        <!-- Search Bar -->
         <div class="search-container">
             <input type="text" class="search-bar" placeholder="Search...">
         </div>
@@ -658,14 +620,12 @@
     font-size: 0.9em;
 ">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
-        <!-- Left Section: Motto and Contact Information -->
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
             <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
             <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
 
-        <!-- Center Section: Social Media Links -->
         <div style="flex: 1; min-width: 200px; text-align: center; padding: 10px;">
             <h3 style="color: #ECECE9;">Follow Us</h3>
             <a href="https://www.facebook.com/people/The-Newer-Earth-Programme/61565747641949/?rdid=0QMA8aLVpjtyjk6I&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FjsrvtRrCVDyLw7H2%252F" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
@@ -676,7 +636,6 @@
             </a>
         </div>
 
-        <!-- Right Section: Quick Links -->
         <div style="flex: 1; min-width: 200px; text-align: right; padding: 10px;">
             <h3 style="color: #ECECE9;">Quick Links</h3>
             <a href="index.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Home</a>
@@ -689,23 +648,10 @@
         </div>
     </div>
 
-    <!-- Copyright Section -->
     <div style="margin-top: 20px; text-align: center;">
         <p>&copy; 2024 Newer Earth. All rights reserved.</p>
     </div>
 </footer>
-        
-    <!-- JavaScript for Transparent Scroll Effect -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const banner = document.querySelector('.banner');
-            if (window.scrollY > 50) {
-                banner.classList.add('transparent');
-            } else {
-                banner.classList.remove('transparent');
-            }
-        });
-    </script>
 
 </body>
 </html>
