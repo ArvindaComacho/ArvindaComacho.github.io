@@ -173,6 +173,56 @@
             border-color: #014D50;
             outline: none;
         }
+
+        /* Content Section 1 Styling */
+        .content-section-1 {
+            padding: 60px 10%; /* Add padding for spacing */
+            background-color: #f9f9f9; /* Light background color */
+        }
+        
+        .content-container {
+            display: flex;
+            align-items: flex-start; /* Align items to the top */
+            gap: 40px; /* Space between text and image */
+        }
+        
+        .text-content {
+            flex: 1; /* Take up remaining space */
+            max-width: 60%; /* Limit text width */
+        }
+        
+        .logo-above-heading {
+            width: 80px; /* Adjust logo size */
+            height: auto;
+            margin-bottom: 20px; /* Space below logo */
+        }
+        
+        .section-heading-image {
+            width: 100%; /* Full width of the container */
+            height: auto;
+            margin-bottom: 20px; /* Space below heading */
+        }
+        
+        .text-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px; /* Space between paragraphs */
+        }
+        
+        .image-content {
+            flex: 1; /* Take up remaining space */
+            max-width: 40%; /* Limit image width */
+            display: flex;
+            align-items: center; /* Center image vertically */
+        }
+        
+        .image-right {
+            width: 100%; /* Full width of the container */
+            height: auto;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
         
     </style>
 </head>
@@ -374,24 +424,26 @@
 </style>
 </section>
         
-    <!-- Content Section 1 -->
-    <section class="content-section-1" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 10%; background: #f5f5f5;">
-        <!-- Left Section: Heading and Text -->
-        <div class="text-content" style="flex: 1; padding-right: 20px;">
-            <h2 style="font-size: 2rem; font-weight: 700; color: #014D50;">We Bring Sustainability to Unexpected Places</h2>
-            <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+<!-- Content Section 1 -->
+<section class="content-section-1">
+    <div class="content-container">
+        <!-- Text Content -->
+        <div class="text-content">
+            <img src="Logo.png" alt="Logo" class="logo-above-heading">
+            <img src="content heading 1a.png" alt="We Bring Sustainability to Unexpected Places" class="section-heading-image">
+            <p>
                 Whether it's planting a native wildflower border in your backyard, teaching novice gardeners to grow their own food, or helping locals with environmental conservation practices, we empower homeowners to help the environment.
             </p>
-            <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+            <p>
                 Each small step helps us to create a newer earth for future generations.
             </p>
         </div>
-    
-        <!-- Right Section: Sustainability Image -->
-        <div class="image-content" style="flex: 1; display: flex; justify-content: center;">
-            <img src="sustainability image.png" alt="Sustainability Image" style="max-width: 100%; height: auto; border-radius: 8px;">
+        <!-- Image Content -->
+        <div class="image-content">
+            <img src="sustainability image.png" alt="Sustainability Image" class="image-right">
         </div>
-    </section>
+    </div>
+</section>
         
 <style>
     /* Styling for the image container */
