@@ -6,14 +6,12 @@
     <link rel="icon" type="image/jpg" href="favicon.jpg">
     <title>Newer Earth</title>
     <style>
-        /* Reset margin and padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -23,7 +21,6 @@
         padding-top: 70px;
         }
 
-        /* Banner Style */
         .banner {
             position: fixed;
             top: 0;
@@ -41,12 +38,10 @@
             z-index: 1000;
         }
 
-        /* Banner changes to semi-transparent on scroll */
         .banner.transparent {
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Logo Placeholder */
         .logo {
             display: flex;
             align-items: center;
@@ -58,7 +53,6 @@
             margin-right: 15px;
         }
 
-        /* Navigation Links Styling */
         .nav-links {
             display: flex;
             gap: 20px;
@@ -80,7 +74,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -97,7 +90,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Link Styling */
         .nav-links .nav-link {
             text-decoration: none;
             color: #333;
@@ -112,7 +104,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover for Learning Hub link */
         .nav-links .nav-link::after {
             content: '';
             position: absolute;
@@ -129,7 +120,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Dropdown Menu */
         .dropdown {
             display: inline-block;
             position: relative;
@@ -151,9 +141,8 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-        /* Dropdown Item Styling */
         .dropdown-menu a {
-            color: #014D50; /* Text color */
+            color: #014D50;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -162,11 +151,10 @@
         }
         
         .dropdown-menu a:hover {
-            background-color: rgba(153, 184, 29, 0.2); /* Hover effect */
+            background-color: rgba(153, 184, 29, 0.2);
             border-radius: 5px;
         }
         
-        /* Underline effect for main navigation and dropdown links */
         .nav-links a::after,
         .dropdown-menu a::after {
             content: '';
@@ -185,7 +173,6 @@
             transform: scaleX(1);
         }
 
-        /* Search Bar Styling */
         .search-container {
             display: flex;
             align-items: center;
@@ -206,7 +193,6 @@
             outline: none;
         }
 
-        /* Fullscreen Background Section */
         .fullscreen-section {
             height: 100vh;
             background: url('Sunflower.png') no-repeat center center/cover;
@@ -214,10 +200,9 @@
             align-items: center;
             justify-content: flex-start;
             position: relative;
-            padding: 0 50px; /* Adjust left padding for centering text image */
+            padding: 0 50px;
         }
         
-        /* Content Container */
         .content-container {
             text-align: left;
             display: flex;
@@ -225,14 +210,12 @@
             align-items: center;
         }
         
-        /* Text Image */
         .text-image {
             max-width: 650px; 
             height: auto;
             margin-bottom: 20px;
         }
         
-        /* Explore Button Styling */
         .explore-button img {
             width: 140px;
             height: auto;
@@ -252,17 +235,17 @@
         .next-section {
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Ensures elements stack vertically */
-            align-items: center; /* Centers the heading image and the boxes */
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             background-color: #ECECE9;
             padding: 50px;
         }
         
         .heading-image {
-            text-align: center; /* Centers the heading image */
+            text-align: center;
             margin-top: 20px;
-            margin-bottom: 30px; /* Space between heading image and boxes */
+            margin-bottom: 30px;
     
         }
         
@@ -273,50 +256,50 @@
         
         .link-boxes {
             display: flex;
-            gap: 35px; /* Adds gap between the images */
-            justify-content: center; /* Ensures the images are centered horizontally */
+            gap: 35px;
+            justify-content: center;
             width: 100%;
         }
         
         .link-boxes a {
-            display: inline-block; /* Makes the image clickable */
-            transition: transform 0.3s ease; /* Animation for hover effect */
+            display: inline-block; 
+            transition: transform 0.3s ease;
             width: 280px;
             height: auto;
         }
         
         .link-boxes img {
-            width: 100%; /* Makes the image fill its container */
-            height: auto; /* Maintains the aspect ratio of the image */
-            border-radius: 12px; /* Rounds the corners of the image */
-            object-fit: cover; /* Ensures the image covers the container */
+            width: 100%; 
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
             transition: transform 0.3s ease-in-out;
         }
         
         .link-boxes a:hover img {
-            transform: scale(1.05); /* Makes the image grow slightly on hover */
+            transform: scale(1.05);
         }
         
         html {
             scroll-behavior: smooth;
         }
 
-                /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+        
         ::-webkit-scrollbar {
-          width: 12px; /* Adjust the width of the scrollbar */
+          width: 12px;
         }
         
         ::-webkit-scrollbar-track {
-          background-color: #E3E3E1; /* Track background color */
+          background-color: #E3E3E1;
         }
         
         ::-webkit-scrollbar-thumb {
-          background-color: #888888; /* Thumb (the draggable part) color */
-          border-radius: 10px; /* Optional: round the thumb */
+          background-color: #888888; 
+          border-radius: 10px; 
         }
         
         ::-webkit-scrollbar-thumb:hover {
-          background-color: #A1A1A1; /* Thumb color on hover */
+          background-color: #A1A1A1;
         }
 
         </style>
@@ -326,18 +309,15 @@
     
 <!-- Banner Section -->
 <header class="banner">
-    <!-- Logo Section -->
     <div class="logo">
-        <img src="Logo.png"> <!-- Replace with your logo image file -->
+        <img src="Logo.png">
     </div>
 
-    <!-- Navigation Links -->
     <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about us.html">About Us</a>
         <a href="landscape aesthetics.html">Landscape Aesthetics</a>
         
-        <!-- Learning Hub Dropdown -->
         <div class="dropdown">
             <a href="#" class="nav-link">Learning Hub</a>
             <div class="dropdown-menu">
@@ -349,7 +329,6 @@
         <a href="events.html">Events</a>
     </nav>
 
-    <!-- Search Bar -->
     <div class="search-container">
         <input type="text" class="search-bar" placeholder="Search...">
     </div>
@@ -359,7 +338,6 @@
 </html>
 
 <main>
-    <!-- Fullscreen Background Section -->
     <section class="fullscreen-section">
         <div class="content-container">
             <img src="what's blooming text.png" alt="What's Blooming Text" class="text-image">
@@ -369,13 +347,11 @@
         </div>
     </section>
 
- <!-- Target Section -->
 <section id="next-section" class="next-section">
     <div class="heading-image">
         <img src="hey homeowners.png" alt="Heading Image" class="centered-image">
     </div>
 
-    <!-- Boxes for Links -->
     <div class="link-boxes">
         <a href="renewable energy.html" class="link-box">
             <img src="renewable energy.png" alt="Renewable Energy">
@@ -400,14 +376,12 @@
     font-size: 0.9em;
 ">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
-        <!-- Left Section: Motto and Contact Information -->
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
             <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
             <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
 
-        <!-- Center Section: Social Media Links -->
         <div style="flex: 1; min-width: 200px; text-align: center; padding: 10px;">
             <h3 style="color: #ECECE9;">Follow Us</h3>
             <a href="https://www.facebook.com/people/The-Newer-Earth-Programme/61565747641949/?rdid=0QMA8aLVpjtyjk6I&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FjsrvtRrCVDyLw7H2%252F" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
@@ -418,7 +392,6 @@
             </a>
         </div>
 
-        <!-- Right Section: Quick Links -->
         <div style="flex: 1; min-width: 200px; text-align: right; padding: 10px;">
             <h3 style="color: #ECECE9;">Quick Links</h3>
             <a href="index.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Home</a>
@@ -431,23 +404,10 @@
         </div>
     </div>
 
-    <!-- Copyright Section -->
     <div style="margin-top: 20px; text-align: center;">
         <p>&copy; 2024 Newer Earth. All rights reserved.</p>
     </div>
 </footer>
-        
-    <!-- JavaScript for Transparent Scroll Effect -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const banner = document.querySelector('.banner');
-            if (window.scrollY > 50) {
-                banner.classList.add('transparent');
-            } else {
-                banner.classList.remove('transparent');
-            }
-        });
-    </script>
 
 </body>
 </html>
