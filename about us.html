@@ -6,14 +6,12 @@
     <link rel="icon" type="image/jpg" href="favicon.jpg">
     <title>Newer Earth</title>
     <style>
-        /* Reset margin and padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -23,7 +21,6 @@
         padding-top: 70px;
         }
 
-        /* Banner Style */
         .banner {
             position: fixed;
             top: 0;
@@ -41,12 +38,10 @@
             z-index: 1000;
         }
 
-        /* Banner changes to more transparent on scroll */
         .banner.transparent {
             background: rgba(255, 255, 255, 0.5);
         }
 
-        /* Logo Placeholder */
         .logo {
             display: flex;
             align-items: center;
@@ -58,7 +53,6 @@
             margin-right: 15px;
         }
 
-        /* Navigation Styling */
         .nav-links {
             display: flex;
             gap: 20px;
@@ -80,7 +74,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -97,7 +90,6 @@
             transform: scaleX(1);
         }
     
-        /* Learning Hub Link Styling */
         .nav-links .nav-link {
             text-decoration: none;
             color: #333;
@@ -112,7 +104,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover for Learning Hub link */
         .nav-links .nav-link::after {
             content: '';
             position: absolute;
@@ -129,7 +120,6 @@
             transform: scaleX(1);
         }
         
-        /* Learning Hub Dropdown Menu */
         .dropdown {
             display: inline-block;
             position: relative;
@@ -152,9 +142,8 @@
             display: block;
         }
         
-        /* Dropdown Item Styling */
         .dropdown-menu a {
-            color: #014D50; /* Text color */
+            color: #014D50;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -163,11 +152,10 @@
         }
         
         .dropdown-menu a:hover {
-            background-color: rgba(153, 184, 29, 0.2); /* Hover effect */
+            background-color: rgba(153, 184, 29, 0.2);
             border-radius: 5px;
         }
         
-        /* Underline effect for main navigation and dropdown links */
         .nav-links a::after,
         .dropdown-menu a::after {
             content: '';
@@ -186,7 +174,6 @@
             transform: scaleX(1);
         }
         
-        /* Search Bar Styling */
         .search-container {
             display: flex;
             align-items: center;
@@ -207,22 +194,21 @@
             outline: none;
         }
 
-                /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
-          width: 12px; /* Adjust the width of the scrollbar */
+          width: 12px;
         }
         
         ::-webkit-scrollbar-track {
-          background-color: #E3E3E1; /* Track background color */
+          background-color: #E3E3E1;
         }
         
         ::-webkit-scrollbar-thumb {
-          background-color: #888888; /* Thumb (the draggable part) color */
-          border-radius: 10px; /* Optional: round the thumb */
+          background-color: #888888;
+          border-radius: 10px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-          background-color: #A1A1A1; /* Thumb color on hover */
+          background-color: #A1A1A1;
         }
 
     </style>
@@ -231,18 +217,15 @@
 
     <!-- Banner Section -->
     <header class="banner">
-        <!-- Logo Section -->
         <div class="logo">
-            <img src="Logo.png"> <!-- Replace with your logo image file -->
+            <img src="Logo.png">
         </div>
 
-        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
 
-            <!-- Learning Hub Dropdown -->
             <div class="dropdown">
                 <a href="#" class="nav-link">Learning Hub</a>
                 <div class="dropdown-menu">
@@ -254,13 +237,12 @@
             <a href="events.html">Events</a>
         </nav>
 
-        <!-- Search Bar -->
         <div class="search-container">
             <input type="text" class="search-bar" placeholder="Search...">
         </div>
     </header>
 
-<!-- Main Content (For Scrolling) -->
+<!-- Main Content -->
 <main>
     <!-- About us section -->
     <section style="
@@ -271,7 +253,7 @@
         justify-content: space-between; 
         text-align: left; 
         background-color: #99B81D; 
-        padding: 0 10%; /* Adds horizontal padding */
+        padding: 0 10%;
         color: white;
         position: relative;
     ">
@@ -322,7 +304,7 @@
         We encourage community through conservation, making sustainability enjoyable, practical, and inclusive for everyone.
     </p>
 
-<!-- Carousel Container -->
+<!-- Spinny Thingy Container -->
 <div id="profileCarousel" style="display: flex; align-items: center; justify-content: center; gap: 35px; padding: 20px; box-sizing: border-box;">
 
     <!-- Profile 1 -->
@@ -353,24 +335,20 @@
     </div>
 </div>
 
-<!-- JavaScript for Expandable Profile Cards -->
 <script>
     function expandProfile(card) {
-        // Collapse any expanded card
         document.querySelectorAll('.profileCard').forEach(profile => {
             profile.style.width = '250px';
             profile.style.height = '300px';
             profile.querySelector('.profileDescription').style.display = 'none';
         });
 
-        // Expand the clicked card
         card.style.width = '300px';
         card.style.height = '350px';
         card.querySelector('.profileDescription').style.display = 'block';
     }
 </script>
 
-<!-- CSS Styling for Smooth Expansion -->
 <style>
     .profileCard {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -382,10 +360,8 @@
     
 </section>
     
-<!-- How We Work Section -->
 <section style="background-color: #99B81D; color: #014D50; text-align: left; padding: 100px 10%; position: relative; display: flex; align-items: center; justify-content: space-between; overflow: hidden;">
 
-    <!-- Left Side Image (Flower Image) -->
     <div style="flex: 1; display: flex; justify-content: center; align-items: center; position: relative;">
         <img src="flower2.png" alt="Flower Image" style="width: 80%;">
     </div>
@@ -395,7 +371,6 @@
         <!-- Section Heading -->
         <h2 style="font-size: 2em; font-weight: bold; margin-bottom: 20px;">How We Work</h2>
         
-        <!-- Description Points with Star Images -->
         <div style="display: flex; flex-direction: column; gap: 20px;">
 
             <!-- Point 1 -->
@@ -461,23 +436,10 @@
         </div>
     </div>
 
-    <!-- Copyright Section -->
     <div style="margin-top: 20px; text-align: center;">
         <p>&copy; 2024 Newer Earth. All rights reserved.</p>
     </div>
 </footer>
-        
-    <!-- JavaScript for Transparent Scroll Effect -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const banner = document.querySelector('.banner');
-            if (window.scrollY > 50) {
-                banner.classList.add('transparent');
-            } else {
-                banner.classList.remove('transparent');
-            }
-        });
-    </script>
 
 </body>
 </html>
