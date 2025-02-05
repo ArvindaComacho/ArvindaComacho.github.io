@@ -6,14 +6,12 @@
     <link rel="icon" type="image/jpg" href="favicon.jpg">
     <title>Newer Earth</title>
     <style>
-        /* Reset margin and padding */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -23,7 +21,6 @@
         padding-top: 70px;
         }
 
-        /* Banner Style */
         .banner {
             position: fixed;
             top: 0;
@@ -41,12 +38,10 @@
             z-index: 1000;
         }
 
-        /* Banner changes to semi-transparent on scroll */
         .banner.transparent {
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* Logo Placeholder */
         .logo {
             display: flex;
             align-items: center;
@@ -58,7 +53,6 @@
             margin-right: 15px;
         }
 
-        /* Navigation Links Styling */
         .nav-links {
             display: flex;
             gap: 20px;
@@ -80,7 +74,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover */
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -97,7 +90,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Link Styling */
         .nav-links .nav-link {
             text-decoration: none;
             color: #333;
@@ -112,7 +104,6 @@
             color: #014D50;
         }
 
-        /* Underline effect on hover for Learning Hub link */
         .nav-links .nav-link::after {
             content: '';
             position: absolute;
@@ -129,7 +120,6 @@
             transform: scaleX(1);
         }
 
-        /* Learning Hub Dropdown Menu */
         .dropdown {
             display: inline-block;
             position: relative;
@@ -151,7 +141,6 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-        /* Dropdown Item Styling */
         .dropdown-menu a {
             color: #014D50;
             padding: 12px 16px;
@@ -166,7 +155,6 @@
             border-radius: 5px;
         }
         
-        /* Underline effect for main navigation and dropdown links */
         .nav-links a::after,
         .dropdown-menu a::after {
             content: '';
@@ -185,7 +173,6 @@
             transform: scaleX(1);
         }
 
-        /* Search Bar Styling */
         .search-container {
             display: flex;
             align-items: center;
@@ -205,7 +192,7 @@
             border-color: #014D50;
             outline: none;
         }
-        /* Overall Section Styling */
+
         .three-rs-section {
             background-color: #ECECE9;
             padding: 0;
@@ -225,7 +212,6 @@
         background-color: #ECECE9;
     }
         
-        /* Top Half Styling */
         .top-half {
             position: relative;
             height: 70vh;
@@ -255,7 +241,6 @@
             padding-left: 20px;
         }
         
-        /* Bottom Half Styling */
         .bottom-half {
             background: #F6F6F4;
             margin: -80px auto 50px;
@@ -273,14 +258,12 @@
             z-index: 1;
         }
         
-        /* Content Blocks Styling */
         .content-block {
             margin-bottom: 30px;
             margin-left: 50px;
             margin-right: 50px;
         }
 
-        /* Image Row Styling */
         .image-row {
             display: flex; 
             justify-content: space-between; 
@@ -289,7 +272,6 @@
             padding-right: 150px;
         }
         
-        /* Image Styling */
         .image-row a {
             display: block;
             width: 30%;
@@ -315,7 +297,6 @@
             margin-left: 5px;
         }
     
-        /* Section Heading Images Styling */
         .section-heading-image {
             width: 100%;
             max-width: 650px;
@@ -326,7 +307,6 @@
             display: block;
         }
         
-        /* Paragraph Styling */
         .content-block p, .content-block ul {
             font-size: 1rem;
             line-height: 1.6;
@@ -360,7 +340,6 @@
             background-repeat: no-repeat;
             background-position: 60px center;
         }
-        /*Each customised bullet point*/
         
         .custom-bullet-list li:nth-child(1) {
             background-image: url('icon1.png');
@@ -388,64 +367,60 @@
             background-image: url('icon7.png');
         }
 
-        /* Styling for the bottom section */
         .bottom-section {
-            text-align: center; /* Center content */
-            padding: 20px; /* Add padding to the section */
-            background-color: #F6F6F4; /* Optional: background color */
-            border: 2px solid #EAEAE6; /* Light gray border */
-            border-radius: 20px; /* Rounded edges */
+            text-align: center; 
+            padding: 20px;
+            background-color: #F6F6F4;
+            border: 2px solid #EAEAE6;
+            border-radius: 20px;
             
         }
         
-        /* Styling for the text images */
         .text-images {
             display: flex;
-            justify-content: column; /* Center the images horizontally */
+            justify-content: column;
             align-items: center;
-            gap: 0px; /* Add space between the images */
-            margin-bottom: 20px; /* Space below the images */
+            gap: 0px; 
+            margin-bottom: 20px;
         }
         
         .text-image {
-            max-width: 60%; /* Ensure responsiveness */
+            max-width: 60%;
             height: auto;
         }
         
-        /* Styling for the explore button */
         .explore-button-container {
             display: flex;
             justify-content: center;
-            margin-top: 10px; /* Space above the button */
+            margin-top: 10px; 
             width: 100%
         }
         
         .explore-button {
-            width: 25%; /* Adjust to fit your desired button size */
+            width: 25%; 
             height: auto;
-            cursor: pointer; /* Change cursor to pointer on hover */
+            cursor: pointer; 
         }
         
         .explore-button:hover {
-            opacity: 0.8; /* Add hover effect */
+            opacity: 0.8; 
         }
 
-                /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
-          width: 12px; /* Adjust the width of the scrollbar */
+          width: 12px;
         }
         
         ::-webkit-scrollbar-track {
-          background-color: #E3E3E1; /* Track background color */
+          background-color: #E3E3E1;
         }
         
         ::-webkit-scrollbar-thumb {
-          background-color: #888888; /* Thumb (the draggable part) color */
-          border-radius: 10px; /* Optional: round the thumb */
+          background-color: #888888; 
+          border-radius: 10px; 
         }
         
         ::-webkit-scrollbar-thumb:hover {
-          background-color: #A1A1A1; /* Thumb color on hover */
+          background-color: #A1A1A1; 
         }
         
     </style>
@@ -455,18 +430,15 @@
     
 <!-- Banner Section -->
 <header class="banner">
-    <!-- Logo Section -->
     <div class="logo">
-        <img src="Logo.png"> <!-- Replace with your logo image file -->
+        <img src="Logo.png">
     </div>
 
-    <!-- Navigation Links -->
     <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about us.html">About Us</a>
         <a href="landscape aesthetics.html">Landscape Aesthetics</a>
         
-        <!-- Learning Hub Dropdown -->
         <div class="dropdown">
             <a href="#" class="nav-link">Learning Hub</a>
             <div class="dropdown-menu">
@@ -478,7 +450,6 @@
         <a href="events.html">Events</a>
     </nav>
 
-    <!-- Search Bar -->
     <div class="search-container">
         <input type="text" class="search-bar" placeholder="Search...">
     </div>
@@ -487,21 +458,16 @@
 </body>
 </html>
 
-
-    <!-- Banner Section -->
     <header class="banner">
-        <!-- Logo Section -->
         <div class="logo">
-            <img src="Logo.png"> <!-- Replace with your logo image file -->
+            <img src="Logo.png">
         </div>
 
-        <!-- Navigation Links -->
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about us.html">About Us</a>
             <a href="landscape aesthetics.html">Landscape Aesthetics</a>
             
-            <!-- Learning Hub Dropdown -->
             <div class="dropdown">
                 <a href="#" class="nav-link">Learning Hub</a>
                 <div class="dropdown-menu">
@@ -513,7 +479,6 @@
             <a href="events.html">Events</a>
         </nav>
 
-        <!-- Search Bar -->
         <div class="search-container">
             <input type="text" class="search-bar" placeholder="Search...">
         </div>
@@ -521,14 +486,12 @@
 
 <main>
 <section class="three-rs-section">
-    <!-- Top Half with Image -->
     <div class="top-half">
         <img src="three rs half image.png" alt="Three Rs of Waste Management Feild" class="top-half-image">
         <div class="heading-overlay">
         </div>
     </div>
 
-    <!-- Bottom Half with Content -->
     <div class="bottom-half">
         <!-- Content Block 1 -->
         <div class="content-block">
@@ -592,9 +555,8 @@
         <!-- Content Block 4 -->
         <div class="bottom-section">
             <div class="text-images">
-                <!-- First Image and Button -->
                 <div class="text-image-container">
-                    <a href="renewable energy.html"> <!-- Wrap the image and button with <a> -->
+                    <a href="renewable energy.html">
                         <img src="bottom image1.png" alt="Text Image 1" class="text-image">
                         <div class="explore-button-container">
                             <img src="explore button1.png" alt="Explore Button" class="explore-button">
@@ -602,9 +564,8 @@
                     </a>
                 </div>
         
-                <!-- Second Image and Button -->
                 <div class="text-image-container">
-                    <a href="why it matters.html"> <!-- Wrap the image and button with <a> -->
+                    <a href="why it matters.html"> 
                         <img src="bottom image2.png" alt="Text Image 2" class="text-image">
                         <div class="explore-button-container">
                             <img src="explore button1.png" alt="Explore Button" class="explore-button">
@@ -625,14 +586,12 @@
     font-size: 0.9em;
 ">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
-        <!-- Left Section: Motto and Contact Information -->
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
             <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
             <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
 
-        <!-- Center Section: Social Media Links -->
         <div style="flex: 1; min-width: 200px; text-align: center; padding: 10px;">
             <h3 style="color: #ECECE9;">Follow Us</h3>
             <a href="https://www.facebook.com/people/The-Newer-Earth-Programme/61565747641949/?rdid=0QMA8aLVpjtyjk6I&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252FjsrvtRrCVDyLw7H2%252F" target="_blank" style="color: white; margin: 0 10px; text-decoration: none;">
@@ -643,7 +602,6 @@
             </a>
         </div>
 
-        <!-- Right Section: Quick Links -->
         <div style="flex: 1; min-width: 200px; text-align: right; padding: 10px;">
             <h3 style="color: #ECECE9;">Quick Links</h3>
             <a href="index.html" style="color: white; display: block; margin: 5px 0; text-decoration: none;">Home</a>
@@ -656,23 +614,10 @@
         </div>
     </div>
 
-    <!-- Copyright Section -->
     <div style="margin-top: 20px; text-align: center;">
         <p>&copy; 2024 Newer Earth. All rights reserved.</p>
     </div>
 </footer>
-        
-    <!-- JavaScript for Transparent Scroll Effect -->
-    <script>
-        window.addEventListener('scroll', function () {
-            const banner = document.querySelector('.banner');
-            if (window.scrollY > 50) {
-                banner.classList.add('transparent');
-            } else {
-                banner.classList.remove('transparent');
-            }
-        });
-    </script>
 
 </body>
 </html>
