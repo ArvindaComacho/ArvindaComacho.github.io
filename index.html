@@ -281,57 +281,33 @@
             margin-left: 20px;
         }
 
-        /* Content Section 3 Styling */
-        .content-section-3 {
-            height: 100vh; /* Full viewport height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #ECECE9; /* Light background */
-            padding: 0 10%; /* Add padding for spacing */
+        /* Image Styling for content section 2*/
+        .image-row a {
+            display: block;
+            width: 30%;  /* Adjust size of each image (change as needed) */
+            text-align: center;
         }
         
-        .content-block {
-            text-align: center; /* Center align content */
-            max-width: 1200px; /* Limit content width */
-            width: 100%;
-        }
-        
-        .section-heading-image {
-            width: 100%; /* Responsive heading image */
+        .image-row img {
+            width: 100%; 
             height: auto;
-            max-width: 600px; /* Limit heading size */
-            margin-bottom: 40px; /* Space below heading */
+            max-width: 100%;
+            transition: transform 0.3s ease;
         }
         
-        .image-row {
-            display: flex;
-            justify-content: space-between; /* Space images evenly */
-            gap: 20px; /* Space between images */
+        .image-row img:hover {
+            transform: scale(1.05);
         }
         
-        .image-link {
-            flex: 1; /* Equal width for all images */
-            max-width: 30%; /* Limit image width */
-            text-decoration: none; /* Remove underline */
-            transition: transform 0.3s ease; /* Smooth hover effect */
+        html {
+            scroll-behavior: smooth;
         }
         
-        .image-link:hover {
-            transform: translateY(-10px); /* Lift image on hover */
+        /* Add a little gap between the images if needed */
+        .image-row a + a {
+            margin-left: 5px;
         }
-        
-        .top-pick-image {
-            width: 100%; /* Responsive images */
-            height: auto;
-            border-radius: 12px; /* Rounded corners */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: box-shadow 0.3s ease; /* Smooth shadow effect */
-        }
-        
-        .top-pick-image:hover {
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-        }
+
         
     </style>
 </head>
@@ -578,24 +554,23 @@
 </section>
         
 <!-- Content Section 3 -->
-<section class="content-section-3">
-    <div class="content-block">
-        <!-- Section Heading -->
-        <img src="content heading 1c.png" alt="Our Top Picks" class="section-heading-image">
-
-        <!-- Image Row with Links -->
-        <div class="image-row">
-            <a href="renewable energy.html" class="image-link">
-                <img src="top pick1.png" alt="Renewable Energy" class="top-pick-image">
-            </a>
-            <a href="landscape aesthetics.html" class="image-link">
-                <img src="top pick 2.png" alt="Landscape Aesthetics" class="top-pick-image">
-            </a>
-            <a href="three rs.html" class="image-link">
-                <img src="top pick3.png" alt="Waste Management" class="top-pick-image">
-            </a>
+<section>
+        <div class="content-section-2">
+            <img src="content heading 1c.png" alt="Our Top Picks" class="section-heading-image">
+                <div class="image-row">
+                    <a href="renewable energy.html">
+                        <img src="top pick1.png" alt="Renewable Energy">
+                    </a>
+                    <a href="landscape aesthetics.html">
+                        <img src="top pick 2.png" alt="Landscape Aesthetics">
+                    </a>
+                    <a href="three rs.html">
+                        <img src="top pick3.png" alt="Waste Management">
+                    </a>
+                </div>
         </div>
     </div>
+
 </section>
         
 <style>
