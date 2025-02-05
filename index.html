@@ -280,6 +280,58 @@
             color: #ECECE9; /* Text color */
             margin-left: 20px;
         }
+
+        /* Content Section 3 Styling */
+        .content-section-3 {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ECECE9; /* Light background */
+            padding: 0 10%; /* Add padding for spacing */
+        }
+        
+        .content-block {
+            text-align: center; /* Center align content */
+            max-width: 1200px; /* Limit content width */
+            width: 100%;
+        }
+        
+        .section-heading-image {
+            width: 100%; /* Responsive heading image */
+            height: auto;
+            max-width: 600px; /* Limit heading size */
+            margin-bottom: 40px; /* Space below heading */
+        }
+        
+        .image-row {
+            display: flex;
+            justify-content: space-between; /* Space images evenly */
+            gap: 20px; /* Space between images */
+        }
+        
+        .image-link {
+            flex: 1; /* Equal width for all images */
+            max-width: 30%; /* Limit image width */
+            text-decoration: none; /* Remove underline */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+        
+        .image-link:hover {
+            transform: translateY(-10px); /* Lift image on hover */
+        }
+        
+        .top-pick-image {
+            width: 100%; /* Responsive images */
+            height: auto;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: box-shadow 0.3s ease; /* Smooth shadow effect */
+        }
+        
+        .top-pick-image:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+        }
         
     </style>
 </head>
@@ -524,20 +576,27 @@
         </div>
     </div>
 </section>
-
-<!-- Content Section 3 -->
         
-<section style="
-    height: 100vh; 
-    max-width: 100%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    background-color: #ECECE9; 
-">
+<!-- Content Section 3 -->
+<section class="content-section-3">
+    <div class="content-block">
+        <!-- Section Heading -->
+        <img src="content heading 1c.png" alt="Our Top Picks" class="section-heading-image">
 
+        <!-- Image Row with Links -->
+        <div class="image-row">
+            <a href="renewable energy.html" class="image-link">
+                <img src="top pick1.png" alt="Renewable Energy" class="top-pick-image">
+            </a>
+            <a href="landscape aesthetics.html" class="image-link">
+                <img src="top pick 2.png" alt="Landscape Aesthetics" class="top-pick-image">
+            </a>
+            <a href="three rs.html" class="image-link">
+                <img src="top pick3.png" alt="Waste Management" class="top-pick-image">
+            </a>
+        </div>
+    </div>
 </section>
-
         
 <style>
         /* Customizing the scrollbar for Webkit browsers (Chrome, Safari, Edge) */
