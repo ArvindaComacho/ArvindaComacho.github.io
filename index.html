@@ -226,6 +226,60 @@
             width: 100%; /* Full width of the container */
             height: auto;
         }
+
+        /* Content Section 2 Styling */
+        .content-section-2 {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #014D50; /* Dark green background */
+            padding: 0 10%; /* Add padding for spacing */
+            color: white; /* Text color */
+        }
+        
+        .content-block {
+            display: flex;
+            align-items: center;
+            gap: 40px; /* Space between image and text */
+            max-width: 1200px; /* Limit content width */
+            width: 100%;
+        }
+        
+        .image-container {
+            flex: 1; /* Take up half the space */
+            display: flex;
+            justify-content: center;
+        }
+        
+        .people-powered-image {
+            width: 100%; /* Responsive image */
+            height: auto;
+            max-width: 500px; /* Limit image size */
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+        
+        .text-content {
+            flex: 1; /* Take up half the space */
+            max-width: 50%; /* Limit text width */
+        }
+        
+        .heading-container {
+            margin-bottom: 20px; /* Space below heading */
+        }
+        
+        .heading-image {
+            width: 100%; /* Responsive heading image */
+            height: auto;
+            max-width: 400px; /* Limit heading size */
+        }
+        
+        .text-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Space between paragraphs */
+        }
         
     </style>
 </head>
@@ -450,34 +504,25 @@
 </section>
 
 <!-- Content Section 2 -->
-        
-<section style="
-    height: 100vh; 
-    max-width: 100%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    background-color: #014D50; 
-">
-         <!-- Content Section 2 -->
-        <div class="content-block content-block-2">
-            <!-- Left Side: People Powered Image -->
-            <div class="people-powered-image-container">
-                <img src="people-powered image.png" alt="People Powered" class="people-powered-image">
-            </div>
-        
-            <!-- Right Side: Heading and Text -->
-            <div class="content-text">
-                <!-- Heading (Centered Vertically on Top Right) -->
-                <div class="heading-container">
-                    <img src="content heading 1b.png" alt="People Powered Heading" class="heading-image">
-                </div>
-        
-                <!-- Text Content -->
-                <p>Newer Earth relies on community support. We're dedicated through determination and effort to rejuvenate our community's natural environment, making it a welcoming space for all.</p>
-                <p>With your assistance, we aspire to build partnerships with national agencies in the future, non-profits, and local farms. If you believe that the environment matters, get involved!</p>
-            </div>
+<section class="content-section-2">
+    <div class="content-block">
+        <!-- Left Side: People Powered Image -->
+        <div class="image-container">
+            <img src="people-powered image.png" alt="People Powered" class="people-powered-image">
         </div>
+
+        <!-- Right Side: Heading and Text -->
+        <div class="text-content">
+            <!-- Heading -->
+            <div class="heading-container">
+                <img src="content heading 1b.png" alt="People Powered Heading" class="heading-image">
+            </div>
+
+            <!-- Text Content -->
+            <p>Newer Earth relies on community support. We're dedicated through determination and effort to rejuvenate our community's natural environment, making it a welcoming space for all.</p>
+            <p>With your assistance, we aspire to build partnerships with national agencies in the future, non-profits, and local farms. If you believe that the environment matters, get involved!</p>
+        </div>
+    </div>
 </section>
 
 <!-- Content Section 3 -->
