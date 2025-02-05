@@ -176,8 +176,11 @@
 
         /* Content Section 1 Styling */
         .content-section-1 {
+            height: 100vh; /* Full viewport height */
             padding: 60px 10%; /* Add padding for spacing */
             background-color: #ECECE9;
+            display: flex;
+            align-items: center; /* Center content vertically */
         }
         
         .content-container {
@@ -298,15 +301,15 @@
             Welcome to Newer Earth, where passion meets environmental sustainability. Join us as we lead the way toward a greener, more sustainable world.
         </p>
         <!-- Call-to-Action Button -->
-        <a href="#upcoming-events" style="
-            background-color: #014D50; /* Dark green */
+        <a href="#content-section-1" style="
+            background-color: #014D50;
             color: white;
             padding: 15px 30px;
             font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         ">
             Adventures Await
         </a>
