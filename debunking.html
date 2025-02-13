@@ -415,6 +415,37 @@
             visibility: visible;
         }
         
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.6); /* Black with opacity */
+            backdrop-filter: blur(10px); /* Blur effect */
+        }
+        
+        /* Show modal when targeted */
+        .modal:target {
+            display: block;
+        }
+        
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 10% auto; /* 10% from the top and centered */
+            padding: 30px;
+            border-radius: 12px;
+            width: 80%; /* Responsive width */
+            max-width: 600px; /* Max width */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: #014D50;
+            position: relative;
+        }
+        
         .close-button {
             position: absolute;
             top: 10px;
@@ -425,6 +456,7 @@
             background: transparent;
             border: none;
             padding: 5px;
+            text-decoration: none;
         }
         
         .close-button:hover {
@@ -456,40 +488,42 @@
     <div class="section-1">
         <h1>Debunking</h1>
         <p>Myths about the environment can lead to misinformation and hinder sustainability efforts. By separating fact from fiction, we can encourage individuals to make informed decisions that will positively impact the planet.</p>
-        
-        <div class="myth-boxes">
+
             <!-- True Myths Box -->
-            <div class="myth-box">
-                <input type="checkbox" id="true-myths-toggle" class="toggle-checkbox">
-                <label for="true-myths-toggle" class="myth-box-label">
-                    <h2>True Myths</h2>
-                    <p class="brief-description">Explore through interactive testing, which myths are true.</p>
-                </label>
-                <div class="expanded-content">
-                    <label for="true-myths-toggle" class="close-button">X</label>
-                    <ul>
-                        <li>Turning off lights when leaving a room saves energy.</li>
-                        <li>Composting reduces landfill waste.</li>
-                        <li>LED bulbs use less energy than incandescent bulbs.</li>
-                    </ul>
-                </div>
+        <a href="#true-myths-modal" class="myth-box">
+            <h2>True Myths</h2>
+            <p class="brief-description">Explore through interactive testing, which myths are true.</p>
+        </a>
+        
+        <!-- False Myths Box -->
+        <a href="#false-myths-modal" class="myth-box">
+            <h2>False Myths</h2>
+            <p class="brief-description">Explore through interactive testing, which myths are false.</p>
+        </a>
+        
+        <!-- True Myths Modal -->
+        <div id="true-myths-modal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close-button">&times;</a>
+                <h2>True Myths</h2>
+                <ul>
+                    <li>Turning off lights when leaving a room saves energy.</li>
+                    <li>Composting reduces landfill waste.</li>
+                    <li>LED bulbs use less energy than incandescent bulbs.</li>
+                </ul>
             </div>
-    
-            <!-- False Myths Box -->
-            <div class="myth-box">
-                <input type="checkbox" id="false-myths-toggle" class="toggle-checkbox">
-                <label for="false-myths-toggle" class="myth-box-label">
-                    <h2>False Myths</h2>
-                    <p class="brief-description">Explore through interactive testing, which myths are false.</p>
-                </label>
-                <div class="expanded-content">
-                    <label for="false-myths-toggle" class="close-button">X</label>
-                    <ul>
-                        <li>Recycling is a waste of time and doesn’t help.</li>
-                        <li>Electric cars are worse for the environment than gasoline cars.</li>
-                        <li>Plastic bags are more eco-friendly than paper bags.</li>
-                    </ul>
-                </div>
+        </div>
+        
+        <!-- False Myths Modal -->
+        <div id="false-myths-modal" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close-button">&times;</a>
+                <h2>False Myths</h2>
+                <ul>
+                    <li>Recycling is a waste of time and doesn’t help.</li>
+                    <li>Electric cars are worse for the environment than gasoline cars.</li>
+                    <li>Plastic bags are more eco-friendly than paper bags.</li>
+                </ul>
             </div>
         </div>
         
