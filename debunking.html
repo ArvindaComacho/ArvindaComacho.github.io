@@ -411,7 +411,7 @@
             padding: 30px;
             border-radius: 12px;
             width: 80%;
-            max-width: 600px;
+            max-width: 800px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             color: #014D50;
             position: relative;
@@ -432,6 +432,30 @@
         
         .close-button:hover {
             color: #084F6A;
+        }
+
+        .modal-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #014D50;
+        }
+        
+        .modal-content h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #014D50;
+        }
+        
+        .modal-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .modal-content strong {
+            color: #014D50;
         }
         
         ::-webkit-scrollbar {
@@ -486,31 +510,45 @@
             </div>
         </div>
         
-        <!-- True Myths Modal -->
-        <div id="true-myths-modal" class="modal">
-            <div class="modal-content">
-                <a href="#" class="close-button">&times;</a>
-                <h2>True Myths</h2>
-                <ul>
-                    <li>Turning off lights when leaving a room saves energy.</li>
-                    <li>Composting reduces landfill waste.</li>
-                    <li>LED bulbs use less energy than incandescent bulbs.</li>
-                </ul>
-            </div>
-        </div>
+<!-- True Myths Modal -->
+<div id="true-myths-modal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close-button">&times;</a>
+        <h2>True Myths</h2>
+        <p>There are many misconceptions about environmental practices. Here are some <strong>true myths</strong> that are often misunderstood:</p>
         
-        <!-- False Myths Modal -->
-        <div id="false-myths-modal" class="modal">
-            <div class="modal-content">
-                <a href="#" class="close-button">&times;</a>
-                <h2>False Myths</h2>
-                <ul>
-                    <li>Recycling is a waste of time and doesn’t help.</li>
-                    <li>Electric cars are worse for the environment than gasoline cars.</li>
-                    <li>Plastic bags are more eco-friendly than paper bags.</li>
-                </ul>
-            </div>
-        </div>
+        <h3>1. Turning Off Lights Saves Energy</h3>
+        <p>Turning off lights when you leave a room is a simple yet effective way to save energy. This reduces electricity consumption and lowers your utility bills.</p>
+        
+        <h3>2. Composting Reduces Landfill Waste</h3>
+        <p>Composting organic waste like food scraps and yard trimmings helps reduce the amount of waste sent to landfills. It also creates nutrient-rich soil for gardening.</p>
+        
+        <h3>3. LED Bulbs Are Energy-Efficient</h3>
+        <p>LED bulbs use significantly less energy than traditional incandescent bulbs and last much longer, making them a cost-effective and eco-friendly choice.</p>
+        
+        <p><strong>Remember:</strong> Small changes in daily habits can have a big impact on the environment.</p>
+    </div>
+</div>
+
+<!-- False Myths Modal -->
+<div id="false-myths-modal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close-button">&times;</a>
+        <h2>False Myths</h2>
+        <p>There are many false beliefs about environmental practices. Here are some <strong>false myths</strong> that need to be debunked:</p>
+        
+        <h3>1. Recycling Is a Waste of Time</h3>
+        <p>Recycling is not a waste of time. It helps conserve natural resources, reduces landfill waste, and minimizes pollution. Proper recycling practices are essential for sustainability.</p>
+        
+        <h3>2. Electric Cars Are Worse for the Environment</h3>
+        <p>Electric cars produce fewer emissions over their lifetime compared to gasoline cars. While battery production has an environmental impact, the overall benefits outweigh the drawbacks.</p>
+        
+        <h3>3. Plastic Bags Are More Eco-Friendly Than Paper Bags</h3>
+        <p>Plastic bags take hundreds of years to decompose and often harm wildlife. Paper bags, while not perfect, are biodegradable and have a lower environmental impact.</p>
+        
+        <p><strong>Remember:</strong> Always verify information before making decisions that affect the environment.</p>
+    </div>
+</div>
         
             <div class="debunking-image-container">
                 <img src="debunking image.png" alt="Debunking Image" class="debunking-image">
