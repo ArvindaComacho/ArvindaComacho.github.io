@@ -321,26 +321,30 @@
             z-index: 3;
         }
         
+        /* Myth Boxes Container */
         .myth-boxes {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            text-align: center;
-            width: 80%;
-            margin: 0 auto;
-            z-index: 3;
+            display: flex; /* Use flexbox to align boxes side by side */
+            gap: 30px; /* Space between the boxes */
+            justify-content: center; /* Center the boxes horizontally */
+            width: 80%; /* Adjust the container width as needed */
+            margin: 0 auto; /* Center the container */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
         
+        /* Myth Box Styles */
         .myth-box {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 12px;
-            width: 40%;
+            width: 40%; /* Adjust the width of each box */
             transition: background 0.3s ease, transform 0.3s ease;
             position: relative;
             cursor: pointer;
             z-index: 3;
-            text-align: center;
+            text-align: center; /* Center the text inside the box */
+            color: #ECECE9; /* Set text color */
+            flex: 1 1 40%; /* Allow boxes to grow and shrink, with a base width of 40% */
+            min-width: 250px; /* Minimum width for responsiveness */
         }
         
         .myth-box:hover {
@@ -355,7 +359,6 @@
         }
         
         .myth-box .brief-description {
-            color: #ECECE9;
             font-size: 1rem;
             margin-bottom: 10px;
             text-align: center;
@@ -428,16 +431,6 @@
         
         .close-button:hover {
             color: #084F6A;
-        }
-
-        .myth-boxes a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .myth-boxes a:hover {
-            text-decoration: none;
-            color: inherit;
         }
         
         ::-webkit-scrollbar {
