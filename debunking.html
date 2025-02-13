@@ -327,6 +327,7 @@
             justify-content: center;
             text-align: center;
             width: 80%;
+            margin: 0 auto;
             z-index: 3;
         }
         
@@ -334,11 +335,12 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 12px;
-            width: 48%;
+            width: 40%;
             transition: background 0.3s ease, transform 0.3s ease;
             position: relative;
             cursor: pointer;
             z-index: 3;
+            text-align: center;
         }
         
         .myth-box:hover {
@@ -387,30 +389,29 @@
         
         /* Modal Styles */
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0, 0, 0, 0.6); /* Black with opacity */
-            backdrop-filter: blur(10px); /* Blur effect */
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
         }
         
-        /* Show modal when targeted */
         .modal:target {
             display: block;
         }
         
         .modal-content {
             background-color: rgba(255, 255, 255, 0.9);
-            margin: 10% auto; /* 10% from the top and centered */
+            margin: 10% auto;
             padding: 30px;
             border-radius: 12px;
-            width: 80%; /* Responsive width */
-            max-width: 600px; /* Max width */
+            width: 80%;
+            max-width: 600px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             color: #014D50;
             position: relative;
