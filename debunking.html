@@ -407,7 +407,7 @@
         
         .modal-content {
             background-color: rgba(255, 255, 255, 0.9);
-            margin: 6.5% auto;
+            margin: 6.3% auto;
             padding: 30px;
             border-radius: 12px;
             width: 80%;
@@ -434,6 +434,14 @@
             color: #084F6A;
         }
 
+        /* Scrollable Modal Body */
+        .modal-body {
+            overflow-y: auto; /* Enable vertical scrolling */
+            flex: 1; /* Allow body to take up remaining space */
+            padding-right: 10px; /* Add padding to avoid overlap with scrollbar */
+            text-align: left; /* Align all text to the left */
+        }
+        
         .modal-content h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
@@ -449,10 +457,11 @@
         }
         
         .modal-body p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 15px;
             color: #333;
+            text-align: left;
         }
         
         .modal-body strong {
