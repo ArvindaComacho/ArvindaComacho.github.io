@@ -245,6 +245,23 @@
             background-color: #012f33;
         }
 
+        /* Scroll Indicator Animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+        
+        .scroll-indicator {
+            cursor: pointer;
+        }
+        
         ::-webkit-scrollbar {
           width: 12px; 
         }
@@ -301,6 +318,19 @@
         <div style="text-align: center; margin-left: 20px;">
             <img src="landscape aesthetics image.png" alt="Overview Image" style="max-width: 100%; height: auto; width: 90%;">
         </div>
+    </div>
+
+    <!-- Scroll Indicator Arrow -->
+    <div class="scroll-indicator" style="
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: #014D50;
+        animation: bounce 2s infinite;
+    ">
+        ↓
     </div>
 </section>
       
