@@ -319,19 +319,18 @@
         height: 5px;
         background-color: #014D50;
         border-radius: 2px;
-        transform: rotate(45deg);
     }
     
-    .chevron::after {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 5px;
-        background-color: #014D50;
-        border-radius: 2px;
-        transform: rotate(-90deg);
-        top: 0;
-        left: 0;
+    /* First Chevron (Top Part of Arrow) */
+    .chevron:first-child {
+        transform: rotate(45deg);
+        margin-bottom: -3px; /* Overlap to form an arrow */
+    }
+    
+    /* Second Chevron (Bottom Part of Arrow) */
+    .chevron:last-child {
+        transform: rotate(-45deg);
+        margin-top: -3px; /* Overlap to form an arrow */
     }
     
     /* Bounce Animation */
