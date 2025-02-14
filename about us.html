@@ -194,6 +194,23 @@
             outline: none;
         }
 
+        /* Scroll Indicator Animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+        
+        .scroll-indicator {
+            cursor: pointer;
+        }
+  
         ::-webkit-scrollbar {
           width: 12px;
         }
@@ -287,6 +304,19 @@
         background-position: right bottom;
         background-size: contain;
     ">
+    </div>
+
+    <!-- Scroll Indicator Arrow -->
+    <div class="scroll-indicator" style="
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        color: #014D50;
+        animation: bounce 2s infinite;
+    ">
+        ↓
     </div>
         
 </section>
